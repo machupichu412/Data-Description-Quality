@@ -1,0 +1,680 @@
+[
+  {
+    "TechnicalDescription": "This Attribute has a static value - <3001> decided by commercial business and uploaded through flat file.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct mapping to ARRType column coming from static file having string values provided by commercial business.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": "In desc source table is mentioned as DimARRService table  and then source is mentioned as static source. \nIs it a static source file? \nRe check and phrase it accordingly."
+  },
+  {
+    "TechnicalDescription": "Direct mapping to ServiceName column coming from static file having string values provided by commercial business.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": "In desc source table is mentioned as DimARRService table  and then source is mentioned as static source. \nIs it a static source file? \nRe check and phrase it accordingly."
+  },
+  {
+    "TechnicalDescription": "Direct mapping to ServicePackageSKU column coming from static file having string values provided by commercial business.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": "In desc source table is mentioned as DimARRService table  and then source is mentioned as static source. \nIs it a static source file? \nRe check and phrase it accordingly."
+  },
+  {
+    "TechnicalDescription": "This Attribute has a static value (2001,2002,2003,2004,2005) provided by commercial business and uploaded through flat file.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "In desc source table is mentioned as DimARRService table  and then source is mentioned as static source. \nIs it a static source file? \nRe check and phrase it accordingly."
+  },
+  {
+    "TechnicalDescription": "Direct mapping to ARRType column coming from static file having string values provided by commercial business.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": "In desc source table is mentioned as DimARRService table  and then source is mentioned as static source. \nIs it a static source file? \nRe check and phrase it accordingly."
+  },
+  {
+    "TechnicalDescription": "Direct mapping to ServicePackageName column coming from static file having string values provided by commercial business.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": "In desc source table is mentioned as DimARRService table  and then source is mentioned as static source. \nIs it a static source file? \nRe check and phrase it accordingly."
+  },
+  {
+    "TechnicalDescription": "SurrogateKey generated within UDP NRT to identify unique records of DimCauseType table. Generated based on the column CauseType.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "Add source table and souce name"
+  },
+  {
+    "TechnicalDescription": "The attribute has static values of  >= 7Days <14Days , < 5hrs , >= Day <3Days , >= 21Days <31Days , Unknown , decided by commercial business and uploaded through flat file.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "pls confirm, is it static values or hardcoded ?\nIf it is static, it has to be coming from a static file provided by business.",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "The attribute has static values of  >= 7Days <14Days , <1Day , >= 21Days <31Days , >= 1Day <3Days , Unknown ,decided by commercial business and uploaded through flat file.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "refer row #15 where attribute is IdleTimeL1 and entity is vwdimidletimespan",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "SurrogateKey generated within UDP NRT to identify unique records of DimIdleTimeSpan table.\nWhen IdleTimeL1 & IdleTimeL2 = \"Unknown\" and Sort=0 then hardcoded as -1\nWhen IdleTimeL1 ='< 5hrs' & IdleTimeL2 = '<1Day' and Sort=1 then hardcoded as 1\nWhen IdleTimeL1 ='>= 5hrs <8hrs' & IdleTimeL2 = '<1Day' and Sort=1 then hardcoded as 2\nWhen IdleTimeL1 ='>= 8hrs <16hrs' & IdleTimeL2 = '<1Day' and Sort=1 then hardcoded as 3\nWhen IdleTimeL1 ='>= 16hrs <1Day' & IdleTimeL2 = '<1Day' and Sort=1 then hardcoded as 4\nand goes on until it's hardcoded as 10.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "This attribute has static values of (0,1,2,3,4) provided by Commercial Business.\nWhen IdleTimeL1 & IdleTimeL2 = \"Unknown\" then hardcoded as 0\nWhen IdleTimeL1 ='< 5hrs' & IdleTimeL2 = '<1Day' then hardcoded as 1\nWhen IdleTimeL1 ='>= Day <3Days' & IdleTimeL2 = '>= 1Day <3Days' then hardcoded as 2\nWhen IdleTimeL1 & IdleTimeL2 = '>= 3 Days <7Days' then hardcoded as 3\nWhen IdleTimeL1 & IdleTimeL2 = '>= 7Days <14Days' then hardcoded as 4",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "refer row #15 where attribute is IdleTimeL1 and entity is vwdimidletimespan",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "This attribute has static values of (Low, Unknown, Medium, High, Missed) decided by commercial business and uploaded through flat file.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "refer row #15 where attribute is IdleTimeL1 and entity is vwdimidletimespan",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "SurrogateKey generated within UDP NRT to identify unique records of DimIRStatus table.\nLogic: When IRStatus = \"Unknown\" then hardcoded as -1\nwhen IRStatus = \"Critical\" then hardcoded as 1\nwhen IRStatus = \"Hi\" then hardcoded as 2\nwhen IRStatus = \"Medium\" then hardcoded as 3\nwhen IRStatus = \"Low\" then hardcoded as 4\nwhen IRStatus = \"Met\" then hardcoded as 5\nwhen IRStatus = \"Missed\" then hardcoded as 6",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "This attribute has static values of (Complete ,Unknown ,Cancelled, Missed, Pending) decided by commercial business and uploaded through flat file.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "refer row #15 where attribute is IdleTimeL1 and entity is vwdimidletimespan",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "SurrogateKey generated within UDP NRT to identify unique records of dimkpistate table.\nLogic: When KPIState = \"Unknown\" then hardcoded as -1\nwhen KPIState = \"Cancelled\" then hardcoded as 1\nwhen KPIState = \"Missed\" then hardcoded as 2\nwhen KPIState = \"Pending\" then hardcoded as 3\nwhen KPIState = \"Complete\" then hardcoded as 4",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "Hardcoded 1 or 2 on what condition? For which value it is 1 or 2 add the details.\n\nSurrogateKey generated within UDP NRT to identify unique records of dimkpistate table. \nLogic: When KPIState = \"State1\" then hardcoded as 1 \nwhen KPIState = \"State2\" then hardcoded as 2  \n"
+  },
+  {
+    "TechnicalDescription": "SurrogateKey generated within UDP NRT to identify unique records of DimLaborTimeSpan table.\nWhen LaborSpanL1 & LaborSpanL2 = \"Unknown\" and SortL1 & SortL2 = 0 then hardcoded as -1\nWhen LaborSpanL1=\"<100\", LaborSpanL2 = \"<50\" and SortL1 & SortL2 = 1 then hardcoded as 1\nWhen LaborSpanL1=\"<100\", LaborSpanL2 = \"<75\" and SortL1 = 2 & SortL2 = 1 then hardcoded as 2\nWhen LaborSpanL1=\"<100\", LaborSpanL2 = \"<100\" and SortL1 = 3 SortL2 = 1 then hardcoded as 3\nWhen LaborSpanL1=\"<200\", LaborSpanL2 = \"<150\" and SortL1 = 4 SortL2 = 2 then hardcoded as 4\nand goes so on until it's hardcoded as 20",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "Hardcoded 1 or 2 on what condition? For which value it is 1 or 2 add the details"
+  },
+  {
+    "TechnicalDescription": "SurrogateKey generated within UDP NRT to identify unique records of DimPhase table.It is generated based on StateAnnotation column.",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "Add source table and souce name"
+  },
+  {
+    "TechnicalDescription": "This attribute has static values of (Unknown,<1 Hour,1-3 Hours etc) provided by the commercial business.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "refer row #15 where attribute is IdleTimeL1 and entity is vwdimidletimespan",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "SurrogateKey generated within UDP NRT to identify unique records of DimScopeAgeSpan table.\nLogic: When ScopeAgeSpan = \"Unknown\" then hardcoded as -1\nwhen ScopeAgeSpan = \"<1 Hour\" then hardcoded as 1\nwhen ScopeAgeSpan = \"1-3 Hours\" then hardcoded as 2\nwhen ScopeAgeSpan = \"3-7 Hours\" then hardcoded as 3\nwhen ScopeAgeSpan = \"7-10 Hours\" then hardcoded as 4\nwhen ScopeAgeSpan = \"10-15 Hours\" then hardcoded as 5\nwhen ScopeAgeSpan = \"15-20 Hours\" then hardcoded as 6\nwhen ScopeAgeSpan = \"20-24 Hours\" then hardcoded as 7\nwhen ScopeAgeSpan = \"> 24 hours\" then hardcoded as 8",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "Ref rno - 27"
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on FullDate and IsWeekday columns of DimTime table coming from Commercial NextDay Datamart within SA&DP source having integer values.\nLogic:  If FullDate is less than or equal to the current timestamp and IsWeekday is equal to 1 then it hardcoded 1 else hardcoded as 0.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Ok",
+    "L3 Review Status": "Add source table name"
+  },
+  {
+    "TechnicalDescription": "Derived by applying Day logic on Fulldate columns coming in DimTime table coming from Commercial NextDay Datamart within SA&DP Datamart within SA&DP.\nLogic:  Extract the Day (Monday,..) from the date value coming in Fulldate.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Instead of updating DATE TRUNCATE function in the logic, explain like below:\nExtract the Day (Monday,..) from the date value coming in Fulldate.",
+    "L3 Review Status": "Instead of ND mention it as Commercial NextDay Datamart within SA&DP / UDPCOmmercial NextDay Datamart"
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on DayName column in DimTime table coming from Commercial NextDay Datamart within SA&DP Datamart within SA&DP.\nLogic: WHEN DayName = 'saturday' THEN hardcoded as 1   WHEN DayName = 'sunday' THEN hardcoded as 2\nWHEN DayName = 'monday'  THEN hardcoded as 3  WHEN DayName = 'tuesday'  THEN hardcoded as 4\nWHEN DayName = 'wednesday'  THEN hardcoded as 5  WHEN DayName = 'thursday' THEN hardcoded as 6\nWHEN DayName = 'friday'  THEN hardcoded as 7 ELSE - 1  END AS DayId",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Refer row #37 where attribute is FiscalCumulativeWeek",
+    "L3 Review Status": "Instead of ND mention it as Commercial NextDay Datamart within SA&DP / UDPCOmmercial NextDay Datamart"
+  },
+  {
+    "TechnicalDescription": "Direct mapping to DayName in DimTime table coming from Commercial NextDay Datamart within SA&DP Datamart within SA&DP having string values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Remove ectra wording column",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on FiscalWeek and FiscalYear columns coming from DimTime table coming from Commercial NextDay Datamart within SA&DP source.\nLogic: CASE WHEN Length(FiscalWeek) = 1 THEN Cast(CONCAT ( FiscalYear ,0,FiscalWeek) AS INT)\nELSE Cast(CONCAT ( FiscalYear ,FiscalWeek ) AS INT) END AS FiscalCumulativeWeek",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Format of logic is missing, you can follow like below\nLogic: CASE WHEN Length(FiscalWeek) = 1  THEN Cast(CONCAT ( FiscalYear ,0,FiscalWeek) AS INT) \nELSE Cast(CONCAT ( FiscalYear ,FiscalWeek ) AS INT) \nEND AS FiscalCumulativeWeek",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct mapping to FiscalQuarter column in DimTime table coming from Commercial NextDay Datamart within SA&DP having integer values.\n(Ex:For FiscalPeriod Value as 1(july-september) then FiscalQuarter is populated as - 2007-07-01T00:00:00.000+0000,\nFor FiscalPeriod Value as 2(October-december) then FiscalQuarter is populated as- 2007-10-01T00:00:00.000+0000,\nFor FiscalPeriod Value as 3(January-march) then FiscalQuarter is populated as- 2008-01-01T00:00:00.000+0000,\nFor FiscalPeriod Value 4(april- june) then FiscalQuarter is populated as-2008-04-01T00:00:00.000+0000)",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Phrase the description properly for red highlighted. Mention the month range for value 1 to 4 for any year.\nCan refer for Example : Value 1 corrosponds to July  to Sept and so on..",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct mapping to IsCurrentFiscalMonth column in DimTime table coming from Commercial NextDay Datamart within SA&DP source having boolean values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "On what column this is being dervied and derivation logic is not clear",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "Direct mapping to IsCurrentFiscalWeek column in DimTime table coming from Commercial NextDay Datamart within SA&DP source having boolean values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "On what column this is being dervied and derivation logic is not clear",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "Direct mapping to IsCurrentFiscalYear column in DimTime table coming from Commercial NextDay Datamart within SA&DP source having boolean values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "On what column this is being dervied and derivation logic is not clear",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "Direct mapping to IsWeekday column in DimTime table coming from Commercial NextDay Datamart within SA&DP source having boolean values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "On what column this is being dervied and derivation logic is not clear",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "This attribute has static values of (-1, 1799, 3599, 5399, 7199 etc) provided by Commercial Business.\nWhen TimeOfDayId= -1, TimeOfDay3Hrs= 'Unknown' AND TimeOfDay1Hr= 'Unknown' then hardcoded as -1\nWhen TimeOfDayId= 0, TimeOfDay3Hrs= '00:00 To 02:59' AND TimeOfDay1Hr= '00:00 To 00:59' then hardcoded as 1799\nWhen TimeOfDayId= 1, TimeOfDay3Hrs= '00:00 To 02:59' AND TimeOfDay1Hr= '00:00 To 00:59' then hardcoded as 3599\nWhen TimeOfDayId= 2, TimeOfDay3Hrs= '00:00 To 02:59' AND TimeOfDay1Hr= '01:00 To 01:59' then hardcoded as 5399\nWhen TimeOfDayId= 3, TimeOfDay3Hrs='00:00 To 02:59' AND TimeOfDay1Hr= '01:00 To 01:59' then hardcoded as 7199\ngoes on until it's hardcoded as 86399",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "pls confirm, is it static values or hardcoded ?\nIf it is static, it has to be coming from a static file provided by business.",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "This attribute has static values of ('Unknown', '00:00 To 00:59', '00:00 To 00:59', '01:00 To 01:59', '01:00 To 01:59' etc) provided by Commercial Business.\nWhen TimeOfDayId= -1 AND TimeOfDay3Hrs= 'Unknown' then hardcoded as 'Unknown'\nWhen TimeOfDayId= 0 AND TimeOfDay3Hrs= '00:00 To 02:59' then hardcoded as '00:00 To 00:59'\nWhen TimeOfDayId= 1 AND TimeOfDay3Hrs= '00:00 To 02:59' then hardcoded as '00:00 To 00:59'\nWhen TimeOfDayId= 2 AND TimeOfDay3Hrs= '00:00 To 02:59' then hardcoded as '01:00 To 01:59'\nWhen TimeOfDayId= 3 AND TimeOfDay3Hrs='00:00 To 02:59' then hardcoded as '01:00 To 01:59'\ngoes on until it's hardcoded as '23:00 To 23:59'",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "pls confirm, is it static values or hardcoded ?\nIf it is static, it has to be coming from a static file provided by business.",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "This attribute has static values of ('Unknown', '00:00 To 00:29', '00:30 To 00:59', '01:00 To 01:29', '01:30 To 01:59' etc) provided by Commercial Business.\nWhen TimeOfDayId= -1 AND TimeOfDay3Hrs= 'Unknown' then hardcoded as 'Unknown'\nWhen TimeOfDayId= 0 AND TimeOfDay3Hrs= '00:00 To 02:59' then hardcoded as '00:00 To 00:29'\nWhen TimeOfDayId= 1 AND TimeOfDay3Hrs= '00:00 To 02:59' then hardcoded as '00:30 To 00:59'\nWhen TimeOfDayId= 2 AND TimeOfDay3Hrs= '00:00 To 02:59' then hardcoded as '01:00 To 01:29'\nWhen TimeOfDayId= 3 AND TimeOfDay3Hrs='00:00 To 02:59' then hardcoded as '01:30 To 01:59'\ngoes on until it's hardcoded as 23:30 To 23:59'",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "pls confirm, is it static values or hardcoded ?\nIf it is static, it has to be coming from a static file provided by business.",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "This attribute has static values of ('Unknown', '00:00 To 02:59' etc) provided by Commercial Business.\nWhen TimeOfDayId= -1 AND TimeOfDay1Hr= 'Unknown' then hardcoded as 'Unknown'\nWhen TimeOfDayId= 0, AND TimeOfDay1Hr= '00:00 To 00:59' then hardcoded as '00:00 To 02:59'\nWhen TimeOfDayId= 1, AND TimeOfDay1Hr= '00:00 To 00:59' then hardcoded as '00:00 To 02:59'\nWhen TimeOfDayId= 2, AND TimeOfDay1Hr= '01:00 To 01:59' then hardcoded as '00:00 To 02:59'\nWhen TimeOfDayId= 3, AND TimeOfDay1Hr= '01:00 To 01:59' then hardcoded as '00:00 To 02:59'\ngoes on until it's hardcoded as '21:00 To 23:59'",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "pls confirm, is it static values or hardcoded ?\nIf it is static, it has to be coming from a static file provided by business.",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "SurrogateKey generated within UDP NRT to identify unique records of DimTimeOfDay table.\nWhen TimeOfDay3Hrs= 'Unknown' AND TimeOfDay1Hr= 'Unknown' AND Seconds= -1 then hardcoded as -1\nWhen TimeOfDay3Hrs= '00:00 To 02:59' TimeOfDay1Hr= '00:00 To 00:59' AND Seconds= 1799 then hardcoded as 0\nWhen TimeOfDay3Hrs= '00:00 To 02:59' TimeOfDay1Hr= '00:00 To 00:59' AND Seconds= 3599 then hardcoded as 1\nWhen TimeOfDay3Hrs= '00:00 To 02:59' TimeOfDay1Hr= '01:00 To 01:59' AND Seconds= 5399 then hardcoded as 2\nWhen TimeOfDay3Hrs='00:00 To 02:59' TimeOfDay1Hr= '01:00 To 00:59' AND Seconds= 7199 then hardcoded as 3\ngoes on until it's hardcoded as 47",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "This attribute has static values of (\"Unknown\",'<1Day',1-<3 Days, 3-<7 Days etc) provided by Commercial Business.\nWhen TimeSpanKey = -1 then hardcoded as \"Unknown\"\nWhen TimeSpanKey = 1 then hardcoded as '<1Day'\nWhen TimeSpanKey = 2 then hardcoded as 1-<3 Days\nWhen TimeSpanKey = 3 then hardcoded as 3-<7 Days\nWhen TimeSpanKey = 4 then hardcoded as 7-<14 Days",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "pls confirm, is it static values or hardcoded ?\nIf it is static, it has to be coming from a static file provided by business.",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "SurrogateKey generated within UDP NRT to identify unique records of DimTimeSpan table.\nWhen TimeSpan = \"Unknown\" then hardcoded as -1\nWhen TimeSpan = '<1Day' then hardcoded as 1\nWhen TimeSpan = '1-<3 Days' then hardcoded as 2\nWhen TimeSpan = '3-<7 Days' then hardcoded as 3\nWhen TimeSpan = '7-<14 Days' then hardcoded as 4\ngoes on until it's hardcoded till 8.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "Ref rno - 27"
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on EXTENSIONATTRIBUTESSR,  SupportAreaNames columns in SupportRequestDetailsSIPv2 Table loaded from Rave data processed by Amplify Source.\nLogic: If EXTENSIONATTRIBUTESSR=1 OR SupportAreaNames like '%OnPrem%'  then Hardcoded as \"On-Prem\" ELSE  Hardcoded as \"Cloud\"",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Use Decode Logic Format- Derived by applying decode logic to columns in tables  from source-",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "This is a reference to DimGeography table to get details about the CustomerCountry. This CustomerCountry is populated by DimGeography.ISOCountryShortName by joining the TenantCountry  in SupportRequestDetailsSIPv2 table coming from Amplify source with ISOCountryShortCode in the DimGeography table coming from UDP Commercial NextDay Datamart within SA&DP.",
+    "L3 - Himanshu: 4-Mar": "Ok\nRefer col G for review comment",
+    "L3 Reviewer Comments": "Provide source as UDPCommercial. Also provide the joining condition.",
+    "L3 Review Status": "THis is an indirect mapping to DimGeo.\nMention it accordingly and the join logic"
+  },
+  {
+    "TechnicalDescription": "This is a reference key to DimGeography table to get details about the CustomerGeographyKey. This key is populated by joining the TenantCountry  in SupportRequestDetailsSIPv2 table coming from Amplify source with ISOCountryShortCode in the DimGeography table coming from Commercial NextDay Datamart within SA&DP.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Ok",
+    "L3 Review Status": "In join logic DimGeo is not used"
+  },
+  {
+    "TechnicalDescription": "This is a reference to DimGeography table to get details about the CustomerGeographyLevel1Name. This DimGeography.CustomerGeographyLevel1Name is populated by GeographyLevel1Name by joining the TenantCountry  in SupportRequestDetailsSIPv2 table coming from Amplify source with ISOCountryShortCode in the DimGeography table coming from UDP Commercial NextDay Datamart within SA&DP.",
+    "L3 - Himanshu: 4-Mar": "Ok\nRefer col G for review comment",
+    "L3 Reviewer Comments": "Provide source as UDPCommercial. Also provide the joining condition.",
+    "L3 Review Status": "Ref rno - 143"
+  },
+  {
+    "TechnicalDescription": "This is a reference to DimGeography table to get details about the CustomerGeographyLevel2Name. This CustomerGeographyLevel2Name is populated by DimGeography.GeographyLevel2Name by joining the TenantCountry  in SupportRequestDetailsSIPv2 table coming from Amplify source with ISOCountryShortCode in the DimGeography table coming from UDP Commercial NextDay Datamart within SA&DP.",
+    "L3 - Himanshu: 4-Mar": "Ok\nRefer col G for review comment",
+    "L3 Reviewer Comments": "Provide source as UDPCommercial. Also provide the joining condition.",
+    "L3 Review Status": "Ref rno - 143"
+  },
+  {
+    "TechnicalDescription": "This is a reference to DimGeography table to get details about the CustomerGeographyLevel3Name. This CustomerGeographyLevel3Name is populated by DimGeography.GeographyLevel3Name by joining the TenantCountry  in SupportRequestDetailsSIPv2 table coming from Amplify source with ISOCountryShortCode in the DimGeography table coming from UDP Commercial NextDay Datamart within SA&DP.",
+    "L3 - Himanshu: 4-Mar": "Ok\nRefer col G for review comment",
+    "L3 Reviewer Comments": "Provide source as UDPCommercial. Also provide the joining condition.",
+    "L3 Review Status": "Ref rno - 143"
+  },
+  {
+    "TechnicalDescription": "This is a reference to DimGeography table to get details about the CustomerGeographyLevel4Name. This CustomerGeographyLevel4Name is populated by DimGeography.GeographyLevel4Name by joining the TenantCountry  in SupportRequestDetailsSIPv2 table coming from Amplify source with ISOCountryShortCode in the DimGeography table coming from UDP Commercial NextDay Datamart within SA&DP.",
+    "L3 - Himanshu: 4-Mar": "Ok\nRefer col G for review comment",
+    "L3 Reviewer Comments": "Provide source as UDPCommercial. Also provide the joining condition.",
+    "L3 Review Status": "Ref rno - 143"
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on Skillids column  in SupportRequestDetailsSIPv2 Table  loaded  from Rave data processed by Amplify source.\nLogic: IF Skillids like '%,458754,%' THEN hardcoded as 'NOAM'\n  WHEN Skillids like '%,458752,%' THEN hardcoded as 'EMEA'\n  WHEN Skillids like '%,458755,%' THEN hardcoded as 'LATAM'\n  WHEN Skillids like '%,458753,%' THEN hardcoded as 'APGC' ",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Refer row #37 where attribute is FiscalCumulativeWeek",
+    "L3 Review Status": "OK"
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to DeliverySubType  column in SupportRequestDetailsSIPv2 table coming from Rave data processed by Amplify Source having String  values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "What is the source table for MDM rules. Mention -\"Business rules in form of Case When Conditions.\"",
+    "L3 Review Status": "what is the significance of - reference table DimDeliveryType. Is it a  source table? Not clear"
+  },
+  {
+    "TechnicalDescription": "This is reference key to the DimDeliveryType to get more details about DeliveryType. This DeliveryType is populated by joining DeliverySubType in DimDeliverySubType table with DeliverySubType in SupportRequestDetails table both the tables are coming from Rave data processed by Amplify source.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "What is the source table for MDM rules. Mention -\"Business rules in form of Case When Conditions.\"",
+    "L3 Review Status": "what is the significance of - reference table DimDeliveryType. Is it a  source table? Not clear"
+  },
+  {
+    "TechnicalDescription": "This is reference key to the DimDeliveryType to get more details about DeliveryTypeKey. This DeliveryTypeKey is populated by joining DeliverySubType in DimDeliverySubType table with DeliverySubType in SupportRequestDetails table both the tables coming from Rave data processed by Amplify source.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Ok",
+    "L3 Review Status": "Paraphrasing is not appropriate"
+  },
+  {
+    "TechnicalDescription": "This is refrencekey to the EmployeeKey to get more details about the DimEmployee. This key is populated by joining PartnerID in FactRequestNRT table coming from Commercial NRT Datamart within SA&DP \\with NativeAgentID in DimEmployeeMapping table coming from UDP Common Database for dynamics cases. ",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Ok",
+    "L3 Review Status": "Maintain the same pattern for similar attributes(phrasing is diffint red as compared to other ref key attributes).\nLogic paraphrasing is also not clear."
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to FiscalMonthName column in DimTime Table coming from UDPCommercial Next Day having string values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Mention Source as UDPCommercial",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to FiscalPeriod column in DimTime Table coming from UDPCommercial Next day having Integer values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Mention Source as UDPCommercial",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "Derived using AcknowledgeDateTime and CreateDateTime columns  in SupportRequestDetailsSIPv2 Table  loaded  from Rave data processed by Amplify source. \nLogic: We take Minutes difference between AcknowledgeDateTime and CreateDateTimec columns.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Don't mention the Date_Diff function. Provide the explanation of logic in Simple english For Ex-> Derived by calculating the time difference of.....",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on Rating column  in SupportRequestDetailsSIPv2 Table  loaded  from Rave data processed by Amplify.\nLogic: If Rating  IS NOT NULL THEN 1 ELSE 0 END.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Remove SR. and mention the Whole table name.",
+    "L3 Review Status": "Ok"
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on CustomerFeedbackDateTime and Comment columns in SupportRequestDetailsSIPv2 Table  loaded  from Rave data processed by Amplify source.\nLogic: IF CustomerFeedbackDateTime IS NOT NULL AND Comment IS NOT NULL AND Comment NOT LIKE '&#%' AND Comment not equal to 'null' AND Comment not equal to 'sovereignscrubbed'\nAND Comment not equal to 'unspecified' THEN True ELSE False",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Ok",
+    "L3 Review Status": "Paraphrasing is not appropriate"
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on ChannelOrgCode,FunctionHierarchyKey,ChannelOrgSummaryName, IsCEnS columns DimFunctionHierarchy table coming from MDM source. \nLogic:\n          If lower(ChannelOrgCode)='b20e' Then true\n          If FunctionHierarchyKey=-1 or ChannelOrgSummaryName='Unknown' or FunctionHierarchyKey is Null THEN\n              CASE \n              If   MDM.IsCEnS is not null then Cast(MDM.IsCEnS as Boolean)\n              Else true\n              END\n         WHEN lower(ChannelOrgCode)<>'b20e' Then false\n          Else true\n          END AS IsCEnS ",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Refer the example provided in Guidelines for this column.",
+    "L3 Review Status": "Paraphrasing is not appropriate"
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to IsCloudServiceRequest column coming from DimSupportServiceRequest table coming from Rave data processed by Amplify Source having boolean values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "OK",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to HasEDU  column in SupportRequestDetailsSIPv2 table coming from Rave data processed by Amplify Source having  Boolean values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "OK",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on TenantCountry column in SupportRequestDetailsSIPv2 Table  loaded  from Rave data processed by Amplify source. \nLogic:  IF TenantCountry IN ('is','li','no','ch','at','be','hr','cy','cz','dk','ee','fi','fr','de','gr','hu','ie','it','lv','lt','lu','mt','nl','pl','pt','ro','sk','si','es','se') THEN True ELSE False END AS IsEU",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "OK",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to EveCritsit column in SupportRequestDetailsSIPv2 table coming from Rave data processed by Amplify Source having boolean values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "OK",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to NewTicket  column in SupportRequestDetailsSIPv2 table coming from Rave data processed by Amplify Source having boolean values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "OK",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to IsPartnerServiceRequest column DimSupportServiceRequest table coming from Rave data processed by Amplify Source having boolean values.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "OK",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to IsPTSolve column in SupportRequestDetailsSIPv2 Table coming from Rave data processed by Amplify Source having boolean values. ",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "OK",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to IsResolved column in SupportRequestDetailsSIPv2 Table coming from Rave data processed by Amplify Source having boolean values ",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "OK",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on SponsoredStrategicFlag colum in  DimCalc table loaded from Commercial NextDay Datamart within SA&DP. \nLogic:IF SponsoredStrategicFlag IS NULL THEN 'No' ELSE SponsoredStrategicFlag END AS IsStrategicFlag.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Provide source.  Remove TP. or use the Full table name and follow indentation.",
+    "L3 Review Status": "Use the std for case-when : decode"
+  },
+  {
+    "TechnicalDescription": "This column is an indirect mapping derived from two sources:  SupportRequestDetailsSIPv2 Table coming from Rave data processed by Amplify Source and the static RavePlanningCategories table. It's mapped based on the CaseType,IssueType, TenantName ,ProgramId columns from the SupportRequestDetailsSIPv2 table, and the values are obtained through specific joins involving key columns like \"SupportAreaName,\" \"OrganizationId,\" and \"RequestId.\"\n\n",
+    "L3 - Himanshu: 4-Mar": "Ok\nIt seems to be a FK/ref key -- Indirect Mapping Complex Lookup Description Updated",
+    "L3 Reviewer Comments": "Provide the table name in MDM. Mention \"Business rules\".",
+    "L3 Review Status": "Paraphrasing is not appropriate"
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on SupportAreaName, SubscriptionType, SkillIds and ProgramId columns in SupportRequestDetailsSIPv2_INC table coming from Rave data processed by Amplify Source.\nLogic: CASE WHEN  SupportAreaName = 'proactive' THEN hardcoded as 1 \n        WHEN SupportAreaName Like 'premier%' AND SubscriptionType = 2 THEN hardcoded as 2\n        WHEN SkillIds Like ('%589825%' or '%393216%' or '%589824%') AND (SubscriptionType IS NULL or not equal to 2) THEN hardcoded as 2 \n        WHEN ProgramId = '5c44c5ec-5fd4-4e45-ab0d-dd9156d1bde9' AND (SubscriptionType IS NULL or not equal to 2) THEN hardcoded as 2\n        ELSE 3 END AS ServiceOfferingKey",
+    "L3 - Himanshu: 4-Mar": "Are we getting ServiceOfferingKey from source itself? -- In Source having RaveServiceOfferingKey . (It's a same table reference attribute : Indirect Mapping)",
+    "L3 Reviewer Comments": "Mention source for FactRequest table",
+    "L3 Review Status": "03/08: Looks good."
+  },
+  {
+    "TechnicalDescription": "This is a reference attribute to DimTheme table to get details of the Technology. Logic: Technology is populated by joining the Theme column in SupportRequestDetailsSIPv2 table coming from Rave data processed by Amplify Source with Theme column in the DimTheme table coming from Commercial NextDay Datamart within SA&DP.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "Mention like below\nbusiness rules in the form of case when statement applied on SupportAreaName provided and maintained by Modern Workspace business.",
+    "L3 Review Status": "Review comment not addressed"
+  },
+  {
+    "TechnicalDescription": "This is reference attribute to the DimGeography table to get more details about the ISOCountryShortName. It is populated by joining TenantCountry column in SupportRequestDetails_NRT intermediate table (refer entity desc for SupportRequestDetails_NRT table derivation) with ISOCountryShortCode column in DimGeography table coming from Commercial NextDay Datamart within SA&DP",
+    "L3 - Himanshu: 4-Mar": "This SupportRequestDetails_NRT is enrichment file, can we mention as intermittent file in bracket?\nSince it is applicable for all attributes can we update at entity level description ?",
+    "L3 Reviewer Comments": "Ok",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Surrogate key generated within UDP NRT to identify unique records of FactRaveUnAssignedSnapshot table. It is generated using RequestId column.",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": "Add source table and source name"
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on RequestAge_Days column in SupportRequestDetails_NRT  intermediate table having string values (refer entity desc for SupportRequestDetails_NRT table derivation).\nLogic:CASE WHEN RequestAge_Days <= 1 Then hardcoded as '00-01 day'\n\tWHEN RequestAge_Days > 1 AND RequestAge_Days <= 3 Then hardcoded as '01-03 days'\n\tWHEN RequestAge_Days > 3 AND RequestAge_Days <= 7 Then hardcoded as '03-07 days'\n\tWHEN RequestAge_Days > 7 AND RequestAge_Days <= 14 Then hardcoded as '07-14 days'\n\tWHEN RequestAge_Days > 14 AND RequestAge_Days <= 21 Then hardcoded as '14-21 days'\n\tWHEN RequestAge_Days > 21 AND RequestAge_Days <= 30 Then hardcoded as '21-30 days'\n\tWHEN RequestAge_Days > 30 AND RequestAge_Days <= 60 Then hardcoded as '30-60 days'\n\tWHEN RequestAge_Days > 60 AND RequestAge_Days <= 90 Then hardcoded as '60-90 days'\n\tWHEN RequestAge_Days > 90 Then hardcoded as '90+ days'\n\tEND AS SRAgeBucket",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "Ok",
+    "L3 Review Status": "Improve Paraphrasing "
+  },
+  {
+    "TechnicalDescription": "This is reference Key to the DimCauseType table to get more details about CauseTypeKey. This key is populated by joining CauseType column in Cases table coming from DFM Events data processed by Cornerstone with CauseType in the DimCauseType coming from Commercial NextDay Datamart within SA&DP..",
+    "L3 - Himanshu: 4-Mar": "Mention source\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on KPIState column in DimKPIState table coming from Commercial NextDay Datamart within SA&DP and  State, Name and SRNumber columns in KPIFlash intermediate table.\nKPIFLASH: This intermediate table is derived from KPI table coming from DFM Events data processed by Cornerstone by taking SRNumber, max of State column by grouping on SRNumber and Lower(Name) \nLogic -  \nStep-1: DimKPIState table is joined with KPIFLASH intermediate table on join condition DimKPIState.KPIState = KPIFLASH.State and LOWER(KPIFLASH.Name) = 'fcr' to pick max of DimKPIState.KPIStateKey grouped by on KPIFLASH.SRNumber\nStep-2: If KPIStateKey derived in step 1 is NULL then hardcoded as -1 else whatever value coming in KPIStateKey is populated.",
+    "L3 - Himanshu: 4-Mar": "Revisit - step 3 paraphrasing not clear\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on KPIState column in DimKPIState table coming from Commercial NextDay Datamart within SA&DP and  State, Name and SRNumber columns in KPIFlash intermediate table.\nKPIFLASH: This intermediate table is derived from KPI table coming from DFM Events data processed by Cornerstone by taking SRNumber, max of State column by grouping on SRNumber and Lower(Name) \nLogic -  \nStep-1: DimKPIState table is joined with KPIFLASH intermediate table on join condition DimKPIState.KPIState = KPIFLASH.State and LOWER(KPIFLASH.Name) = 'fdr' to pick max of DimKPIState.KPIStateKey grouped by on KPIFLASH.SRNumber\nStep-2: If KPIStateKey derived in step 1 is NULL then hardcoded as -1 else whatever value coming in KPIStateKey is populated.",
+    "L3 - Himanshu: 4-Mar": "Revisit\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic based on CompletedDateTime, ExpireDateTime, SlaType columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic : Step 1- We consider the max value of CompletedDateTime and ExpireDateTime columns when SlaType = 'initialresponse'\nStep 2- If max of CompletedDateTime is greater than ExpireDateTime then hardcoded as 'Missed'\nStep 3- If max of CompletedDateTime is less than or equal to ExpireDateTime then hardcoded as 'Met' Else 'Unknown' END AS  IRStatus",
+    "L3 - Himanshu: 4-Mar": "Checked the condition \nCASE WHEN SlaType = 'initialresponse' THEN CompletedDateTime END ) is greater than MAX of (CASE WHEN SlaType = 'initialresponse' THEN ExpireDateTime END )\nUpdated Ram\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Indirect mapping to IRStatusKey in DimIRStatus table coming from Commercial NRT Datamart within SA&DP.\nLogic: Step1- It is fetched by joining IRStatus column in DimIRStatus table with IRStatus column in SlaItem table coming from DFM Events data processed by Cornerstone.\nStep2- If IRStatusKey is NULL from step1 then replaces it with -1. ",
+    "L3 - Himanshu: 4-Mar": "Check the line \"IdleTimeSpanKey is NULL from step 1\"?\nUpdated Ram\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on TenantName column in DimTenant table, DataSourceKey column in DimDataSource table, QueueName column in DimQueue table coming from Commercial NextDay Datamart within SA&DP, EmployeeEmail and CSCompanyAgency columns in DimEmployee table coming from UDP Common Database for dynamics cases, PreviousRoutingQueueName column in SREvents table coming from DFM Events data processed by Cornerstone and SupportAreaName column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP \nLogic:CASE WHEN TenantName LIKE '%contoso%' OR 'mstest_%' OR 'test_test_%' OR 'test' OR 'msft' THEN 0\n\t            WHEN DataSourceKey = 203 AND EmployeeEmail NOT LIKE '%offagent%'\n                                AND CSCompanyAgency NOT IN ('Avande', 'Experis', 'Mural', 'Rhipe', 'Sherweb', 'Subfero Ltd', 'Zones Inc')\n\t\t\t\tAND WHEN QueueName OR PreviousRoutingQueueName NOT IN ( 'MSaaS Rave Transfers', 'Engineering')\n\t\t\t\tAND SupportAreaName NOT LIKE '%test%' OR SupportAreaName NOT LIKE '%lab%'\n\t\t   THEN 1 ELSE 0 END AS IsCubeFlag",
+    "L3 - Himanshu: 4-Mar": "To be checked by dev\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic based on ServiceRequestID column in Cases table coming from DFM Events data processed by Cornerstone and DataSourceKey column in DimDataSource table coming from Commercial NextDay Datamart within SA&DP.\nLogic: Step 1- If DatasourceKey=3 it then goes to step 2 else step 3.\nStep2- If ServiceRequestID column is not NULL then it's hardcoded as 'Yes' else 'No'. \nStep3- It assigns the value 'Unknown'.",
+    "L3 - Himanshu: 4-Mar": "Rewrite the desc, paraphrasing is missing.\nUpdated Ram\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on CompletedOn and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Step 1- Calculates time difference in minutes between CompletedOn and CreatedDateTime columns in Cases table. \nStep 2- If the value from step 1 is less than or equal to 30 minutes it's hardcoded as 1 else 0.",
+    "L3 - Himanshu: 4-Mar": "paraphrasing is missing, rewrite\nUpdated Ram\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct mapping to PlanningCategoryKey column in FactSupportServiceRequest table comng from Commercial NextDay Datamart within SA&DP source having integer values.",
+    "L3 - Himanshu: 4-Mar": "ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic based on Row_InitialPreviousRoutingContext ,EventDateTime columns in SREvents table coming from DFM Events data processed by Cornerstone .\nLogic: - Step1- WHEN Row_InitialPreviousRoutingContext = 1 from SREvents table then we consider QueueKey from DimQueue table coming from Commercial NextDay Datamart within SA&DP by joining PreviousRoutingContextId in SREvents table with NativeQueueID in DimQueue table.\nStep2- The QueueKey fetched from step1 is aliased as PreviousAssignedQueueKey.",
+    "L3 - Himanshu: 4-Mar": "Rewritethe description for significance of queuekey\nCan you confirm if is it reference key (queueKey) ? If yes, this need to updated as reference key in desc.\n[Eshwar] This is not reference key.\nOk.",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived attribute of datatype int based on CreatedDateTime column in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:Step1-  It fetches the date portion from CreatedDateTime and removes hyphens from it.\nStep2-If SRCreatedDateTimeId from step1 has null values then it replaces it with -1.",
+    "L3 - Himanshu: 4-Mar": "Rewrite the logic in desc, by mentioning like below:\nIt extracts the date from CreateDateTime by removing the Hyphen.\nOk",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived attribute of datatype int based on CreatedDateTime  column in Cases table from DFM data processed by Cornerstone.It is joined using SRNumber from both FactSupportData and Cases table.\nLogic:Step1- It calculates the number of seconds passed since the start of the day (midnight) for a given CreatedDateTime. \n           Step2- It then rounds the value fetched from step1 up to the nearest 30-minute interval and subtracts 1 second and aliased as SRCreatedDateTimeSeconds.\n\nExample: The CreatedDateTime is 2024-03-07 15:25:30,\n                Step1 : Calculate Seconds from 12 am and the time difference is 15 h 25 min 30 sec, which equals to 55,530 seconds.\n                Step 2: Divide 55,530 sec by 1800 (seconds in 30 minutes), resulting in 30.85 and round off which would be 31 mins.\n                Step 3: Multiply 31 min (from step 2) by 1800 to get Seconds in 30-minute Increments that is 55,800 seconds.\n                 Step 4: Subtract 1 second from 55,800 seconds, resulting in 55,799 seconds end as SRCreatedDateTimeSeconds.\n",
+    "L3 - Himanshu: 4-Mar": "Logic is not clear, check\nupdated\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Surrogate key generated within UDP NRT to identify unique records of FactSREvents table.It is generated using SRNumber.",
+    "L3 - Himanshu: 4-Mar": "ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on EventDateTime column in DFM Events data processed by Cornerstone.\nLogic: Step1- It extracts the date portion of EventDateTime.\nStep2- If SRModifiedTimeId from step1 has null values then it's replaced with -1.",
+    "L3 - Himanshu: 4-Mar": "Logic update by referring to SRCreatedDateTimeId column\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on StateAnnotation and EventDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:Step1 - It extracts the date portion of \"EventDateTime\" WHEN \"StateAnnotation\"= ('identifying the issue', 'identifying issue', 'scope').\nStep2 - If step 1 fetches null values then ut replaced with -1",
+    "L3 - Himanshu: 4-Mar": "Logic update by referring to SRCreatedDateTimeId column\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived  by applying decode logic on IncidentType and CaseType columns in Cases table coming from DFM Events data processed by Cornerstone having string values.\nLogic :\nStep 1 : It checks if a certain condition involving IncidentType column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP is true. \nStep 2: If Step 1 is true, then it checks the value of SRType  column in Cases table coming from DFM Events data processed by Cornerstone and assigns specific values based on different scenarios. \nStep 3: If the initial condition from Step 1 is false, it returns the result as 'Unknown'.",
+    "L3 - Himanshu: 4-Mar": "Write the logic in steps\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Dervied by applying decode logic on column Severity loaded from Cases table from DFM Events data processed by Cornerstone. Logic: Taking the first value of Severity column from Cases entity by grouping on SR Number and order by based on Eventdatetime.",
+    "L3 - Himanshu: 4-Mar": "Ok",
+    "L3 Reviewer Comments": "What is significanc of A, please define.\nCheck the logic part,  where it can be updated like below\nexample : Taking the first value of severity column from entity X by grouping on SR number\u2026........",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct Mapping to ARRTypeDerived column in FactSREvents table coming from Commercial NRT Datamart within SA&DP having string values.",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "What is significanc of FI, please define.\nBreak down into IF Else statements.",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "This attribute has static values of (Unknown,Critical) provided by Commercial Business and uploaded through flat file.",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "Phrase the description properly for red highlighted.\nMention entity for ExpiresDateTime",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on column SRCreationDateTime in FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic:\nWHEN (SRCreationDateTime) BETWEEN 1 AND 8 THEN 'Asia'\nWHEN (SRCreationDateTime) BETWEEN 9 AND 16 THEN 'EMEA'\nWHEN (SRCreationDateTime) BETWEEN 17 AND 24 OR HOUR(SRCreationDateTime)=0 THEN 'Americas' END AS ManagementAccountableForSR",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "What is significanc of FI, please define.",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on column SLAExpiresTime, SLACompletedTime  from SLAEvents from Commercial NRT Datamart within SA&DP source.\nLogic: Calculates the time difference in minutes between SLAExpiresTime and either the Current Timestamp or SLACompletedTime, if SLACompletedTime is null. If the conditions are not met, it returns 0; otherwise 1.",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "What is significanc of SLA, please define.",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It calculates the MinutesPastSLA into different time ranges and providing corresponding labels.\n1)WHEN MinutesPastSLA > 7200 THEN '>5 Days'\n2)WHEN MinutesPastSLA > 4320 THEN '>3 Days'\n3)WHEN MinutesPastSLA > 1440 THEN '>1 Day'\n4)WHEN MinutesPastSLA > 480 THEN '>8 Hours'\n5)ELSE '< 8 Hours'.",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "What is significanc of FI, please define.",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It takes the MinutesPastSLA duration and formats it into a string representation of days and hours (e.g., \"2 D | 4 H\"). If MinutesPastSLA is null, the result is also null.",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "What is significanc of FI, please define.",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It evaluates the value of MinutesPastSLA and assigns a priority level based on different conditions.\n1)WHEN MinutesPastSLA > 7200 THEN 1: If MinutesPastSLA is greater than 7200 (which corresponds to 5 days), it assigns a priority level of 1.\n2)WHEN MinutesPastSLA > 4320 THEN 2: If MinutesPastSLA is between 4320 (3 days) and 7200 (5 days), it assigns a priority level of 2.\n3)WHEN MinutesPastSLA > 1440 THEN 3: If MinutesPastSLA is between 1440 (1 day) and 4320 (3 days), it assigns a priority level of 3.\n4)WHEN MinutesPastSLA > 480 THEN 4: If MinutesPastSLA is between 480 minutes (8 hours) and 1440 (1 day), it assigns a priority level of 4.\nELSE 5) If none of the above conditions are met, it assigns a priority level of 5.",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "What is significanc of FI, please define.",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on State, StateLastUpdatedDateTime and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:  When State ='Open' it calculates the difference in hours between Current Timestamp and CreatedDateTime column in Cases table.\n               When State ='Closed' it calculates the difference in hours between StateLastUpdatedDateTime and CreatedDateTime columns in Cases table.\n                If the result when either of the above conditions met it assign 1 else it assign 0 when any of the DateTime column is null.",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "What is significanc of FI, please define.\nPut Logic in paraphrasing like (case when / if else/\u2026)",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on column SRCreationDateTime in FactSREvents table coming from Commercial NRT Datamart within SA&DP source having integer values.\nLogic:  It calculates the number of minutes that have passed between the current time and the SRCreationDateTime from FactSREvents table and labels this duration as \"SRCreationMinutes.\"",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "What is significanc of FI, please define.\nMention current timestamp instead of unix timestamp in the logic.",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic CompletedDateTime,Type and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone.\nLogic: It calculates  minute difference between CompletedDateTime and CreatedDateTime columns When Type = 'InitialResponse' in Cases table.",
+    "L3 - Himanshu: 4-Mar": null,
+    "L3 Reviewer Comments": "Mention word \"column\" for \"type\".\nPhrase the sentence properly for red highlighted.",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "This is reference Key to the DimCauseType table to get more details about CauseTypeKey. This key is populated by joining CauseType column in Cases table coming from DFM Events data processed by Cornerstone with CauseType in the DimCauseType coming from Commercial NextDay Datamart within SA&DP..",
+    "L3 - Himanshu: 4-Mar": "Mention source\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on KPIState column in DimKPIState table coming from Commercial NextDay Datamart within SA&DP and  State, Name and SRNumber columns in KPIFlash intermediate table.\nKPIFLASH: This intermediate table is derived from KPI table coming from DFM Events data processed by Cornerstone by taking SRNumber, max of State column by grouping on SRNumber and Lower(Name) \nLogic -  \nStep-1: DimKPIState table is joined with KPIFLASH intermediate table on join condition DimKPIState.KPIState = KPIFLASH.State and LOWER(KPIFLASH.Name) = 'fcr' to pick max of DimKPIState.KPIStateKey grouped by on KPIFLASH.SRNumber\nStep-2: If KPIStateKey derived in step 1 is NULL then hardcoded as -1 else whatever value coming in KPIStateKey is populated.",
+    "L3 - Himanshu: 4-Mar": "Revisit - step 3 paraphrasing not clear\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on KPIState column in DimKPIState table coming from Commercial NextDay Datamart within SA&DP and  State, Name and SRNumber columns in KPIFlash intermediate table.\nKPIFLASH: This intermediate table is derived from KPI table coming from DFM Events data processed by Cornerstone by taking SRNumber, max of State column by grouping on SRNumber and Lower(Name) \nLogic -  \nStep-1: DimKPIState table is joined with KPIFLASH intermediate table on join condition DimKPIState.KPIState = KPIFLASH.State and LOWER(KPIFLASH.Name) = 'fdr' to pick max of DimKPIState.KPIStateKey grouped by on KPIFLASH.SRNumber\nStep-2: If KPIStateKey derived in step 1 is NULL then hardcoded as -1 else whatever value coming in KPIStateKey is populated.",
+    "L3 - Himanshu: 4-Mar": "Revisit\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic based on CompletedDateTime, ExpireDateTime, SlaType columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic : Step 1- We consider the max value of CompletedDateTime and ExpireDateTime columns when SlaType = 'initialresponse'\nStep 2- If max of CompletedDateTime is greater than ExpireDateTime then hardcoded as 'Missed'\nStep 3- If max of CompletedDateTime is less than or equal to ExpireDateTime then hardcoded as 'Met' Else 'Unknown' END AS  IRStatus",
+    "L3 - Himanshu: 4-Mar": "Checked the condition \nCASE WHEN SlaType = 'initialresponse' THEN CompletedDateTime END ) is greater than MAX of (CASE WHEN SlaType = 'initialresponse' THEN ExpireDateTime END )\nUpdated Ram\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Indirect mapping to IRStatusKey in DimIRStatus table coming from Commercial NRT Datamart within SA&DP.\nLogic: Step1- It is fetched by joining IRStatus column in DimIRStatus table with IRStatus column in SlaItem table coming from DFM Events data processed by Cornerstone.\nStep2- If IRStatusKey is NULL from step1 then replaces it with -1. ",
+    "L3 - Himanshu: 4-Mar": "Check the line \"IdleTimeSpanKey is NULL from step 1\"?\nUpdated Ram\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on TenantName column in DimTenant table, DataSourceKey column in DimDataSource table, QueueName column in DimQueue table coming from Commercial NextDay Datamart within SA&DP, EmployeeEmail and CSCompanyAgency columns in DimEmployee table coming from UDP Common Database for dynamics cases, PreviousRoutingQueueName column in SREvents table coming from DFM Events data processed by Cornerstone and SupportAreaName column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP \nLogic:CASE WHEN TenantName LIKE '%contoso%' OR 'mstest_%' OR 'test_test_%' OR 'test' OR 'msft' THEN 0\n\t            WHEN DataSourceKey = 203 AND EmployeeEmail NOT LIKE '%offagent%'\n                                AND CSCompanyAgency NOT IN ('Avande', 'Experis', 'Mural', 'Rhipe', 'Sherweb', 'Subfero Ltd', 'Zones Inc')\n\t\t\t\tAND WHEN QueueName OR PreviousRoutingQueueName NOT IN ( 'MSaaS Rave Transfers', 'Engineering')\n\t\t\t\tAND SupportAreaName NOT LIKE '%test%' OR SupportAreaName NOT LIKE '%lab%'\n\t\t   THEN 1 ELSE 0 END AS IsCubeFlag",
+    "L3 - Himanshu: 4-Mar": "To be checked by dev\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic based on ServiceRequestID column in Cases table coming from DFM Events data processed by Cornerstone and DataSourceKey column in DimDataSource table coming from Commercial NextDay Datamart within SA&DP.\nLogic: Step 1- If DatasourceKey=3 it then goes to step 2 else step 3.\nStep2- If ServiceRequestID column is not NULL then it's hardcoded as 'Yes' else 'No'. \nStep3- It assigns the value 'Unknown'.",
+    "L3 - Himanshu: 4-Mar": "Rewrite the desc, paraphrasing is missing.\nUpdated Ram\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on CompletedOn and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Step 1- Calculates time difference in minutes between CompletedOn and CreatedDateTime columns in Cases table. \nStep 2- If the value from step 1 is less than or equal to 30 minutes it's hardcoded as 1 else 0.",
+    "L3 - Himanshu: 4-Mar": "paraphrasing is missing, rewrite\nUpdated Ram\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Direct mapping to PlanningCategoryKey column in FactSupportServiceRequest table comng from Commercial NextDay Datamart within SA&DP source having integer values.",
+    "L3 - Himanshu: 4-Mar": "ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic based on Row_InitialPreviousRoutingContext ,EventDateTime columns in SREvents table coming from DFM Events data processed by Cornerstone .\nLogic: - Step1- WHEN Row_InitialPreviousRoutingContext = 1 from SREvents table then we consider QueueKey from DimQueue table coming from Commercial NextDay Datamart within SA&DP by joining PreviousRoutingContextId in SREvents table with NativeQueueID in DimQueue table.\nStep2- The QueueKey fetched from step1 is aliased as PreviousAssignedQueueKey.",
+    "L3 - Himanshu: 4-Mar": "Rewritethe description for significance of queuekey\nCan you confirm if is it reference key (queueKey) ? If yes, this need to updated as reference key in desc.\n[Eshwar] This is not reference key.\nOk.",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived attribute of datatype int based on CreatedDateTime column in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:Step1-  It fetches the date portion from CreatedDateTime and removes hyphens from it.\nStep2-If SRCreatedDateTimeId from step1 has null values then it replaces it with -1.",
+    "L3 - Himanshu: 4-Mar": "Rewrite the logic in desc, by mentioning like below:\nIt extracts the date from CreateDateTime by removing the Hyphen.\nOk",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived attribute of datatype int based on CreatedDateTime  column in Cases table from DFM data processed by Cornerstone.It is joined using SRNumber from both FactSupportData and Cases table.\nLogic:Step1- It calculates the number of seconds passed since the start of the day (midnight) for a given CreatedDateTime. \n           Step2- It then rounds the value fetched from step1 up to the nearest 30-minute interval and subtracts 1 second and aliased as SRCreatedDateTimeSeconds.\n\nExample: The CreatedDateTime is 2024-03-07 15:25:30,\n                Step1 : Calculate Seconds from 12 am and the time difference is 15 h 25 min 30 sec, which equals to 55,530 seconds.\n                Step 2: Divide 55,530 sec by 1800 (seconds in 30 minutes), resulting in 30.85 and round off which would be 31 mins.\n                Step 3: Multiply 31 min (from step 2) by 1800 to get Seconds in 30-minute Increments that is 55,800 seconds.\n                 Step 4: Subtract 1 second from 55,800 seconds, resulting in 55,799 seconds end as SRCreatedDateTimeSeconds.\n",
+    "L3 - Himanshu: 4-Mar": "Logic is not clear, check\nupdated\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Surrogate key generated within UDP NRT to identify unique records of FactSREvents table.It is generated using SRNumber.",
+    "L3 - Himanshu: 4-Mar": "ok",
+    "L3 Reviewer Comments": "Provide the logic for surrogate key generation like which columns ?",
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on EventDateTime column in DFM Events data processed by Cornerstone.\nLogic: Step1- It extracts the date portion of EventDateTime.\nStep2- If SRModifiedTimeId from step1 has null values then it's replaced with -1.",
+    "L3 - Himanshu: 4-Mar": "Logic update by referring to SRCreatedDateTimeId column\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived by applying decode logic on StateAnnotation and EventDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:Step1 - It extracts the date portion of \"EventDateTime\" WHEN \"StateAnnotation\"= ('identifying the issue', 'identifying issue', 'scope').\nStep2 - If step 1 fetches null values then ut replaced with -1",
+    "L3 - Himanshu: 4-Mar": "Logic update by referring to SRCreatedDateTimeId column\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  },
+  {
+    "TechnicalDescription": "Derived  by applying decode logic on IncidentType and CaseType columns in Cases table coming from DFM Events data processed by Cornerstone having string values.\nLogic :\nStep 1 : It checks if a certain condition involving IncidentType column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP is true. \nStep 2: If Step 1 is true, then it checks the value of SRType  column in Cases table coming from DFM Events data processed by Cornerstone and assigns specific values based on different scenarios. \nStep 3: If the initial condition from Step 1 is false, it returns the result as 'Unknown'.",
+    "L3 - Himanshu: 4-Mar": "Write the logic in steps\nok",
+    "L3 Reviewer Comments": null,
+    "L3 Review Status": null
+  }
+]
