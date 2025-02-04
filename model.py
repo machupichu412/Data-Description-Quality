@@ -8,7 +8,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using device: {device}")
 
 # load dataset
-df = pd.read_csv("reviews.csv")  # ensure your file is in the correct location
+df = pd.read_csv("data.csv")  
 
 # classification labels
 df["label"] = df["label"].apply(lambda x: 1 if x == "positive" else 0)
