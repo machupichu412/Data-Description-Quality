@@ -60,6 +60,6 @@ tokenizer.save_pretrained("fine_tuned_llama")
 classifier = pipeline("text-classification", model="fine_tuned_llama", device=0 if torch.cuda.is_available() else -1)
 
 # results
-test_comment = "Entity: This entity stores customer transactions. | Attribute: Transaction Amount field stores monetary values. | Service: Used for financial reporting."
+test_comment = "This Attribute has a static value - <3001> decided by commercial business and uploaded through flat file."
 result = classifier(test_comment)
 print(f"Classification Result: {result}")
