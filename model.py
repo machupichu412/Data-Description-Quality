@@ -26,7 +26,7 @@ model = AutoModelForSequenceClassification.from_pretrained(model_name, num_label
 
 # tokenize data
 def preprocess_function(examples):
-    return tokenizer(examples["combined_text"], truncation=True, padding=True, max_length=512)
+    return tokenizer(examples["TechnicalDescription"], truncation=True, padding=True, max_length=512)
 
 tokenized_datasets = dataset.map(preprocess_function, batched=True)
 
