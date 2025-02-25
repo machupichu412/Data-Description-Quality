@@ -1,0 +1,442 @@
+[
+  {
+    "reverse_engineered_description": "This Attribute has a static value - <3001> uploaded through flat file.",
+    "comment": "Provide the logic for surrogate key generation like which columns?",
+    "final_description": "This Attribute has a static value - <3001> decided by commercial business and uploaded through flat file."
+  },
+  {
+    "reverse_engineered_description": "Direct mapping to ARRType column coming from DimARRService table.",
+    "comment": "Is it a static source file? Re-check and phrase it accordingly.",
+    "final_description": "Direct mapping to ARRType column coming from static file having string values provided by commercial business."
+  },
+  {
+    "reverse_engineered_description": "Direct mapping to ServiceName column coming from DimARRService table.",
+    "comment": "Is it a static source file? Re-check and phrase it accordingly.",
+    "final_description": "Direct mapping to ServiceName column coming from static file having string values provided by commercial business."
+  },
+  {
+    "reverse_engineered_description": "Direct mapping to ServicePackageSKU column coming from DimARRService table.",
+    "comment": "Is it a static source file? Re-check and phrase it accordingly.",
+    "final_description": "Direct mapping to ServicePackageSKU column coming from static file having string values provided by commercial business."
+  },
+  {
+    "reverse_engineered_description": "This Attribute has a static value (2001,2002,2003,2004,2005) uploaded through flat file.",
+    "comment": "Provide the logic for surrogate key generation like which columns?",
+    "final_description": "This Attribute has a static value (2001,2002,2003,2004,2005) provided by commercial business and uploaded through flat file."
+  },
+  {
+    "reverse_engineered_description": "Direct mapping to ARRType column coming from DimARRService table.",
+    "comment": "Is it a static source file? Re-check and phrase it accordingly.",
+    "final_description": "Direct mapping to ARRType column coming from static file having string values provided by commercial business."
+  },
+  {
+    "reverse_engineered_description": "Direct mapping to ServicePackageName column coming from DimARRService table.",
+    "comment": "Is it a static source file? Re-check and phrase it accordingly.",
+    "final_description": "Direct mapping to ServicePackageName column coming from static file having string values provided by commercial business."
+  },
+  {
+    "reverse_engineered_description": "SurrogateKey generated within UDP NRT to identify unique records of DimCauseType table.",
+    "comment": "Provide the logic for surrogate key generation like which columns? Add source table and source name.",
+    "final_description": "SurrogateKey generated within UDP NRT to identify unique records of DimCauseType table. Generated based on the column CauseType."
+  },
+  {
+    "reverse_engineered_description": "The attribute has hardcoded values of >= 7Days <14Days, < 5hrs, >= Day <3Days, >= 21Days <31Days, Unknown.",
+    "comment": "Please confirm, is it static values or hardcoded? If it is static, it has to be coming from a static file provided by business.",
+    "final_description": "The attribute has static values of  >= 7Days <14Days , < 5hrs , >= Day <3Days , >= 21Days <31Days , Unknown , decided by commercial business and uploaded through flat file."
+  },
+  {
+    "reverse_engineered_description": "The attribute has hardcoded values of >= 7Days <14Days, <1Day, >= 21Days <31Days, >= 1Day <3Days, Unknown.",
+    "comment": "Refer row #15 where attribute is IdleTimeL1 and entity is vwdimidletimespan.",
+    "final_description": "The attribute has static values of  >= 7Days <14Days , <1Day , >= 21Days <31Days , >= 1Day <3Days , Unknown ,decided by commercial business and uploaded through flat file."
+  },
+  {
+    "reverse_engineered_description": "SurrogateKey generated within UDP NRT to identify unique records of DimIdleTimeSpan table.",
+    "comment": "Provide the logic for surrogate key generation like which columns?",
+    "final_description": "SurrogateKey generated within UDP NRT to identify unique records of DimIdleTimeSpan table.\nWhen IdleTimeL1 & IdleTimeL2 = \"Unknown\" and Sort=0 then hardcoded as -1\nWhen IdleTimeL1 ='< 5hrs' & IdleTimeL2 = '<1Day' and Sort=1 then hardcoded as 1\nWhen IdleTimeL1 ='>= 5hrs <8hrs' & IdleTimeL2 = '<1Day' and Sort=1 then hardcoded as 2\nWhen IdleTimeL1 ='>= 8hrs <16hrs' & IdleTimeL2 = '<1Day' and Sort=1 then hardcoded as 3\nWhen IdleTimeL1 ='>= 16hrs <1Day' & IdleTimeL2 = '<1Day' and Sort=1 then hardcoded as 4\nand goes on until it's hardcoded as 10."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on RequestAge_Days column in SupportRequestDetails_NRT intermediate table. The logic involves several conditional checks based on the values in RequestAge_Days, which categorize the data into different age buckets.",
+    "comment": "Improve Paraphrasing",
+    "final_description": "Derived by applying decode logic on RequestAge_Days column in SupportRequestDetails_NRT intermediate table having string values (refer entity desc for SupportRequestDetails_NRT table derivation).\nLogic:CASE WHEN RequestAge_Days <= 1 Then hardcoded as '00-01 day' ... END AS SRAgeBucket"
+  },
+  {
+    "reverse_engineered_description": "Reference Key to the DimCauseType table is used to get more details about CauseTypeKey, populated by joining CauseType column in Cases table with CauseType column in the DimCauseType table.",
+    "comment": "Mention source",
+    "final_description": "This is reference Key to the DimCauseType table to get more details about CauseTypeKey. This key is populated by joining CauseType column in Cases table coming from DFM Events data processed by Cornerstone with CauseType in the DimCauseType coming from Commercial NextDay Datamart within SA&DP."
+  },
+  {
+    "reverse_engineered_description": "This logic derives a value by applying decode logic on KPIState column in the DimKPIState table and State, Name, and SRNumber columns in the KPIFlash intermediate table. The process includes joining DimKPIState and KPIFLASH, and using conditional checks to determine the final value of KPIStateKey.",
+    "comment": "Revisit - step 3 paraphrasing not clear",
+    "final_description": "Derived by applying decode logic on KPIState column in DimKPIState table coming from Commercial NextDay Datamart within SA&DP and  State, Name and SRNumber columns in KPIFlash intermediate table. ... Step-2: If KPIStateKey derived in step 1 is NULL then hardcoded as -1 else whatever value coming in KPIStateKey is populated."
+  },
+  {
+    "reverse_engineered_description": "This logic derives a value by applying decode logic on KPIState column in the DimKPIState table and State, Name, and SRNumber columns in the KPIFlash intermediate table. The process includes joining DimKPIState and KPIFLASH, and using conditional checks to determine the final value of KPIStateKey.",
+    "comment": "Revisit",
+    "final_description": "Derived by applying decode logic on KPIState column in DimKPIState table coming from Commercial NextDay Datamart within SA&DP and  State, Name and SRNumber columns in KPIFlash intermediate table. ... Step-2: If KPIStateKey derived in step 1 is NULL then hardcoded as -1 else whatever value coming in KPIStateKey is populated."
+  },
+  {
+    "reverse_engineered_description": "This logic uses decode logic based on the CompletedDateTime, ExpireDateTime, and SlaType columns in the Cases table to categorize status values into 'Met', 'Missed', or 'Unknown' depending on the conditions applied to the respective times.",
+    "comment": "Checked the condition \nCASE WHEN SlaType = 'initialresponse' THEN CompletedDateTime END ) is greater than MAX of (CASE WHEN SlaType = 'initialresponse' THEN ExpireDateTime END )\nUpdated Ram",
+    "final_description": "Derived by applying decode logic based on CompletedDateTime, ExpireDateTime, SlaType columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic : Step 1- We consider the max value of CompletedDateTime and ExpireDateTime columns when SlaType = 'initialresponse' ... END AS IRStatus"
+  },
+  {
+    "reverse_engineered_description": "Indirect mapping to IRStatusKey in DimIRStatus table, derived by joining IRStatus column in DimIRStatus table with IRStatus column in SlaItem table, replacing NULL values with -1.",
+    "comment": "Check the line \"IdleTimeSpanKey is NULL from step 1\"?\nUpdated Ram",
+    "final_description": "Indirect mapping to IRStatusKey in DimIRStatus table coming from Commercial NRT Datamart within SA&DP.\nLogic: Step1- It is fetched by joining IRStatus column in DimIRStatus table with IRStatus column in SlaItem table coming from DFM Events data processed by Cornerstone."
+  },
+  {
+    "reverse_engineered_description": "This logic applies decode logic based on several columns including TenantName, DataSourceKey, QueueName, and others from various tables like DimTenant, DimDataSource, DimQueue, DimEmployee, and others to determine the IsCubeFlag value based on multiple conditions.",
+    "comment": "To be checked by dev",
+    "final_description": "Derived by applying decode logic on TenantName column in DimTenant table, DataSourceKey column in DimDataSource table, QueueName column in DimQueue table coming from Commercial NextDay Datamart within SA&DP, EmployeeEmail and CSCompanyAgency columns in DimEmployee table coming from UDP Common Database for dynamics cases ... CASE WHEN TenantName LIKE '%contoso%' ... END AS IsCubeFlag"
+  },
+  {
+    "reverse_engineered_description": "This logic uses decode logic based on ServiceRequestID and DataSourceKey columns from the Cases table and DimDataSource table to assign 'Yes', 'No', or 'Unknown' values based on conditions applied to the columns.",
+    "comment": "Rewrite the desc, paraphrasing is missing.",
+    "final_description": "Derived by applying decode logic based on ServiceRequestID column in Cases table coming from DFM Events data processed by Cornerstone and DataSourceKey column in DimDataSource table coming from Commercial NextDay Datamart within SA&DP.\nLogic: Step 1- If DatasourceKey=3 it then goes to step 2 else step 3.\nStep2- If ServiceRequestID column is not NULL then it's hardcoded as 'Yes' else 'No'. \nStep3- It assigns the value 'Unknown'."
+  },
+  {
+    "reverse_engineered_description": "This logic calculates the time difference in minutes between CompletedOn and CreatedDateTime columns in the Cases table and uses that to assign a value of 1 or 0 based on whether the difference is less than or equal to 30 minutes.",
+    "comment": "paraphrasing is missing, rewrite",
+    "final_description": "Derived by applying decode logic on CompletedOn and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Step 1- Calculates time difference in minutes between CompletedOn and CreatedDateTime columns in Cases table. \nStep 2- If the value from step 1 is less than or equal to 30 minutes it's hardcoded as 1 else 0."
+  },
+  {
+    "reverse_engineered_description": "Direct mapping to PlanningCategoryKey column in FactSupportServiceRequest table, indicating an integer value based on the source.",
+    "comment": "Provide the logic for surrogate key generation like which columns ?",
+    "final_description": "Direct mapping to PlanningCategoryKey column in FactSupportServiceRequest table comng from Commercial NextDay Datamart within SA&DP source having integer values."
+  },
+  {
+    "reverse_engineered_description": "This logic derives a value based on Row_InitialPreviousRoutingContext and EventDateTime columns in the SREvents table, using a conditional check to join with the DimQueue table and fetch the QueueKey, which is then aliased as PreviousAssignedQueueKey.",
+    "comment": "Rewritethe description for significance of queuekey",
+    "final_description": "Derived by applying decode logic based on Row_InitialPreviousRoutingContext ,EventDateTime columns in SREvents table coming from DFM Events data processed by Cornerstone .\nLogic: - Step1- WHEN Row_InitialPreviousRoutingContext = 1 from SREvents table then we consider QueueKey from DimQueue table coming from Commercial NextDay Datamart within SA&DP by joining PreviousRoutingContextId in SREvents table with NativeQueueID in DimQueue table."
+  },
+  {
+    "reverse_engineered_description": "This derived attribute extracts the date portion from CreatedDateTime and removes hyphens, assigning a value of -1 if the result is NULL.",
+    "comment": "Rewrite the logic in desc, by mentioning like below:\nIt extracts the date from CreateDateTime by removing the Hyphen.",
+    "final_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:Step1-  It fetches the date portion from CreatedDateTime and removes hyphens from it.\nStep2-If SRCreatedDateTimeId from step1 has null values then it replaces it with -1."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on RequestAge_Days column in SupportRequestDetails_NRT intermediate table. The logic involves several conditional checks based on the values in RequestAge_Days, which categorize the data into different age buckets.",
+    "comment": "Improve Paraphrasing",
+    "final_description": "Derived by applying decode logic on RequestAge_Days column in SupportRequestDetails_NRT intermediate table having string values (refer entity desc for SupportRequestDetails_NRT table derivation).\nLogic:CASE WHEN RequestAge_Days <= 1 Then hardcoded as '00-01 day' ... END AS SRAgeBucket"
+  },
+  {
+    "reverse_engineered_description": "Reference Key to the DimCauseType table is used to get more details about CauseTypeKey, populated by joining CauseType column in Cases table with CauseType column in the DimCauseType table.",
+    "comment": "Mention source",
+    "final_description": "This is reference Key to the DimCauseType table to get more details about CauseTypeKey. This key is populated by joining CauseType column in Cases table coming from DFM Events data processed by Cornerstone with CauseType in the DimCauseType coming from Commercial NextDay Datamart within SA&DP."
+  },
+  {
+    "reverse_engineered_description": "This logic derives a value by applying decode logic on KPIState column in the DimKPIState table and State, Name, and SRNumber columns in the KPIFlash intermediate table. The process includes joining DimKPIState and KPIFLASH, and using conditional checks to determine the final value of KPIStateKey.",
+    "comment": "Revisit - step 3 paraphrasing not clear",
+    "final_description": "Derived by applying decode logic on KPIState column in DimKPIState table coming from Commercial NextDay Datamart within SA&DP and  State, Name and SRNumber columns in KPIFlash intermediate table. ... Step-2: If KPIStateKey derived in step 1 is NULL then hardcoded as -1 else whatever value coming in KPIStateKey is populated."
+  },
+  {
+    "reverse_engineered_description": "This logic derives a value by applying decode logic on KPIState column in the DimKPIState table and State, Name, and SRNumber columns in the KPIFlash intermediate table. The process includes joining DimKPIState and KPIFLASH, and using conditional checks to determine the final value of KPIStateKey.",
+    "comment": "Revisit",
+    "final_description": "Derived by applying decode logic on KPIState column in DimKPIState table coming from Commercial NextDay Datamart within SA&DP and  State, Name and SRNumber columns in KPIFlash intermediate table. ... Step-2: If KPIStateKey derived in step 1 is NULL then hardcoded as -1 else whatever value coming in KPIStateKey is populated."
+  },
+  {
+    "reverse_engineered_description": "This logic uses decode logic based on the CompletedDateTime, ExpireDateTime, and SlaType columns in the Cases table to categorize status values into 'Met', 'Missed', or 'Unknown' depending on the conditions applied to the respective times.",
+    "comment": "Checked the condition \nCASE WHEN SlaType = 'initialresponse' THEN CompletedDateTime END ) is greater than MAX of (CASE WHEN SlaType = 'initialresponse' THEN ExpireDateTime END )\nUpdated Ram",
+    "final_description": "Derived by applying decode logic based on CompletedDateTime, ExpireDateTime, SlaType columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic : Step 1- We consider the max value of CompletedDateTime and ExpireDateTime columns when SlaType = 'initialresponse' ... END AS IRStatus"
+  },
+  {
+    "reverse_engineered_description": "Indirect mapping to IRStatusKey in DimIRStatus table, derived by joining IRStatus column in DimIRStatus table with IRStatus column in SlaItem table, replacing NULL values with -1.",
+    "comment": "Check the line \"IdleTimeSpanKey is NULL from step 1\"?\nUpdated Ram",
+    "final_description": "Indirect mapping to IRStatusKey in DimIRStatus table coming from Commercial NRT Datamart within SA&DP.\nLogic: Step1- It is fetched by joining IRStatus column in DimIRStatus table with IRStatus column in SlaItem table coming from DFM Events data processed by Cornerstone."
+  },
+  {
+    "reverse_engineered_description": "This logic applies decode logic based on several columns including TenantName, DataSourceKey, QueueName, and others from various tables like DimTenant, DimDataSource, DimQueue, DimEmployee, and others to determine the IsCubeFlag value based on multiple conditions.",
+    "comment": "To be checked by dev",
+    "final_description": "Derived by applying decode logic on TenantName column in DimTenant table, DataSourceKey column in DimDataSource table, QueueName column in DimQueue table coming from Commercial NextDay Datamart within SA&DP, EmployeeEmail and CSCompanyAgency columns in DimEmployee table coming from UDP Common Database for dynamics cases ... CASE WHEN TenantName LIKE '%contoso%' ... END AS IsCubeFlag"
+  },
+  {
+    "reverse_engineered_description": "This logic uses decode logic based on ServiceRequestID and DataSourceKey columns from the Cases table and DimDataSource table to assign 'Yes', 'No', or 'Unknown' values based on conditions applied to the columns.",
+    "comment": "Rewrite the desc, paraphrasing is missing.",
+    "final_description": "Derived by applying decode logic based on ServiceRequestID column in Cases table coming from DFM Events data processed by Cornerstone and DataSourceKey column in DimDataSource table coming from Commercial NextDay Datamart within SA&DP.\nLogic: Step 1- If DatasourceKey=3 it then goes to step 2 else step 3.\nStep2- If ServiceRequestID column is not NULL then it's hardcoded as 'Yes' else 'No'. \nStep3- It assigns the value 'Unknown'."
+  },
+  {
+    "reverse_engineered_description": "This logic calculates the time difference in minutes between CompletedOn and CreatedDateTime columns in the Cases table and uses that to assign a value of 1 or 0 based on whether the difference is less than or equal to 30 minutes.",
+    "comment": "paraphrasing is missing, rewrite",
+    "final_description": "Derived by applying decode logic on CompletedOn and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Step 1- Calculates time difference in minutes between CompletedOn and CreatedDateTime columns in Cases table. \nStep 2- If the value from step 1 is less than or equal to 30 minutes it's hardcoded as 1 else 0."
+  },
+  {
+    "reverse_engineered_description": "Direct mapping to PlanningCategoryKey column in FactSupportServiceRequest table, indicating an integer value based on the source.",
+    "comment": "Provide the logic for surrogate key generation like which columns ?",
+    "final_description": "Direct mapping to PlanningCategoryKey column in FactSupportServiceRequest table comng from Commercial NextDay Datamart within SA&DP source having integer values."
+  },
+  {
+    "reverse_engineered_description": "This logic derives a value based on Row_InitialPreviousRoutingContext and EventDateTime columns in the SREvents table, using a conditional check to join with the DimQueue table and fetch the QueueKey, which is then aliased as PreviousAssignedQueueKey.",
+    "comment": "Rewritethe description for significance of queuekey",
+    "final_description": "Derived by applying decode logic based on Row_InitialPreviousRoutingContext ,EventDateTime columns in SREvents table coming from DFM Events data processed by Cornerstone .\nLogic: - Step1- WHEN Row_InitialPreviousRoutingContext = 1 from SREvents table then we consider QueueKey from DimQueue table coming from Commercial NextDay Datamart within SA&DP by joining PreviousRoutingContextId in SREvents table with NativeQueueID in DimQueue table."
+  },
+  {
+    "reverse_engineered_description": "This derived attribute extracts the date portion from CreatedDateTime and removes hyphens, assigning a value of -1 if the result is NULL.",
+    "comment": "Rewrite the logic in desc, by mentioning like below:\nIt extracts the date from CreateDateTime by removing the Hyphen.",
+    "final_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:Step1-  It fetches the date portion from CreatedDateTime and removes hyphens from it.\nStep2-If SRCreatedDateTimeId from step1 has null values then it replaces it with -1."
+  },
+  {
+    "reverse_engineered_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table from DFM data processed by Cornerstone. It is joined using SRNumber from both FactSupportData and Cases table.\nLogic: It calculates the number of seconds passed since midnight for a given CreatedDateTime and rounds it to the nearest 30-minute interval.\nExample: If CreatedDateTime is 2024-03-07 15:25:30, it first calculates seconds from midnight, rounds to the nearest 30-minute increment, and subtracts 1 second.",
+    "comment": "Logic is not clear, check",
+    "final_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table from DFM data processed by Cornerstone. It is joined using SRNumber from both FactSupportData and Cases table.\nLogic: Step1- It calculates the number of seconds passed since the start of the day (midnight) for a given CreatedDateTime. \nStep2- It then rounds the value fetched from step1 up to the nearest 30-minute interval and subtracts 1 second and aliased as SRCreatedDateTimeSeconds.\nExample: The CreatedDateTime is 2024-03-07 15:25:30,\nStep1 : Calculate Seconds from 12 am and the time difference is 15 h 25 min 30 sec, which equals to 55,530 seconds.\nStep 2: Divide 55,530 sec by 1800 (seconds in 30 minutes), resulting in 30.85 and round off which would be 31 mins.\nStep 3: Multiply 31 min (from step 2) by 1800 to get Seconds in 30-minute Increments that is 55,800 seconds.\nStep 4: Subtract 1 second from 55,800 seconds, resulting in 55,799 seconds end as SRCreatedDateTimeSeconds."
+  },
+  {
+    "reverse_engineered_description": "Surrogate key generated within UDP NRT to identify unique records in FactSREvents table. It is generated using SRNumber.",
+    "comment": "Provide the logic for surrogate key generation like which columns?",
+    "final_description": "Surrogate key generated within UDP NRT to identify unique records of FactSREvents table. It is generated using SRNumber."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on EventDateTime column in DFM Events data processed by Cornerstone.\nLogic: Extracts the date portion of EventDateTime and replaces null values in SRModifiedTimeId with -1.",
+    "comment": "Logic update by referring to SRCreatedDateTimeId column",
+    "final_description": "Derived by applying decode logic on EventDateTime column in DFM Events data processed by Cornerstone.\nLogic: Step1- It extracts the date portion of EventDateTime.\nStep2- If SRModifiedTimeId from step1 has null values then it's replaced with -1."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on StateAnnotation and EventDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Extracts the date portion of EventDateTime when StateAnnotation is in ('identifying the issue', 'identifying issue', 'scope'). If the result is null, it is replaced with -1.",
+    "comment": "Logic update by referring to SRCreatedDateTimeId column",
+    "final_description": "Derived by applying decode logic on StateAnnotation and EventDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Step1 - It extracts the date portion of \"EventDateTime\" WHEN \"StateAnnotation\"= ('identifying the issue', 'identifying issue', 'scope').\nStep2 - If step 1 fetches null values then ut replaced with -1"
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on IncidentType and CaseType columns in Cases table coming from DFM Events data processed by Cornerstone.\nLogic: Checks conditions involving IncidentType column in FactSRSupportData table. If true, assigns values based on SRType column in Cases table. If false, returns 'Unknown'.",
+    "comment": "Write the logic in steps",
+    "final_description": "Derived  by applying decode logic on IncidentType and CaseType columns in Cases table coming from DFM Events data processed by Cornerstone having string values.\nLogic :\nStep 1 : It checks if a certain condition involving IncidentType column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP is true. \nStep 2: If Step 1 is true, then it checks the value of SRType column in Cases table coming from DFM Events data processed by Cornerstone and assigns specific values based on different scenarios. \nStep 3: If the initial condition from Step 1 is false, it returns the result as 'Unknown'."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on column Severity loaded from Cases table from DFM Events data processed by Cornerstone.\nLogic: Selects the first value of Severity column by grouping on SRNumber and ordering by EventDateTime.",
+    "comment": "Check the logic part, where it can be updated like below example: Taking the first value of severity column from entity X by grouping on SR number…",
+    "final_description": "Derived by applying decode logic on column Severity loaded from Cases table from DFM Events data processed by Cornerstone. Logic: Taking the first value of Severity column from Cases entity by grouping on SR Number and order by based on Eventdatetime."
+  },
+  {
+    "reverse_engineered_description": "Direct mapping to ARRTypeDerived column in FactSREvents table.",
+    "comment": "What is significance of FI, please define. Break down into IF Else statements.",
+    "final_description": "Direct Mapping to ARRTypeDerived column in FactSREvents table coming from Commercial NRT Datamart within SA&DP having string values."
+  },
+  {
+    "reverse_engineered_description": "This attribute has static values ('Unknown', 'Critical') provided by Commercial Business and uploaded via flat file.",
+    "comment": "Phrase the description properly for red highlighted. Mention entity for ExpiresDateTime.",
+    "final_description": "This attribute has static values of (Unknown,Critical) provided by Commercial Business and uploaded through flat file."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on column SRCreationDateTime in FactSREvents.\nLogic: Assigns a region based on the value of SRCreationDateTime.",
+    "comment": "What is significance of FI, please define.",
+    "final_description": "Derived by applying decode logic on column SRCreationDateTime in FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic:\nWHEN (SRCreationDateTime) BETWEEN 1 AND 8 THEN 'Asia'\nWHEN (SRCreationDateTime) BETWEEN 9 AND 16 THEN 'EMEA'\nWHEN (SRCreationDateTime) BETWEEN 17 AND 24 OR HOUR(SRCreationDateTime)=0 THEN 'Americas' END AS ManagementAccountableForSR"
+  },
+  {
+    "reverse_engineered_description": "This attribute has static values ('Unknown', 'Critical') provided by Commercial Business and uploaded via flat file.",
+    "comment": "Phrase the description properly for red highlighted.\nMention entity for ExpiresDateTime",
+    "final_description": "This attribute has static values of (Unknown,Critical) provided by Commercial Business and uploaded through flat file."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on column SRCreationDateTime in FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: Assigns a region based on the value of SRCreationDateTime.",
+    "comment": "What is significance of FI, please define.",
+    "final_description": "Derived by applying decode logic on column SRCreationDateTime in FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic:\nWHEN (SRCreationDateTime) BETWEEN 1 AND 8 THEN 'Asia'\nWHEN (SRCreationDateTime) BETWEEN 9 AND 16 THEN 'EMEA'\nWHEN (SRCreationDateTime) BETWEEN 17 AND 24 OR HOUR(SRCreationDateTime)=0 THEN 'Americas' END AS ManagementAccountableForSR"
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on column SLAExpiresTime and SLACompletedTime in SLAEvents table.\nLogic: Computes the time difference in minutes between SLAExpiresTime and SLACompletedTime or the current timestamp if SLACompletedTime is null.",
+    "comment": "What is significance of SLA, please define.",
+    "final_description": "Derived by applying decode logic on column SLAExpiresTime, SLACompletedTime from SLAEvents from Commercial NRT Datamart within SA&DP source.\nLogic: Calculates the time difference in minutes between SLAExpiresTime and either the Current Timestamp or SLACompletedTime, if SLACompletedTime is null. If the conditions are not met, it returns 0; otherwise 1."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on MinutesPastSLA column in FactSREvents.\nLogic: Categorizes MinutesPastSLA into predefined time ranges with corresponding labels.",
+    "comment": "What is significance of FI, please define.",
+    "final_description": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It calculates the MinutesPastSLA into different time ranges and providing corresponding labels.\n1)WHEN MinutesPastSLA > 7200 THEN '>5 Days'\n2)WHEN MinutesPastSLA > 4320 THEN '>3 Days'\n3)WHEN MinutesPastSLA > 1440 THEN '>1 Day'\n4)WHEN MinutesPastSLA > 480 THEN '>8 Hours'\n5)ELSE '< 8 Hours'."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on MinutesPastSLA column in FactSREvents.\nLogic: Formats MinutesPastSLA into a string representation of days and hours.",
+    "comment": "What is significance of FI, please define.",
+    "final_description": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It takes the MinutesPastSLA duration and formats it into a string representation of days and hours (e.g., \"2 D | 4 H\"). If MinutesPastSLA is null, the result is also null."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on MinutesPastSLA column in FactSREvents.\nLogic: Assigns priority levels based on predefined thresholds of MinutesPastSLA.",
+    "comment": "What is significance of FI, please define.",
+    "final_description": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It evaluates the value of MinutesPastSLA and assigns a priority level based on different conditions.\n1)WHEN MinutesPastSLA > 7200 THEN 1: If MinutesPastSLA is greater than 7200 (which corresponds to 5 days), it assigns a priority level of 1.\n2)WHEN MinutesPastSLA > 4320 THEN 2: If MinutesPastSLA is between 4320 (3 days) and 7200 (5 days), it assigns a priority level of 2.\n3)WHEN MinutesPastSLA > 1440 THEN 3: If MinutesPastSLA is between 1440 (1 day) and 4320 (3 days), it assigns a priority level of 3.\n4)WHEN MinutesPastSLA > 480 THEN 4: If MinutesPastSLA is between 480 minutes (8 hours) and 1440 (1 day), it assigns a priority level of 4.\nELSE 5) If none of the above conditions are met, it assigns a priority level of 5."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on State, StateLastUpdatedDateTime, and CreatedDateTime columns in Cases table.\nLogic: Computes hours between CreatedDateTime and the current timestamp if State is 'Open', or between CreatedDateTime and StateLastUpdatedDateTime if State is 'Closed'.",
+    "comment": "What is significance of FI, please define.\nPut Logic in paraphrasing like (case when / if else/…)",
+    "final_description": "Derived by applying decode logic on State, StateLastUpdatedDateTime and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:  When State ='Open' it calculates the difference in hours between Current Timestamp and CreatedDateTime column in Cases table.\n               When State ='Closed' it calculates the difference in hours between StateLastUpdatedDateTime and CreatedDateTime columns in Cases table.\n                If the result when either of the above conditions met it assign 1 else it assign 0 when any of the DateTime column is null."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on SRCreationDateTime in FactSREvents.\nLogic: Computes the minutes elapsed since SRCreationDateTime and labels it as SRCreationMinutes.",
+    "comment": "What is significance of FI, please define.\nMention current timestamp instead of unix timestamp in the logic.",
+    "final_description": "Derived by applying decode logic on column SRCreationDateTime in FactSREvents table coming from Commercial NRT Datamart within SA&DP source having integer values.\nLogic:  It calculates the number of minutes that have passed between the current time and the SRCreationDateTime from FactSREvents table and labels this duration as \"SRCreationMinutes.\""
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on CompletedDateTime, Type, and CreatedDateTime in Cases table.\nLogic: Computes the minute difference between CompletedDateTime and CreatedDateTime when Type is 'InitialResponse'.",
+    "comment": "Mention word \"column\" for \"type\".\nPhrase the sentence properly for red highlighted.",
+    "final_description": "Derived by applying decode logic CompletedDateTime,Type and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone.\nLogic: It calculates  minute difference between CompletedDateTime and CreatedDateTime columns When Type = 'InitialResponse' in Cases table."
+  },
+  {
+    "reverse_engineered_description": "Reference key to DimCauseType table for fetching CauseTypeKey details. It is populated by joining CauseType in Cases table with CauseType in DimCauseType.",
+    "comment": "Mention source\nok",
+    "final_description": "This is reference Key to the DimCauseType table to get more details about CauseTypeKey. This key is populated by joining CauseType column in Cases table coming from DFM Events data processed by Cornerstone with CauseType in the DimCauseType coming from Commercial NextDay Datamart within SA&DP."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on KPIState column in DimKPIState and State, Name, and SRNumber in KPIFlash.\nLogic: Joins DimKPIState with KPIFlash on KPIState and Name='fcr', grouping by SRNumber and selecting the max KPIStateKey. If null, assigns -1.",
+    "comment": "Revisit - step 3 paraphrasing not clear\nok",
+    "final_description": "Derived by applying decode logic on KPIState column in DimKPIState table coming from Commercial NextDay Datamart within SA&DP and State, Name and SRNumber columns in KPIFlash intermediate table.\n..."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic based on CompletedDateTime, ExpireDateTime, SlaType columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Step 1 - We consider the max value of CompletedDateTime and ExpireDateTime columns when SlaType = 'initialresponse'.\nStep 2 - If CompletedDateTime is greater than ExpireDateTime, set IRStatus as 'Missed'.\nStep 3 - Otherwise, if CompletedDateTime is less than or equal to ExpireDateTime, set IRStatus as 'Met'. Otherwise, set it as 'Unknown'.",
+    "comment": "Checked the condition \nCASE WHEN SlaType = 'initialresponse' THEN CompletedDateTime END ) is greater than MAX of (CASE WHEN SlaType = 'initialresponse' THEN ExpireDateTime END )",
+    "final_description": "Derived by applying decode logic based on CompletedDateTime, ExpireDateTime, SlaType columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic : Step 1- We consider the max value of CompletedDateTime and ExpireDateTime columns when SlaType = 'initialresponse'\nStep 2- If max of CompletedDateTime is greater than ExpireDateTime then hardcoded as 'Missed'\nStep 3- If max of CompletedDateTime is less than or equal to ExpireDateTime then hardcoded as 'Met' Else 'Unknown' END AS  IRStatus"
+  },
+  {
+    "reverse_engineered_description": "Indirect mapping to IRStatusKey in DimIRStatus table coming from Commercial NRT Datamart within SA&DP.\nLogic: Step 1 - It is fetched by joining IRStatus column in DimIRStatus table with IRStatus column in SlaItem table coming from DFM Events data processed by Cornerstone.\nStep 2 - If IRStatusKey is NULL, replace it with -1.",
+    "comment": "Check the line \"IdleTimeSpanKey is NULL from step 1\"?",
+    "final_description": "Indirect mapping to IRStatusKey in DimIRStatus table coming from Commercial NRT Datamart within SA&DP.\nLogic: Step1- It is fetched by joining IRStatus column in DimIRStatus table with IRStatus column in SlaItem table coming from DFM Events data processed by Cornerstone.\nStep2- If IRStatusKey is NULL from step1 then replaces it with -1."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on TenantName column in DimTenant table, DataSourceKey column in DimDataSource table, QueueName column in DimQueue table coming from Commercial NextDay Datamart within SA&DP, EmployeeEmail and CSCompanyAgency columns in DimEmployee table coming from UDP Common Database for dynamics cases, PreviousRoutingQueueName column in SREvents table coming from DFM Events data processed by Cornerstone and SupportAreaName column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP.\nLogic: CASE WHEN TenantName LIKE '%contoso%' OR 'mstest_%' OR 'test_test_%' OR 'test' OR 'msft' THEN 0 ELSE 1 END AS IsCubeFlag",
+    "comment": "To be checked by dev",
+    "final_description": "Derived by applying decode logic on TenantName column in DimTenant table, DataSourceKey column in DimDataSource table, QueueName column in DimQueue table coming from Commercial NextDay Datamart within SA&DP, EmployeeEmail and CSCompanyAgency columns in DimEmployee table coming from UDP Common Database for dynamics cases, PreviousRoutingQueueName column in SREvents table coming from DFM Events data processed by Cornerstone and SupportAreaName column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP \nLogic:CASE WHEN TenantName LIKE '%contoso%' OR 'mstest_%' OR 'test_test_%' OR 'test' OR 'msft' THEN 0\n\t            WHEN DataSourceKey = 203 AND EmployeeEmail NOT LIKE '%offagent%'\n                                AND CSCompanyAgency NOT IN ('Avande', 'Experis', 'Mural', 'Rhipe', 'Sherweb', 'Subfero Ltd', 'Zones Inc')\n\t\t\t\tAND WHEN QueueName OR PreviousRoutingQueueName NOT IN ( 'MSaaS Rave Transfers', 'Engineering')\n\t\t\t\tAND SupportAreaName NOT LIKE '%test%' OR SupportAreaName NOT LIKE '%lab%'\n\t\t   THEN 1 ELSE 0 END AS IsCubeFlag"
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic based on ServiceRequestID column in Cases table coming from DFM Events data processed by Cornerstone and DataSourceKey column in DimDataSource table coming from Commercial NextDay Datamart within SA&DP.\nLogic: If DatasourceKey = 3 and ServiceRequestID is not NULL, set as 'Yes', otherwise 'No'. If DatasourceKey is not 3, set as 'Unknown'.",
+    "comment": "Rewrite the desc, paraphrasing is missing.",
+    "final_description": "Derived by applying decode logic based on ServiceRequestID column in Cases table coming from DFM Events data processed by Cornerstone and DataSourceKey column in DimDataSource table coming from Commercial NextDay Datamart within SA&DP.\nLogic: Step 1- If DatasourceKey=3 it then goes to step 2 else step 3.\nStep2- If ServiceRequestID column is not NULL then it's hardcoded as 'Yes' else 'No'. \nStep3- It assigns the value 'Unknown'."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic based on CompletedOn and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Compute the difference in minutes between CompletedOn and CreatedDateTime. If the difference is <= 30 minutes, set as 1, else 0.",
+    "comment": "paraphrasing is missing, rewrite",
+    "final_description": "Derived by applying decode logic on CompletedOn and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Step 1- Calculates time difference in minutes between CompletedOn and CreatedDateTime columns in Cases table. \nStep 2- If the value from step 1 is less than or equal to 30 minutes it's hardcoded as 1 else 0."
+  },
+  {
+    "reverse_engineered_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Extracts the date from CreatedDateTime by removing hyphens. If SRCreatedDateTimeId is NULL, replace with -1.",
+    "comment": "Rewrite the logic in desc, by mentioning like below:\nIt extracts the date from CreateDateTime by removing the Hyphen.",
+    "final_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:Step1-  It fetches the date portion from CreatedDateTime and removes hyphens from it.\nStep2-If SRCreatedDateTimeId from step1 has null values then it replaces it with -1."
+  },
+  {
+    "reverse_engineered_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table from DFM data processed by Cornerstone. It is joined using SRNumber from both FactSupportData and Cases table.\nLogic: Calculates the number of seconds passed since the start of the day (midnight) for a given CreatedDateTime and rounds it up to the nearest 30-minute interval before subtracting 1 second.",
+    "comment": "Logic is not clear, check",
+    "final_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table from DFM data processed by Cornerstone. It is joined using SRNumber from both FactSupportData and Cases table.\nLogic: Step1 - It calculates the number of seconds passed since the start of the day (midnight) for a given CreatedDateTime.\nStep2 - It then rounds the value fetched from step1 up to the nearest 30-minute interval and subtracts 1 second and aliased as SRCreatedDateTimeSeconds."
+  },
+  {
+    "reverse_engineered_description": "Surrogate key generated within UDP NRT to identify unique records of FactSREvents table. It is generated using SRNumber.",
+    "comment": "Provide the logic for surrogate key generation like which columns?",
+    "final_description": "Surrogate key generated within UDP NRT to identify unique records of FactSREvents table. It is generated using SRNumber."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on EventDateTime column in DFM Events data processed by Cornerstone.\nLogic: Extracts the date portion of EventDateTime. If SRModifiedTimeId is null, it is replaced with -1.",
+    "comment": "Logic update by referring to SRCreatedDateTimeId column",
+    "final_description": "Derived by applying decode logic on EventDateTime column in DFM Events data processed by Cornerstone.\nLogic: Step1- It extracts the date portion of EventDateTime.\nStep2- If SRModifiedTimeId from step1 has null values then it's replaced with -1."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on StateAnnotation and EventDateTime columns in Cases table from DFM Events data processed by Cornerstone source.\nLogic: Extracts the date portion of EventDateTime when StateAnnotation is one of ('identifying the issue', 'identifying issue', 'scope'). If null, replace with -1.",
+    "comment": "Logic update by referring to SRCreatedDateTimeId column",
+    "final_description": "Derived by applying decode logic on StateAnnotation and EventDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Step1 - It extracts the date portion of \"EventDateTime\" WHEN \"StateAnnotation\"= ('identifying the issue', 'identifying issue', 'scope').\nStep2 - If step 1 fetches null values then it is replaced with -1."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on IncidentType and CaseType columns in Cases table from DFM Events data processed by Cornerstone.\nLogic: Checks a condition involving IncidentType. If true, assigns specific values based on SRType. Otherwise, returns 'Unknown'.",
+    "comment": "Write the logic in steps",
+    "final_description": "Derived by applying decode logic on IncidentType and CaseType columns in Cases table coming from DFM Events data processed by Cornerstone having string values.\nLogic:\nStep 1 : It checks if a certain condition involving IncidentType column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP is true. \nStep 2: If Step 1 is true, then it checks the value of SRType column in Cases table coming from DFM Events data processed by Cornerstone and assigns specific values based on different scenarios. \nStep 3: If the initial condition from Step 1 is false, it returns the result as 'Unknown'."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on Severity column in Cases table from DFM Events data processed by Cornerstone. Logic: Takes the first value of the Severity column by grouping on SR Number and ordering by EventDateTime.",
+    "comment": "Check the logic part, where it can be updated like below example: Taking the first value of severity column from entity X by grouping on SR number…",
+    "final_description": "Derived by applying decode logic on column Severity loaded from Cases table from DFM Events data processed by Cornerstone. Logic: Taking the first value of Severity column from Cases entity by grouping on SR Number and order by based on EventDateTime."
+  },
+  {
+    "reverse_engineered_description": "Direct Mapping to ARRTypeDerived column in FactSREvents table from Commercial NRT Datamart within SA&DP.",
+    "comment": "What is significance of FI, please define. Break down into IF Else statements.",
+    "final_description": "Direct Mapping to ARRTypeDerived column in FactSREvents table coming from Commercial NRT Datamart within SA&DP having string values."
+  },
+  {
+    "reverse_engineered_description": "This attribute has static values (Unknown, Critical) provided by Commercial Business and uploaded through a flat file.",
+    "comment": "Phrase the description properly for red highlighted. Mention entity for ExpiresDateTime.",
+    "final_description": "This attribute has static values of (Unknown, Critical) provided by Commercial Business and uploaded through flat file."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on SRCreationDateTime in FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: Assigns a region based on hour ranges.",
+    "comment": "What is significance of FI, please define.",
+    "final_description": "Derived by applying decode logic on column SRCreationDateTime in FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic:\nWHEN (SRCreationDateTime) BETWEEN 1 AND 8 THEN 'Asia'\nWHEN (SRCreationDateTime) BETWEEN 9 AND 16 THEN 'EMEA'\nWHEN (SRCreationDateTime) BETWEEN 17 AND 24 OR HOUR(SRCreationDateTime)=0 THEN 'Americas' END AS ManagementAccountableForSR."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on SLAExpiresTime and SLACompletedTime from SLAEvents from Commercial NRT Datamart within SA&DP source.\nLogic: Checks if SLACompletedTime is null and calculates time difference.",
+    "comment": "What is significance of SLA, please define.",
+    "final_description": "Derived by applying decode logic on column SLAExpiresTime, SLACompletedTime from SLAEvents from Commercial NRT Datamart within SA&DP source.\nLogic: Calculates the time difference in minutes between SLAExpiresTime and either the Current Timestamp or SLACompletedTime, if SLACompletedTime is null. If the conditions are not met, it returns 0; otherwise 1."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It calculates the MinutesPastSLA into different time ranges and providing corresponding labels.",
+    "comment": "What is significanc of FI, please define.",
+    "final_description": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It calculates the MinutesPastSLA into different time ranges and providing corresponding labels.\n1)WHEN MinutesPastSLA > 7200 THEN '>5 Days'\n2)WHEN MinutesPastSLA > 4320 THEN '>3 Days'\n3)WHEN MinutesPastSLA > 1440 THEN '>1 Day'\n4)WHEN MinutesPastSLA > 480 THEN '>8 Hours'\n5)ELSE '< 8 Hours'."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It takes the MinutesPastSLA duration and formats it into a string representation of days and hours.",
+    "comment": "What is significanc of FI, please define.",
+    "final_description": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It takes the MinutesPastSLA duration and formats it into a string representation of days and hours (e.g., \"2 D | 4 H\"). If MinutesPastSLA is null, the result is also null."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It evaluates the value of MinutesPastSLA and assigns a priority level based on different conditions.",
+    "comment": "What is significanc of FI, please define.",
+    "final_description": "Derived by applying decode logic on column MinutesPastSLA from FactSREvents from Commercial NRT Datamart within SA&DP source.\nLogic: It evaluates the value of MinutesPastSLA and assigns a priority level based on different conditions.\n1)WHEN MinutesPastSLA > 7200 THEN 1: If MinutesPastSLA is greater than 7200 (which corresponds to 5 days), it assigns a priority level of 1.\n2)WHEN MinutesPastSLA > 4320 THEN 2: If MinutesPastSLA is between 4320 (3 days) and 7200 (5 days), it assigns a priority level of 2.\n3)WHEN MinutesPastSLA > 1440 THEN 3: If MinutesPastSLA is between 1440 (1 day) and 4320 (3 days), it assigns a priority level of 3.\n4)WHEN MinutesPastSLA > 480 THEN 4: If MinutesPastSLA is between 480 minutes (8 hours) and 1440 (1 day), it assigns a priority level of 4.\nELSE 5) If none of the above conditions are met, it assigns a priority level of 5."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on State, StateLastUpdatedDateTime, and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: When State = 'Open', it calculates the difference in hours between Current Timestamp and CreatedDateTime.\nWhen State = 'Closed', it calculates the difference in hours between StateLastUpdatedDateTime and CreatedDateTime.\nIf any DateTime column is null, it assigns 0.",
+    "comment": "What is significanc of FI, please define.\nPut Logic in paraphrasing like (case when / if else/…)",
+    "final_description": "Derived by applying decode logic on State, StateLastUpdatedDateTime and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:  When State ='Open' it calculates the difference in hours between Current Timestamp and CreatedDateTime column in Cases table.\nWhen State ='Closed' it calculates the difference in hours between StateLastUpdatedDateTime and CreatedDateTime columns in Cases table.\nIf the result when either of the above conditions met it assign 1 else it assign 0 when any of the DateTime column is null."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on column SRCreationDateTime in FactSREvents table coming from Commercial NRT Datamart within SA&DP source.\nLogic: It calculates the number of minutes that have passed between the current Unix timestamp and the SRCreationDateTime.",
+    "comment": "What is significanc of FI, please define.\nMention current timestamp instead of unix timestamp in the logic.",
+    "final_description": "Derived by applying decode logic on column SRCreationDateTime in FactSREvents table coming from Commercial NRT Datamart within SA&DP source having integer values.\nLogic:  It calculates the number of minutes that have passed between the current time and the SRCreationDateTime from FactSREvents table and labels this duration as \"SRCreationMinutes.\""
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on CompletedDateTime, Type, and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone.\nLogic: It calculates the minute difference between CompletedDateTime and CreatedDateTime when Type = 'InitialResponse'.",
+    "comment": "Mention word \"column\" for \"type\".\nPhrase the sentence properly for red highlighted.",
+    "final_description": "Derived by applying decode logic CompletedDateTime,Type and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone.\nLogic: It calculates  minute difference between CompletedDateTime and CreatedDateTime columns When Type = 'InitialResponse' in Cases table."
+  },
+  {
+    "reverse_engineered_description": "This is a reference key to the DimCauseType table to get more details about CauseTypeKey.",
+    "comment": "Mention source",
+    "final_description": "This is reference Key to the DimCauseType table to get more details about CauseTypeKey. This key is populated by joining CauseType column in Cases table coming from DFM Events data processed by Cornerstone with CauseType in the DimCauseType coming from Commercial NextDay Datamart within SA&DP.."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic based on ServiceRequestID column in Cases table coming from DFM Events data processed by Cornerstone and DataSourceKey column in DimDataSource table coming from Commercial NextDay Datamart within SA&DP.\nLogic: If DatasourceKey=3, it assigns 'Yes' if ServiceRequestID is not NULL, otherwise 'No'. If DatasourceKey is not 3, it assigns 'Unknown'.",
+    "comment": "Rewrite the desc, paraphrasing is missing.",
+    "final_description": "Derived by applying decode logic based on ServiceRequestID column in Cases table coming from DFM Events data processed by Cornerstone and DataSourceKey column in DimDataSource table coming from Commercial NextDay Datamart within SA&DP.\nLogic: Step 1- If DatasourceKey=3 it then goes to step 2 else step 3.\nStep2- If ServiceRequestID column is not NULL then it's hardcoded as 'Yes' else 'No'. \nStep3- It assigns the value 'Unknown'."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on CompletedOn and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Calculates time difference in minutes between CompletedOn and CreatedDateTime columns in Cases table. If the value is less than or equal to 30 minutes, it's hardcoded as 1, else 0.",
+    "comment": "paraphrasing is missing, rewrite",
+    "final_description": "Derived by applying decode logic on CompletedOn and CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: Step 1- Calculates time difference in minutes between CompletedOn and CreatedDateTime columns in Cases table. \nStep 2- If the value from step 1 is less than or equal to 30 minutes it's hardcoded as 1 else 0."
+  },
+  {
+    "reverse_engineered_description": "Direct mapping to PlanningCategoryKey column in FactSupportServiceRequest table coming from Commercial NextDay Datamart within SA&DP source.",
+    "comment": "Provide the logic for surrogate key generation like which columns ?",
+    "final_description": "Direct mapping to PlanningCategoryKey column in FactSupportServiceRequest table comng from Commercial NextDay Datamart within SA&DP source having integer values."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic based on Row_InitialPreviousRoutingContext and EventDateTime columns in SREvents table coming from DFM Events data processed by Cornerstone.\nLogic: WHEN Row_InitialPreviousRoutingContext = 1, it considers QueueKey from DimQueue table by joining PreviousRoutingContextId in SREvents table with NativeQueueID in DimQueue table. The QueueKey is assigned as PreviousAssignedQueueKey.",
+    "comment": "Rewrite the description for significance of queuekey\nCan you confirm if is it reference key (queueKey) ? If yes, this need to updated as reference key in desc.\n[Eshwar] This is not reference key.",
+    "final_description": "Derived by applying decode logic based on Row_InitialPreviousRoutingContext ,EventDateTime columns in SREvents table coming from DFM Events data processed by Cornerstone .\nLogic: - Step1- WHEN Row_InitialPreviousRoutingContext = 1 from SREvents table then we consider QueueKey from DimQueue table coming from Commercial NextDay Datamart within SA&DP by joining PreviousRoutingContextId in SREvents table with NativeQueueID in DimQueue table.\nStep2- The QueueKey fetched from step1 is aliased as PreviousAssignedQueueKey."
+  },
+  {
+    "reverse_engineered_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: It fetches the date portion from CreatedDateTime and removes hyphens. If SRCreatedDateTimeId is null, it replaces it with -1.",
+    "comment": "Rewrite the logic in desc, by mentioning like below:\nIt extracts the date from CreateDateTime by removing the Hyphen.",
+    "final_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:Step1-  It fetches the date portion from CreatedDateTime and removes hyphens from it.\nStep2-If SRCreatedDateTimeId from step1 has null values then it replaces it with -1."
+  },
+  {
+    "reverse_engineered_description": "Derived attribute of datatype int based on CreatedDateTime column in Cases table from DFM data processed by Cornerstone. It joins using SRNumber from both FactSupportData and Cases table.\nLogic: It calculates the number of seconds passed since the start of the day for a given CreatedDateTime, rounds it to the nearest 30-minute interval, and subtracts 1 second to determine SRCreatedDateTimeSeconds.",
+    "comment": "Logic is not clear, check",
+    "final_description": "Derived attribute of datatype int based on CreatedDateTime  column in Cases table from DFM data processed by Cornerstone.It is joined using SRNumber from both FactSupportData and Cases table.\nLogic:Step1- It calculates the number of seconds passed since the start of the day (midnight) for a given CreatedDateTime. \n           Step2- It then rounds the value fetched from step1 up to the nearest 30-minute interval and subtracts 1 second and aliased as SRCreatedDateTimeSeconds.\n\nExample: The CreatedDateTime is 2024-03-07 15:25:30,\n                Step1 : Calculate Seconds from 12 am and the time difference is 15 h 25 min 30 sec, which equals to 55,530 seconds.\n                Step 2: Divide 55,530 sec by 1800 (seconds in 30 minutes), resulting in 30.85 and round off which would be 31 mins.\n                Step 3: Multiply 31 min (from step 2) by 1800 to get Seconds in 30-minute Increments that is 55,800 seconds.\n                 Step 4: Subtract 1 second from 55,800 seconds, resulting in 55,799 seconds end as SRCreatedDateTimeSeconds."
+  },
+  {
+    "reverse_engineered_description": "Surrogate key generated within UDP NRT to identify unique records of FactSREvents table.",
+    "comment": "Provide the logic for surrogate key generation like which columns ?",
+    "final_description": "Surrogate key generated within UDP NRT to identify unique records of FactSREvents table.It is generated using SRNumber."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on EventDateTime column in DFM Events data processed by Cornerstone.\nLogic: It extracts the date portion of EventDateTime. If SRModifiedTimeId is null, it replaces it with -1.",
+    "comment": "Logic update by referring to SRCreatedDateTimeId column",
+    "final_description": "Derived by applying decode logic on EventDateTime column in DFM Events data processed by Cornerstone.\nLogic: Step1- It extracts the date portion of EventDateTime.\nStep2- If SRModifiedTimeId from step1 has null values then it's replaced with -1."
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on StateAnnotation and EventDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: It extracts the date portion of EventDateTime when StateAnnotation matches specific values. If the value is null, it replaces it with -1.",
+    "comment": "Logic update by referring to SRCreatedDateTimeId column",
+    "final_description": "Derived by applying decode logic on StateAnnotation and EventDateTime columns in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:Step1 - It extracts the date portion of \"EventDateTime\" WHEN \"StateAnnotation\"= ('identifying the issue', 'identifying issue', 'scope').\nStep2 - If step 1 fetches null values then ut replaced with -1"
+  },
+  {
+    "reverse_engineered_description": "Derived by applying decode logic on IncidentType and CaseType columns in Cases table coming from DFM Events data processed by Cornerstone.\nLogic: It checks a condition involving the IncidentType column in FactSRSupportData table. If true, it assigns specific values based on different scenarios. Otherwise, it returns 'Unknown'.",
+    "comment": "Write the logic in steps",
+    "final_description": "Derived  by applying decode logic on IncidentType and CaseType columns in Cases table coming from DFM Events data processed by Cornerstone having string values.\nLogic :\nStep 1 : It checks if a certain condition involving IncidentType column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP is true. \nStep 2: If Step 1 is true, then it checks the value of SRType  column in Cases table coming from DFM Events data processed by Cornerstone and assigns specific values based on different scenarios. \nStep 3: If the initial condition from Step 1 is false, it returns the result as 'Unknown'."
+  }
+]
