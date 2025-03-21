@@ -9,5 +9,6 @@ Your output format will be: <Pass or Fail>, <N/A or reason for failure>
 Reverse engineering prompt: 
 Reverse engineer what the original technical description looked like before being updated according the review comments. 
 Output only a list of the predicted original technical descriptions, the reviewer comment, and the corresponding updated description (the description from the input file)
-With this json input, reverse engineer the descriptions based on what it looked like before the comments were made. Update the comment to look like the reasoning output from an LLM. Output a new json object with format:
+With this json input, reverse engineer the descriptions based on what it looked like before the comments were made. Update the comment to look like the reasoning output from an LLM. 
+Output a new json object with format:
 {"reverse_engineered_description": <reverse engineered description>, "comment": <updated comment(s)>, "final_description": <original description>} for each description
