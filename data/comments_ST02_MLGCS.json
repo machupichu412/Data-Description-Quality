@@ -1,0 +1,1298 @@
+[
+    {
+        "TechnicalDescription": "This table contains the details for case resolution status of the ticket coming from Dynamics and Amplify source. Grain- ServiceRequestResolution",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "Add the source and source table names and grain. \nIf the list is big then mention just the source name and grain."
+    },
+    {
+        "TechnicalDescription": "This table contains Online Safety Team Queues, Online Safety - T1, Online Safety - T2 Manilla, Online Safety - T3, DMCA - T1 Allyis, DMCA - T2 Allyis.",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok - I am guessing this I some type of ticket table specfic to a tool used by online safety",
+        "Review Comment L3": "ok"
+    },
+    {
+        "TechnicalDescription": "This table contains Customer data coming from Dynamics Cornerstone. It is a SCD Type 2 table which means it retains history of any change to customer attribute e.g. CustomerEmail,CustomerPUID etc. Grain - CustomerId and DataSource",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Add the source and source table names and grain. \nIf the list is big then mention just the source name and grain."
+    },
+    {
+        "TechnicalDescription": "This atrrribte is derived by calculating hex string result of SHA-2 family of CustomerPUId column coming from Cornestone source.",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "It is not a decode logic. change accordingly.\nLogic part is not clear."
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about Incident CreatedDatetime in UTC. This key is populated by joining CreatedTime from DimSupportServiceRequest table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about Incident CreatedDatetime in UTC. This key is populated by joining CreatedTime from DimSupportServiceRequest table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about Incident ClosedDatetime in UTC.This key is populated by joining ClosedDateTime from DimSupportServiceRequest table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about Incident ClosedDatetime in UTC. This key is populated by joining ClosedDateTime from DimSupportServiceRequest table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about Incident CreatedDatetime in PT. This key is populated by joining CreatedTime in PT from DimSupportServiceRequest table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about Incident CreatedDatetime in PT. This key is populated by joining CreatedTime in PT from DimSupportServiceRequest table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about Incident ClosedDatetime in PT . This key is populated by joining ClosedDateTime in PT from DimSupportServiceRequest table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about Incident ClosedDatetime in PT. This key is populated by joining ClosedDateTime in PT from DimSupportServiceRequest table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDataSource table to get more details about Source. Direct mapping to DataSourcekey column in FactSupportServiceRequest table coming from SA&DP Commercial Source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Add source table name"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDataSource table to get more details about Source. Direct mapping to OriginatingDataSourcekey column in FactSupportServiceRequest table coming from SA&DP Commercial Source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimServiceOffering table to get the details of various Commercial Services offered. Direct mapping to ServiceOfferingKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimGlobalContract table to get the details of Commercial global contracts. Direct mapping to GlobalContractKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimAgentRootCauseTaxonomy table to get details of various Issue root cause classifications. Direct mapping to AgentRootCauseTaxonomyKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportLanguage table to get more details about Language. Direct mapping to Supportlanguagekey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportAreaPath table to get details of various Support Area Paths. Direct mapping to SupportAreaPathKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimGeography table to get more details about customer geography. Direct mapping to CustomerGeographyKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimEmployee table to get details of Employee worked on the ticket. Direct mapping to CurrentOwnerEmployeeKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "Hardcoded to Unspecified as it is retired in MSSolve source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "No Longer used",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimRange table to get more details about Ticket ageRange. Derived by applying decode logic on ClosedDateTime,CreatedDateTime columns in DimSupportServiceRequest table coming from SA&DP Commercial Source. Logic: calculate new column Range-when datedifference of ClosedDateTime,CreatedDateTime < 0 then '<=0' ,when datedifference of ClosedDateTime,CreatedDateTime is > 0 and <=1 then '>0-1' ,when datedifference of ClosedDateTime,CreatedDateTime is > 1 and <=2 then '>1-2' ,when datedifference of ClosedDateTime,CreatedDateTime is > 2 and <=3 then '>2-3' ,when datedifference of ClosedDateTime,CreatedDateTime is > 3 and <=4 then '>3-4' ,when datedifference of ClosedDateTime,CreatedDateTime is > 4 and <=5 then '>4-5',when datedifference of ClosedDateTime,CreatedDateTime is > 5 and <=6 then '>5-6' ,when datedifference of ClosedDateTime,CreatedDateTime is > 6 and <=7 then '>6-7' ,when datedifference of ClosedDateTime,CreatedDateTime is > 7 and <=14 then '>7-14' ,when datedifference of ClosedDateTime,CreatedDateTime is > 14 and <=21 then '>14-21' ,when datedifference of ClosedDateTime,CreatedDateTime is > 21 and <=30 then '>21-30' ,when datedifference of ClosedDateTime,CreatedDateTime is > 30 and <=60 then '>30-60' ,when datedifference of ClosedDateTime,CreatedDateTime is > 60 and <=90 then '>60-90' ,when datedifference of ClosedDateTime,CreatedDateTime is > 90 and <=120 then '>90-120' ,when datedifference of ClosedDateTime,CreatedDateTime >120 then '>120' . Now join DimRange based on this new Range column and extract RangeKey ",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "OK",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportChannel table to get more details about medium of communication. Direct mapping to SupportChannelKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to the DimSubPlanningCategory to get more detail about Sub PlanningCategory.Derived by applying decode logic on PlanningCategoryKey column in FactSupportServiceRequest table coming from SA&DP Commercial source. Logic: join FactSupportServiceRequest and Commercial-DimPlanningCategory tables based on PlanningCategoryKey and extract SubPlanningCategoryID, join this with DimSubPlanningCategory based on  SubPlanningCategoryID and extract SubPlanningCategorykey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimServiceRequestStatus table to get staus of ticket. Direct mapping to ServiceRequestStatusKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimServiceRequestState table to get current state of ticket. Direct mapping to StateKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimServiceOfferingMaster table to get more detail of various services offered for Commercial tickets. Direct mapping to ServiceOfferingMasterKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "Fact table that contains Commercial Survey data related to Surface Devices in FactSurvey table coming from SA&DP Commercial Source. Grain: FactSurveyKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "refer rno - 3 review comments"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about Survey CreatedDatetime in UTC. This key is populated by joining AcknowledgeDateTime from FactSurvey table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about Survey CreatedDatetime in UTC. This key is populated by joining AcknowledgeDateTime from FactSurvey table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about Survey CreatedDatetime in PT. This key is populated by joining AcknowledgeDateTime in PT from FactSurvey table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about Survey CreatedDatetime in PT. This key is populated by joining AcknowledgeDateTime in PT from FactSurvey table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimRange table to get more details about Ticket ageRange. Derived by applying decode logic on ClosedDateTime,CreatedDateTime columns in DimSupportServiceRequest table coming from SA&DP Commercial Source. Logic: calculate new column Range-when datedifference of ClosedDateTime,CreatedDateTime < 0 then '<=0' ,when datedifference of ClosedDateTime,CreatedDateTime is > 0 and <=1 then '>0-1' ,when datedifference of ClosedDateTime,CreatedDateTime is > 1 and <=2 then '>1-2' ,when datedifference of ClosedDateTime,CreatedDateTime is > 2 and <=3 then '>2-3' ,when datedifference of ClosedDateTime,CreatedDateTime is > 3 and <=4 then '>3-4' ,when datedifference of ClosedDateTime,CreatedDateTime is > 4 and <=5 then '>4-5',when datedifference of ClosedDateTime,CreatedDateTime is > 5 and <=6 then '>5-6' ,when datedifference of ClosedDateTime,CreatedDateTime is > 6 and <=7 then '>6-7' ,when datedifference of ClosedDateTime,CreatedDateTime is > 7 and <=14 then '>7-14' ,when datedifference of ClosedDateTime,CreatedDateTime is > 14 and <=21 then '>14-21' ,when datedifference of ClosedDateTime,CreatedDateTime is > 21 and <=30 then '>21-30' ,when datedifference of ClosedDateTime,CreatedDateTime is > 30 and <=60 then '>30-60' ,when datedifference of ClosedDateTime,CreatedDateTime is > 60 and <=90 then '>60-90' ,when datedifference of ClosedDateTime,CreatedDateTime is > 90 and <=120 then '>90-120' ,when datedifference of ClosedDateTime,CreatedDateTime >120 then '>120' . Now join DimRange based on this new Range column and extract RangeKey ",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimGeography table to get more details about customer geography. Direct mapping to CustomerGeographyKey column in FactSurvey table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportLanguage table to get more details about Language. Direct mapping to Supportlanguagekey column in FactSurvey table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDataSource table to get more details about Source. Direct mapping to DataSourcekey column in FactSurvey table coming from SA&DP Commercial Source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportChannel table to get more details about medium of communication. Direct mapping to SupportChannelKey column in FactSurvey table coming from SA&DP Commercial source",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimMLGCSSurveyTarget table to get more details about MLGCS Business Targets associated with the survey. Derived by applying decode logic received from MDM_viw_Consumer_MAS_MLGCSSurveyProduct table coming from MDM source. Logic: based on logic available in MDM_viw_Consumer_MAS_MLGCSSurveyProduct table MLGCSSurveyTargetkey related to survey is mapped",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity present within MLGCS datamart.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.\n\ne.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.\nLogic -'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR buisness, is joined with 'Market' column in DimGeography to pick GeographyKey"
+    },
+    {
+        "TechnicalDescription": "Derived by applying decode logic on AccountTimelineid and Datekey columns coming from Upstream source MDAP (Microsoft Ads Data Analytics Platform) DimAccountAttributesTimeline table.\nLogic: SegmentationKey is populated by joining FactPerformingAndNewCountMeasures table with DimAccountAttributesTimeline tables using AccountTimelineId and Datekey from both table",
+        "L1 Review Comment": "Add the Source table name",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Derived by applying decode logic on AccountTimelineid and Datekey columns coming from Upstream source MDAP (Microsoft Ads Data Analytics Platform) DimAccountAttributesTimeline table.\nLogic: AccountAttributeTimeLineKey is populated by joining FactPerformingAndNewCountMeasures table with DimAccountAttributesTimeline tables using AccountTimelineId and Datekey from both table",
+        "L1 Review Comment": "Need to add logic. Please refer the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a Reference key to DimCustomerAccountNonPII table to get details for Customer Accounts. logic: CustomerAccountNonPIIKey is populated by joining DimCustomerAccountNonPII table with FactPerformingAndNewCountmeasures table using accountid from both tables.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimIssueCode table to get details about IssueCode direct mapping of 'IssueCodeKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimCSSProduct table to get CSSProduct related to ticket direct mapping of 'CSSProductKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to know the date on which ticket is last modified in UTC timezone direct mapping of 'LastModifiedUTCDateKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to FactServiceRequest table to get ticket details direct mapping of 'ServiceRequestKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportAreaPath table to get details about first support area path direct mapping of 'FirstSAPKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportAreaPath table to get details about current support area path direct mapping of 'SAPKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSubPlanningCategory table to get details about Sub Planning Category direct mapping of 'SubPlanningCategoryKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportQueue table to get details about the tickets' support queue direct mapping of 'SupportQueueKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to know the time when ticket is created in UTC timezone direct mapping of 'CreatedUTCTimeKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to know the date on which ticket is created in UTC timezone direct mapping of 'CreatedUTCDateKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to know the time when ticket is last modified in PT timezone",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimResourceTenure table to get details about Resource Tenure direct mapping of 'ResourceTenureKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to know the date on which ticket is last modified in PT timezone direct mapping of 'LastModifiedPTDateKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimServiceLine table to get details tickets' first service line direct mapping of 'FirstServiceLineQueueKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimGeography table to get details about Customer Geography direct mapping of 'CustomerGeographyKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimVendorSite table to get details about the employees' company and location direct mapping of 'VendorSiteKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportChannel table to get first support channel of the ticket direct mapping of 'FirstSupportChannelQueueKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimServiceLine table to get details tickets' service line direct mapping of 'ServiceLineKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimEmployee table to get details about the employee who worked on this ticket direct mapping of 'EmployeeKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimRootCauseClassification table to get details about root cause classification direct mapping of 'RootCauseClassificationKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimCustomerPII table to get NonPII info about the customer direct mapping of 'CustomerNonPIIKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportChannel table to get support channel of the ticket direct mapping of 'SupportChannelKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimProgramLineOfBusiness table to get program line of business details of the ticket direct mapping of 'ProgramLineOfBusinessKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportProduct table to get details about Support Product direct mapping of 'SupportProductKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportQueue table to get details about the tickets' first support queue direct mapping of 'FirstSupportQueueKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimEmployee table to get details about the first employee who worked on this ticket direct mapping of 'FirstEmployeeQueueKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimVendorSite table to get details about the first employees' company and location direct mapping of 'FirstVendorSiteQueueKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportLanguage table to get support language of the ticket direct mapping of 'SupportLanguageKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to know the time when ticket is created in PT timezone direct mapping of 'CreatedPTTimeKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDataSource table to identify the tool where ticket is created direct mapping of 'DataSourceKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimCustomerPII table to get info about the customer direct mapping of 'CustomerPIIKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Surrogate key generated in UDP to get Survey Details direct mapping of 'FactSurveyKey' from FactSurvey.",
+        "L1 Review Comment": "Need to re-work, please refer to the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimSupportLanguage table to get first support language of the ticket direct mapping of 'FirstSupportLanguageQueueKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimServiceRequestStatus table to get details about ticket status direct mapping of 'ServiceRequestStatusKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to know the time when ticket is last modified in UTC timezone direct mapping of 'LastModifiedUTCTimeKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to know the date on which ticket is created in PT timezone direct mapping of 'CreatedPTDateKey' from FactServiceRequest.",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This Table containt the details of Requests Transfer detail such as SupportArea,Organizations and SupplierName from Amplify Source.",
+        "L1 Review Comment": "Need to work",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimEmployee table to get more details about the agent assigned to the particular phone interaction\nThis key is populated by joining AssignedAgent from source with UserId from DimEmployee",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimVendorSite table to get more details about VendorSite details of the agent assigned to the particular phone interaction\nThis key is populated by joining ASSIGNED_VENDORCODE and AssignedSiteCode from source with VendorSiteCode from DimVendorSite",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDataSource table to get more details about the source of the agent details\nThis key is populated by joining hardcoded value 'Genesys' with DataSourceName from DimDataSource",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about the StartDate for the agent to which a phone interaction was transferred. This key is populated by joining FROM_END_DATE_TIME from source with CalendarDate from DimDate",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about the StartTime for the agent to which a phone interaction was transferred. This key is populated by joining FROM_END_DATE_TIME from source with Time from DimTime",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about the StartDate of the agent assigned to the particular phone interaction. This key is populated by joining FromStartDateTime from source with CalendarDate from DimDate",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about the StartTime of the agent assigned to the particular phone interaction. This key is populated by joining FromStartDateTime from source with Time from DimTime",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about the EndDate for the agent to which a phone interaction was transferred. This key is populated by joining ToEndDateTime from source with CalendarDate from DimDate",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about the EndTime for the agent to which a phone interaction was transferred. This key is populated by joining ToEndDateTime from source with Time from DimTime",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about the EndDate of the agent assigned to the particular phone interaction. This key is populated by joining ToStartDateTime from source with CalendarDate from DimDate",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about the EndTime of the agent assigned to the particular phone interaction. This key is populated by joining ToStartDateTime from source with Time from DimTime",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimEmployee table to get more details about the agent to which a phone interaction was transferred. This key is populated by joining TransferredAgent from source with UserId from DimEmployee",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimVendorSite table to get more details about VendorSite details of agent to which phone interaction was transferred. This key is populated by joining either concatenation of TRANSFERRED_VENDORCODE,TransferredSiteCode or TransferredAgent  from source with VendorSiteCode from DimVendorSite",
+        "L1 Review Comment": "Need to add the logic of key population. Please refer the latest Guidelines.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is an indirect mapping to internalemailaddress column coming from Upstream Source MSX(Microsoft Sales Experience) ,hub_vw_systemuser table by joining MSX hub_vw_lead table with systemUser table on createdbyid column from lead table and systemuserid column from systemuser table",
+        "L1 Review Comment": "Need to add logic. Please refer the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is an indirect mapping to internalemailaddress column coming from Upstream Source MSX(Microsoft Sales Experience) ,hub_vw_systemuser table by joining MSX hub_vw_lead table with systemUser table on ownerid column from lead table and systemuserid column from systemuser table",
+        "L1 Review Comment": "Need to add logic. Please refer the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This column is an indirect mapping derived from two sources : the MSX ADLS hub_vw_Team  table and the MSX API AuditHistory. It's mapped based on the ownerid column from hub_vw_lead with teamid column from hub_vw_team table, leadnumber from hub_vw_lead table and recordkeyvalue from MSX audithistory table. The values are obtained from team column from hub_vw_team table and newvalue column from MSXAuditHistory table.\nlogic: 1.join the lead table with team table: \n                       lead.ownerid == team.teamid\n       2.join the lead table with MSXAuditHistory:\n\t\t       lead.leadnumber == msx.RecordKeyValue and msx.operation == create\n       if msx.newvalue != null then newvalue otherwise team.team as a CreatorTeamName",
+        "L1 Review Comment": "Need to add logic. Please refer the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Derived by applying decode logic on createddate column coming from Upstream source MSX(Microsoft Sales Experience) hub_vw_opportunity table.\nLogic: date_format(\"createddate\", \"yyyyMMdd\").cast(\"int\")\n",
+        "L1 Review Comment": "Need to add logic. Please refer the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is an indirect mapping to team column coming from Upstream Source MSX(Microsoft Sales Experience) hub_vw_team table by joining MSX hub_vw_opportunity table with ownerid column from Opportunity table and teamid column from hub_vw_team table",
+        "L1 Review Comment": "Need to add logic. Please refer the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is an indirect mapping to value column coming from Upstream Source MSX(Microsoft Sales Experience) hub_vw_hub_vw_stringmap table by joining MSX hub_vw_opportunity table with StatusSeqNo column from Opportunity table and StringMapSeqNo column from StringMap table",
+        "L1 Review Comment": "Need to add logic. Please refer the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is an indirect mapping to internalemailaddress column coming from Upstream Source MSX(Microsoft Sales Experience) ,hub_vw_systemuser table by joining MSX hub_vw_opportunity table with systemUser table on createdbyid column from opportunity table and systemuserid column from systemuser table",
+        "L1 Review Comment": "Need to add logic. Please refer the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is an indirect mapping to team column coming from Upstream Source MSX(Microsoft Sales Experience) hub_vw_team table by joining MSX hub_vw_opportunity table with createdbyid column from Opportunity table and teamid column from hub_vw_team table",
+        "L1 Review Comment": "Need to add logic. Please refer the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is an indirect mapping to internalemailaddress column coming from Upstream Source MSX(Microsoft Sales Experience) ,hub_vw_systemuser table by joining MSX hub_vw_opportunity table with systemUser table on ownerid column from opportunity table and systemuserid column from systemuser table",
+        "L1 Review Comment": "Need to add logic. Please refer the latest guidelines",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This is a Fact table for reporting users that  contains the details of Requests Transfer detail such as SupportArea,Organizations and SupplierName from Amplify Source.  Grain - RequestID",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Add the source and source table names and grain. \nIf the list is big then mention just the source name and grain."
+    },
+    {
+        "TechnicalDescription": "Direct mapping to CurOrg column in AmplifyTransfer entity coming from Amplify source. ",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "In desc it is not clear what is the source of OrganizationName  column out of the two tables.\nRefer this desc and modify - This is an Indirect mapping to LearningPathInternalKey column from \"Learning_Path_Content Report\" API file coming from Cloud Academy source by joining UDP Skill Inventory DimLearningpath table with  \"Learning_Path_Content Report\" on LearningPathID from both tables."
+    },
+    {
+        "TechnicalDescription": "Direct mapping to PreOrg column in AmplifyTransfer entity coming from Amplify source. ",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 3 review comments"
+    },
+    {
+        "TechnicalDescription": "Direct mapping to PreSupplierName column in AmplifyTransfer entity coming from Amplify source. ",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 3 review comments"
+    },
+    {
+        "TechnicalDescription": "Direct mapping to CurSupportArea column in AmplifyTransfer entity coming from Amplify source. ",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 3 review comments"
+    },
+    {
+        "TechnicalDescription": "Direct mapping to CurSupplierName column in AmplifyTransfer entity coming from Amplify source. ",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 3 review comments"
+    },
+    {
+        "TechnicalDescription": "Direct mapping to PreSupportArea column in AmplifyTransfer entity coming from Amplify source. ",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 3 review comments"
+    },
+    {
+        "TechnicalDescription": "This tables contain the details of the transfer of phone calls between agents coming from TRANSFER_FACT table in genesys source.\nThis table is created for Insights(Reporting) Team.",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 2 review comments"
+    },
+    {
+        "TechnicalDescription": "\"This is a reference key to DimEmployee entity to get more details about the agent assigned to the particular \nphone interaction\nTRANSFER_FACT and DimEmployee tables are joined on AssignedAgent.TRANSFER_FACT coming from genesys source and UserId.DimEmployee from UDP and\nEmployeeKey is picked from DimEmployee table to populate AssignedEmployeeKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 in SHeet B3 as Logic - .....\nOtherwise use desc below to write the logic:\nRef desc below - SubmitterEmployeeKey -This is a reference key to EmpMapData entity.\nLogic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail \ncoming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey."
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimVendorSite table to get more details about VendorSite details of the agent assigned to the particular phone interaction\nThis key is populated by joining ASSIGNED_VENDORCODE and AssignedSiteCode from source with VendorSiteCode from DimVendorSite to pick DimVendorSite.VendorSiteKey TRANSFER_FACT and DimVendorSite tables are joined on ASSIGNED_VENDORCODE.TRANSFER_FACT and AssignedSiteCode.TRANSFER_FACT coming from genesys source and VendorSiteCode.DimVendorSite from UDP and\nVendorSiteKey is picked from DimVendorSite table to populate AssignedVendorSiteKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "\"This is a reference key to DimDataSource table to get more details about the source of the agent details\nIt is the key correspoding to DataSourceGroup =  \"\"Genesys\"\" in DimDataSource\"",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Replace the red highligyed string with - \nIt is the key correspoding to DataSourceName =  \"Genesys\" in DimDataSource."
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about the StartDate for the agent to which a phone interaction was transferred. \nTRANSFER_FACT and DimDate tables are joined on FROM_END_DATE_TIME.TRANSFER_FACT coming from genesys source and CalendarDate.DimDate from UDP and\nDateUTCKey is picked from DimDate table to populate FromEndUTCDateKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about the StartDate for the agent to which a phone interaction was transferred. \nTRANSFER_FACT and DimTime tables are joined on FROM_END_DATE_TIME.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and\nDateUTCKey is picked from DimTime table to populate FromEndUTCTimeKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about the StartDate for the agent to which a phone interaction was transferred. \nTRANSFER_FACT and DimDate tables are joined on FromStartDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimDate from UDP and\nDateUTCKey is picked from DimDate table to populate FromStartUTCDateKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about the StartDate for the agent to which a phone interaction was transferred. \nTRANSFER_FACT and DimTime tables are joined on FromStartDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and\nDateUTCKey is picked from DimTime table to populate FromStartUTCTimeKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about the EndDate for the agent to which a phone interaction \nwas transferred. \nTRANSFER_FACT and DimDate tables are joined on ToEndDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimDate from UDP and\nDateUTCKey is picked from DimDate table to populate FromEndUTCDateKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about the EndTime for the agent to which a phone interaction \nwas transferred. \nTRANSFER_FACT and DimTime tables are joined on ToEndDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and\nTimeUTCKey is picked from DimTime table to populate FromEndUTCDateKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimDate table to get more details about the EndDate of the agent assigned to the particular phone interaction. \nThis key is populated by joining ToStartDateTime from source with CalendarDate from DimDate\nTRANSFER_FACT and DimDate tables are joined on ToStartDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimDate from UDP and\nDateUTCKey is picked from DimDate table to populate ToStartUTCDateKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimTime table to get more details about the EndTime of the agent assigned to the particular phone interaction. \nThis key is populated by joining ToStartDateTime from source with CalendarDate from DimDate\nTRANSFER_FACT and DimTime tables are joined on ToStartDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and\nTimeUTCKey is picked from DimTime table to populate ToStartUTCDateKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimEmployee table to get more details about the agent to which a phone interaction was transferred.\nThis key is populated by joining TransferredAgent from source with UserId from DimEmployee\nTRANSFER_FACT and DimEmployee tables are joined on TransferredAgent.TRANSFER_FACT coming from genesys source and UserId.DimEmployee from UDP and\nEmployeeKey is picked from DimEmployee table to populate TransferredEmployeeKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "This is a reference key to DimVendorSite table to get more details about VendorSite details of agent \nto which phone interaction was transferred. \nTRANSFER_FACT and DimEmployee tables are joined on either concatenation of TRANSFERRED_VENDORCODE.TRANSFER_FACT,TransferredSiteCode.TRANSFER_FACT or TransferredAgent.TRANSFER_FACT coming from genesys source and VendorSiteCode.DimVendorSite from UDP and\nVendorSiteKey is picked from DimVendorSite table to populate TransferredVendorSiteKey",
+        "L1 Review Comment": null,
+        "L2 Review Comment": "Ok",
+        "Review Comment L3": "Refer rno - 13 review comments"
+    },
+    {
+        "TechnicalDescription": "This table contains Commercial ticket data coming from SA&DP Commercial source. It is derived from DimSupportServiceRequest and FactSupportServiceRequest tables. Grain:ServiceRequestID",
+        "L1 Review Comment": "Ok",
+        "L2 Review Comment": "I don't think this is all commercial tickets through, on MLGCS?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table contains Commercial Interaction data coming from SA&DP Commercial source. It is derived from FactInteraction table. Grain: ServiceRequestInteractionID",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Surrogate Key generated based on ServiceRequestInteractionID column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to CreatedByType column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Derived attribute of DataSourcekey column in FactIncidentInteraction table coming from SA&DP Commercial source. Logic: Join the FactIncidentInteraction table with the DimDataSource table using the DataSourceKey column, thus denormalizing datasourcekey to retrieve the DataSource column",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to InteractionDirection column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to InteractionType column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to ServiceRequestKey column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to ServiceRequestInteractionID column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to InteractionStatus column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to UpdatedByType column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "What is interaction Data?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table contains details of attributes belonging to consumer tickets coming from ASDCAP source. Grain: ServiceRequestID",
+        "L1 Review Comment": "Ok",
+        "L2 Review Comment": "Ok - lot of this is ASD which should be gone soon",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table contains Language data coming from SA&DP Commercial source. Grain: NativeLanguage",
+        "L1 Review Comment": "Ok",
+        "L2 Review Comment": "Ok - but should be replaced with Common Language ",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to GeographyLevel1Name column in Geography table coming from ASDCAP source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Odd - these are coming from ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to GeographyLevel2Name column in Geography table coming from ASDCAP source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Odd - these are coming from ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to GeographyLevel3Name column in Geography table coming from ASDCAP source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Odd - these are coming from ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to GeographyLevel4Name column in Geography table coming from ASDCAP source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Odd - these are coming from ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table contains details of initiatives taken by Microsoft to increase customer, coming from UCM source. Grain: InitiativeId",
+        "L1 Review Comment": "Ok",
+        "L2 Review Comment": "Kasi - is this something you know about?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Kasi - is this something you know about?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Kasi - is this something you know about?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to InitiativeEndDate column in OARInitiative table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Kasi - is this something you know about?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to InitiativeId column in OARInitiative table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Kasi - is this something you know about?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Surrogate Key generated based on InitiativeId column in OARInitiative table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Kasi - is this something you know about?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to InitiativeName column in OARInitiative table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Kasi - is this something you know about?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to InitiativeStartDate column in OARInitiative table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Kasi - is this something you know about?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to InitiativeStatus column in OARInitiative table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Kasi - is this something you know about?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table contains details of various Issues, for which Agent contacts customer, coming from MDM source. Grain: IssueCode1,IssueCode2,IssueCode3,IssueCode4,MSAScenario,MSAScenarioType",
+        "L1 Review Comment": "Ok",
+        "L2 Review Comment": "Ok - but I plan to replace with SAPs",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table contains scenario and issuecode details coming from MSA tool. Grain: IssueCode1,IssueCode2,IssueCode3,IssueCode4,IssueCode5,IssueCode6,ScenarioType,Scenario",
+        "L1 Review Comment": "Ok",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to AsdArea column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to AsdCustomerCalledReason column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to AsdFocus column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to AsdIssue column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to AsdRootCause column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to ASDScenario column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to AsdTopic column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to IssueCode1 column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to IssueCode2 column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to IssueCode3 column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to IssueCode4 column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to IssueCode5 column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to IssueCode6 column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Surrogate Key generated  based on the combination of  IssueCode1,IssueCode2,IssueCode3,IssueCode4,IssueCode5,IssueCode6,Scenario,ScenarioType columns in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to Scenario column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to ScenarioType column in viw_Consumer_MSAScenarioCategory_LEAF table from MDM Source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "I believe this can be retired, it only worked for ASD",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table contains ticket scenario category details coming from MDM sources. Grain: Scenario",
+        "L1 Review Comment": "Ok",
+        "L2 Review Comment": "Ok - Can be retired was surface ASD only",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to Category column in vw_IssueCodeMapping table coming from MDM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Ok - Can be retired was surface ASD only",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Ok - Can be retired was surface ASD only",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Ok - Can be retired was surface ASD only",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to Scenario column in vw_IssueCodeMapping table coming from MDM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Ok - Can be retired was surface ASD only",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Surrogate Key generated based on Category,Scenario columns in vw_IssueCodeMapping table coming from MDM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "Ok - Can be retired was surface ASD only",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table contains details of various customer divisions coming from UCM source. Grain: L1Segment,L2Segment,L3Segment,ServiceLevel",
+        "L1 Review Comment": "Ok",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Derived by applying decode logic on L1ServiceSegmentName,L2ServiceSegmentName,L3ServiceSegmentName,L4ServiceSegmentName columns in DimSegmentView table coming from UCM source. Logic: If the data for the columns L1ServiceSegmentName, L2ServiceSegmentName, L3ServiceSegmentName, L4ServiceSegmentName is not available in the UCM source but is available in SA&DP, then the result is 0; otherwise, it is 1",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to L1ServiceSegmentName column in DimSegmentView table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to L3ServiceSegmentName column in DimSegmentView table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to L3ServiceSegmentName column in DimSegmentView table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Surrogate Key generated based on L1ServiceSegmentName,L2ServiceSegmentName,L3ServiceSegmentName,L4ServiceSegmentName columns in DimSegmentView table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to L4ServiceSegmentName column in DimSegmentView table coming from UCM source",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table contains attributes of consumer incidents coming from Dynamics source. Grain: ServiceRequestID",
+        "L1 Review Comment": "Ok",
+        "L2 Review Comment": "Ok - there are DFC Part B attributes",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This dimension table contains information around the tactic being pitched in tactics table coming from Unified Customer Management source. Grain: TacticKey, TacticNativeId.",
+        "L1 Review Comment": "Data granularity details missing,tablename and is UCM source ? Please specify the details appropriately. \nSource information to be provided in detail",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Surrogate Key generated for TacticId from tactics table, Unified Customer Management source.",
+        "L1 Review Comment": "Source details is missing\nSource information to be provided in detail",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to TacticCategoryName column in tactics table from Unified Customer Management source having string values. ",
+        "L1 Review Comment": "plz specifiy the source details appropriately with tablenames and column names and source details for Eg. please refer row no 665,666\nSource information to be provided in detail",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "L1 Review Comment": "OK",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping of TacticTitle column in tactics table from Unified Customer Management source having string values.",
+        "L1 Review Comment": "plz specifiy the source details appropriately with tablenames and column names and source details for Eg. please refer row no 665,666\nSource information to be provided in detail",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to TacticID column in tactics table from Unified Customer Management source having integer values.",
+        "L1 Review Comment": "Source entity name is missing",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to TacticCode column in tactics table from Unified Customer Management source having integer values. ",
+        "L1 Review Comment": "Source information to be provided in detail ",
+        "L2 Review Comment": "??",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Entity contains associated Team details of Business Groups for particular Area and Region maintained by CAPS Business Team provided through onetime excel which is rarely updated. Grain - TeamId",
+        "L1 Review Comment": "Till when the data is there or is  totally depreciated from system",
+        "L2 Review Comment": "I don't thjnk this is Rave Team, looks like CAPS",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table contains fields related to product details coming from AIPMR source. Grain - StartDate,DaysFromLaunch,DeviceType",
+        "L1 Review Comment": "Grain is missing",
+        "L2 Review Comment": "Ok - is this still needed since Hololens cancelled?",
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This table have the supplier engagement data coming from latest gto source file",
+        "L1 Review Comment": "Please provide the entity details",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This entity contains the details of efficency metrics for Sentry. The agent and the minutes spent per limbo created item coming from Sentry_OLSSentryReviewerMetrics Source .",
+        "L1 Review Comment": "Sentry_OLSSentryReviewerMetrics, is this a source ? Also, please call it out if its external source.",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to IntervalEndPSTDateTime column  coming from MC_OLSSentryReviewerMetrics Entity from Sentry_OLSSentryReviewerMetrics source having Timestamp type data .",
+        "L1 Review Comment": "Pls add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to IntervalStartPSTDateTime column  coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source having TimeStamp type data .",
+        "L1 Review Comment": "Pls add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to AssignmentCreatedCount column coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source having Integer type data  .",
+        "L1 Review Comment": "Pls add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to ReviewEventCompletedPSTDate column coming from MC_OLSSentryReviewerMetrics Entity from Sentry_OLSSentryReviewerMetrics source  having Timestamp type data .",
+        "L1 Review Comment": "Pls add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to AssignmentCanceledCount column  coming from MC_OLSSentryReviewerMetrics Entity from Sentry_OLSSentryReviewerMetrics source having Integer type data .",
+        "L1 Review Comment": "Pls add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This a Indirect Mapping  to ReviewerName column   coming from MC_OLSSentryReviewer entity joined based on  ActingUserId column from MC_OLSSentryReviewerMetrics entity with UserId  column from MC_OLSSentryReviewer entity having string values.",
+        "L1 Review Comment": "I would suggest not to mention it as Key, instead , we can have it as ,\nIt is an indiret mapping\/ This is derived from ",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to ReviewEventCompletedDateKey column having string values coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source .",
+        "L1 Review Comment": "Pls add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "This a Indirect Mapping to QueueName column coming from  MC_OLSSentryQueue entity joined based on  CurrentQueueId column from MC_OLSSentryReviewerMetrics entity with QueueId  column from MC_OLSSentryQueue entity having string values .",
+        "L1 Review Comment": "I would suggest not to mention it as Key, instead , we can have it as ,\nIt is an indiret mapping\/ This is derived from ",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to ReviewEscalatedCount column coming from MC_OLSSentryReviewerMetrics Entity from Sentry_OLSSentryReviewerMetrics source having Integer type data .",
+        "L1 Review Comment": "Pls add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to HoldCreatedCount column coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source having Integer type data .",
+        "L1 Review Comment": "Pls add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to ReviewReconstitutedByAdminCount column   coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source having Integer type data .",
+        "L1 Review Comment": "Pls add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to AssignmentExpiredCount column having Integer type data  coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source .",
+        "L1 Review Comment": "Pls add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct Mapping to SRID Column having string values coming from Asimov.CLL file from external source cornerstone.",
+        "L1 Review Comment": "Pls add the complete description",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Derived by applying decode logic on AgentGroup column having string values coming from MC_PRCSites_open_demand_daily, MC_PRCSites_open_demand_SMB & MC_PRCSites_open_demand_SOCIAL excel files provided by Store Business Team. Logic: If AgentGroup matches with pattern like r'%accounts%billing%' then Hardcoded as \"Accounts And Billing\" If AgentGroup matches with pattern like r'%up%running%' then Hardcoded as \"Up And Running\" If AgentGroup matches with pattern like r'%tech%support%xbox%' then Hardcoded as \"Technical Support - Xbox\" If AgentGroup matches with pattern like r'%tech%supp%surface%' then Hardcoded as \"Technical Support - Support\" else AgentGroup",
+        "L1 Review Comment": "Please add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Derived by applying decode logic on FactChatVendor.ChatDeviceKey, FactMessaging.ChatDeviceKey coming from LivePersonMessaging source having bigint values to derive ChatDeviceKey column. Logic: If FactChatVendor.ChatDeviceKey is null then FactMessaging.ChatDeviceKey else FactChatVendor.ChatDeviceKey",
+        "L1 Review Comment": "Please add the datatype of the column and also this derivation is not decoding, So dont mention it as decode ",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Derived by applying decode login on Agent column having string values coming from RevenueReport-Insession and CrossSession excel files provided by Store Business Team.  Logic example: If Agent matches with pattern like r'%sut_%' then Hardcoded as \"Sutherland\" If Agent matches with pattern like r'%arv_%' then Hardcoded as \"Arvato\" If Agent matches with pattern like r'%dat_%' then Hardcoded as \"Datacom\" If Agent matches with pattern like r'%mmh_%' then Hardcoded as \"Moshi Moshi Hotline\" If Agent matches with pattern like r'%sit_%' then Hardcoded as \"Sitel\" If Agent matches with pattern like r'%str_%' then Hardcoded as \"Stream\"",
+        "L1 Review Comment": "Please add the datatype of the column",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to DistributorId column having string values coming of MsOrder-Materialized DeltaStream files coming from external source cornerstone maintained in Cosmos.",
+        "L1 Review Comment": "Pls call out cornerstone as External source",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    },
+    {
+        "TechnicalDescription": "Direct mapping to SkuDescription column having string values coming of MsOrder-Materialized DeltaStream files coming from external source cornerstone maintained in Cosmos",
+        "L1 Review Comment": "Pls call out cornerstone as External source",
+        "L2 Review Comment": null,
+        "Review Comment L3": null
+    }
+]
