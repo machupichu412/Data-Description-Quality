@@ -1,0 +1,482 @@
+[
+  {
+    "index": 1,
+    "label": "Pass",
+    "text": "Direct Mapping to CaseNumber column in KPI table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 2,
+    "label": "Pass",
+    "text": "This is reference key to the DimDataSource table to get more details of DataSourceKey. It is populated by joining ActiveSystem column in Cases table coming from DFM Events data processed by Cornerstone source with DataSourceName column in DimDataSource coming from Commercial NextDay Datamart within SA&DP."
+  },
+  {
+    "index": 3,
+    "label": "Fail",
+    "text": "Derived by applying decode logic based on ReopenCount column in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic:If ReopenCount > 0 then True Else False"
+  },
+  {
+    "index": 4,
+    "label": "Pass",
+    "text": "Derived by applying decode logic on SRCreationDateTime in FactSREvents.\nLogic: Computes the minutes elapsed since SRCreationDateTime and labels it as SRCreationMinutes."
+  },
+  {
+    "index": 5,
+    "label": "Fail",
+    "text": "Direct Mapping to State column in Cases table coming from DFM Events data processed by Cornerstone having String values "
+  },
+  {
+    "index": 6,
+    "label": "Pass",
+    "text": "Direct mapping to StateLastUpdatedDateTime column in Cases table coming from DFM Events data processed by Cornerstone having Timestamp(UTC)values."
+  },
+  {
+    "index": 7,
+    "label": "Pass",
+    "text": "Direct Mapping to EntityType column in EscalationTask table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 8,
+    "label": "Pass",
+    "text": "Direct Mapping to AgentEmail  column in SupportRequestDetailsSIPv2 table coming from Rave data processed by Amplify Source having String  values."
+  },
+  {
+    "index": 9,
+    "label": "Pass",
+    "text": "Direct Mapping to RoutingContextId column in FollowUpTask table coming from DFM Events data processed by Cornerstone having integer values."
+  },
+  {
+    "index": 10,
+    "label": "Pass",
+    "text": "Direct mapping to SupportTimeZone column in Cases table coming from DFM Events data processed by Cornerstone having String values."
+  },
+  {
+    "index": 11,
+    "label": "Pass",
+    "text": "Direct Mapping to Modality column in SupportRequestDetailsSIPv2 Table coming from Rave data processed by Amplify Source having String  values."
+  },
+  {
+    "index": 12,
+    "label": "Pass",
+    "text": "Derived by applying decode logic based on Id and TaskType columns in FollowUpTasks table coming from DFM Events processed by Cornerstone having integer values.\nLogic: Step1- We take the distinct Id as TaskCountId when TaskType='FollowupTask'.\nStep2- If TaskCountId coming from step1 is NULL, it replaces it with 0 END AS FollowupTasks."
+  },
+  {
+    "index": 13,
+    "label": "Pass",
+    "text": "Direct Mapping to EventType column in PhoneInteraction table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 14,
+    "label": "Pass",
+    "text": "Direct mapping to TicketLanguage column in SupportRequestDetails_NRT\u00a0intermediate table having String values (refer entity desc for SupportRequestDetails_NRT table derivation)."
+  },
+  {
+    "index": 15,
+    "label": "Pass",
+    "text": "Direct Mapping to EntityURI (Entity  Universal Resource Identifier)column in EmailInteraction table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 16,
+    "label": "Pass",
+    "text": "Indirect mapping to GlobalContractKey in DimGlobalContract table coming from Commercial NextDay Datamart within SA&DP.\nLogic: Step1- It is fetched by joining Cases table coming from DFM Events data processed by Cornerstone with DimGlobalContract(DGC) when the below following conditions are met.\nWhen Cases.ContractObjId = DGC.GlobalContractID\nAND Cases.ContractScheduleId = DGC.GlobalContractScheduleId\nAND Cases.ContractSiteID = DGC.GlobalInstallationSiteID\nStep2 - If GlobalContractKey is NULL from step1 then replaces it with -1. "
+  },
+  {
+    "index": 17,
+    "label": "Pass",
+    "text": "Direct Mapping to StartDateTime column in Cases table coming from DFM Events data processed by Cornerstone having Timestamp(UTC)values."
+  },
+  {
+    "index": 18,
+    "label": "Pass",
+    "text": "Indirect mapping to IdleTimeSpanKey in DimIdleTimeSpan table coming from Commercial NRT Datamart within SA&DP.\nLogic: Step-1 : It is fetched by joining IdleTimeSpan column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP with IdleTimeL1 column in DimIdleTimeSpan table.\nStep-2 : If IdleTimeSpanKey from step-1 is NULL then it replaced with -1."
+  },
+  {
+    "index": 19,
+    "label": "Fail",
+    "text": "Direct Mapping to ContractScheduleId column in Cases table coming from DFM Events data processed by Cornerstone having string values "
+  },
+  {
+    "index": 20,
+    "label": "Pass",
+    "text": "Direct Mapping to EscalationStatus column in SupportRequestDetailsSIPv2 Table coming from Rave data processed by Amplify Source having string values."
+  },
+  {
+    "index": 21,
+    "label": "Pass",
+    "text": "Derived by applying decode logic on ProgramType column in Cases table coming from DFM Events data processed by Cornerstone source having string values.\nLogic :  CASE When ProgramType = '%d365%' then hardcoded true else false."
+  },
+  {
+    "index": 22,
+    "label": "Pass",
+    "text": "Direct Mapping to EventType column in EscalationTask table coming from DFM Events data processed by Cornerstone having timestamp values in UTC."
+  },
+  {
+    "index": 23,
+    "label": "Pass",
+    "text": "Direct Mapping to EventType column in FollowUpTask table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 24,
+    "label": "Fail",
+    "text": "Direct Mapping to BusinessTenant column in Cases table coming from DFM Events data processed by Cornerstone having string values "
+  },
+  {
+    "index": 25,
+    "label": "Pass",
+    "text": "Direct Mapping to AzureSubscriptionId column in Cases table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 26,
+    "label": "Pass",
+    "text": "Direct mapping to CaseNumber  column in Cases table coming from DFM Events data processed by Cornerstone having integer values."
+  },
+  {
+    "index": 27,
+    "label": "Pass",
+    "text": "Direct Mapping to AssignedTo column in FollowUpTask table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 28,
+    "label": "Pass",
+    "text": "Direct Mapping to EntityURI (Entity  Universal Resource Identifier) column in CollaborationTask table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 29,
+    "label": "Fail",
+    "text": "This is reference attribute to the DimGeography table to get more details about the GeographyLevel2Name. It is populated by joining TenantCountry column in SupportRequestDetails_NRT intermediate table (refer entity desc for SupportRequestDetails_NRT table derivation) with ISOCountryShortCode column in DimGeography table coming from Commercial NextDay Datamart within SA&DP"
+  },
+  {
+    "index": 30,
+    "label": "Pass",
+    "text": "SurrogateKey generated within UDP NRT to identify unique records of DimCauseType table."
+  },
+  {
+    "index": 31,
+    "label": "Pass",
+    "text": "Direct Mapping to RequestId column in SupportRequestDetailsSIPv2 Table coming from Rave data processed by Amplify Source having String  values."
+  },
+  {
+    "index": 32,
+    "label": "Fail",
+    "text": "Direct Mapping to CauseId column in Cases table coming from DFM Events data processed by Cornerstone having string values "
+  },
+  {
+    "index": 33,
+    "label": "Pass",
+    "text": "Derived by applying decode logic based on ServiceRequestID column in Cases table coming from DFM Events data processed by Cornerstone and DataSourceKey column in DimDataSource table coming from Commercial NextDay Datamart within SA&DP.\nLogic: If DatasourceKey = 3 and ServiceRequestID is not NULL, set as 'Yes', otherwise 'No'. If DatasourceKey is not 3, set as 'Unknown'."
+  },
+  {
+    "index": 34,
+    "label": "Pass",
+    "text": "Direct Mapping to SurveyCategories  column in SupportRequestDetailsSIPv2 table coming from Rave data processed by Amplify Source having String values."
+  },
+  {
+    "index": 35,
+    "label": "Pass",
+    "text": "Direct Mapping to State column in EscalationTask table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 36,
+    "label": "Pass",
+    "text": "Direct Mapping to EntityAction column in FollowUpTask table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 37,
+    "label": "Pass",
+    "text": "Direct Mapping to EntityType column in Labor table coming from DFM Events data processed by Cornerstone having String values."
+  },
+  {
+    "index": 38,
+    "label": "Fail",
+    "text": "Direct Mapping to RootCause column in Cases table coming from DFM Events data processed by Cornerstone having String values "
+  },
+  {
+    "index": 39,
+    "label": "Pass",
+    "text": "Direct mapping to AgentIdAssignedCount  column in Cases table coming from DFM Events data processed by Cornerstone having integer values."
+  },
+  {
+    "index": 40,
+    "label": "Pass",
+    "text": "Direct Mapping to EventDateTime column in CollaborationTask table coming from DFM Events data processed by Cornerstone having timestamp values in UTC."
+  },
+  {
+    "index": 41,
+    "label": "Pass",
+    "text": "Direct Mapping to UpdatedReason  column in Labor table coming from DFM Events data processed by Cornerstone having  String values."
+  },
+  {
+    "index": 42,
+    "label": "Pass",
+    "text": "Derived attribute of datatype int based on CreatedDateTime column in Cases table coming from DFM Events data processed by Cornerstone source.\nLogic: It fetches the date portion from CreatedDateTime and removes hyphens. If SRCreatedDateTimeId is null, it replaces it with -1."
+  },
+  {
+    "index": 43,
+    "label": "Fail",
+    "text": "Derived by applying decode logic on ProgramType column in Cases table coming  from DFM Events data processed by Cornerstone having string values.\nLogic : CASE When ProgramType ='%identity%'  then true else false"
+  },
+  {
+    "index": 44,
+    "label": "Pass",
+    "text": "Derived by applying decode logic based on ProgramType column in Cases table coming  from DFM Events data processed by Cornerstone source.\nLogic: If ProgramType contains values like 'S500' then true else false."
+  },
+  {
+    "index": 45,
+    "label": "Pass",
+    "text": "Direct mapping to LastUpdatedTime column in CustomerScheduledCallbackTime table coming from Amplify source having Timestamp(UTC) values."
+  },
+  {
+    "index": 46,
+    "label": "Pass",
+    "text": "Direct Mapping to StateAnnotation column in CollaborationTask table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 47,
+    "label": "Fail",
+    "text": "Timestamp in UTC at which record is updated by ETL process in UDP"
+  },
+  {
+    "index": 48,
+    "label": "Fail",
+    "text": "Derived by applying decode logic on CustomerType, CustomerType2, CustomerType3, CustomerIdSource, CustomerIdSource2, CustomerIdSource3 columns in Cases table loaded from DFM Events data processed by Cornerstone source.\nLogic: CASE   WHEN CustomerType ='supportpartner' and CustomerIdSource is not equal to 'unknown' and CustomerIdSource is NOT NULL THEN CustomerId1\n\t             WHEN CustomerType2 ='supportpartner' and CustomerIdSource2 is not equal to 'unknown' and CustomerIdSource2 is NOT NULL THEN CustomerId2\n                             WHEN CustomerType3 ='supportpartner' and CustomerIdSource3 is not equal to 'unknown' and CustomerIdSource3 is NOT NULL THEN CustomerId3\n            END AS PartnerTenantId"
+  },
+  {
+    "index": 49,
+    "label": "Pass",
+    "text": "Direct Mapping to State column in  SupportRequestDetailsSIPv2 Table coming from Rave data processed by Amplify Source having  String values."
+  },
+  {
+    "index": 50,
+    "label": "Pass",
+    "text": "Direct mapping to Severity column in SupportRequestDetails_NRT\u00a0intermediate table having integer  values (refer entity desc for SupportRequestDetails_NRT table derivation)."
+  },
+  {
+    "index": 51,
+    "label": "Pass",
+    "text": "Direct mapping to Severity  column in Cases table coming from DFM Events data processed by Cornerstone having integer values."
+  },
+  {
+    "index": 52,
+    "label": "Pass",
+    "text": "Direct Mapping to CallMeNow column in  SupportRequestDetailsSIPv2 Table coming from Rave data processed by Amplify Source having boolean values."
+  },
+  {
+    "index": 53,
+    "label": "Pass",
+    "text": "Direct Mapping to CreatedOn column in Cases table coming from DFM Events data processed by Cornerstone having timestamp values in UTC."
+  },
+  {
+    "index": 54,
+    "label": "Pass",
+    "text": "Direct Mapping to AgentId  column in Labor table coming from DFM Events data processed by Cornerstone having String values."
+  },
+  {
+    "index": 55,
+    "label": "Pass",
+    "text": "Direct Mapping to UpdatedOn column in EscalationTask table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 56,
+    "label": "Fail",
+    "text": "Direct Mapping to AgentIdLastUpdatedOn column in Cases table coming from DFM Events data processed by Cornerstone having timestamp values in UTC"
+  },
+  {
+    "index": 57,
+    "label": "Pass",
+    "text": "Direct Mapping to SupportTimeZone\u00a0column in Cases table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 58,
+    "label": "Pass",
+    "text": "Derived by applying decode logic on StateAnnotation, EventDateTime, CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone.\nLogic: It takes  minute difference between EventDateTime and CreatedDateTime when StateAnnotation IN ('troubleshooting') in Cases table."
+  },
+  {
+    "index": 59,
+    "label": "Pass",
+    "text": "Direct Mapping to EventDateTime column in CollaborationTask table coming from DFM Events data processed by Cornerstone having timestamp values in UTC."
+  },
+  {
+    "index": 60,
+    "label": "Pass",
+    "text": "Direct mapping to CustomerProgramType  column in Cases table coming from DFM Events data processed by Cornerstone source having string values."
+  },
+  {
+    "index": 61,
+    "label": "Pass",
+    "text": "Derived by applying decode logic on EventDateTime, EntityAction columns in Collaboration table coming from DFM Events data processed by Cornerstone source.\nLogic: It is populated by taking minimum value of EventDateTime When EntityAction = 'TaskAssignedToAgent ' from CollaborationTask table from DFM Events data processed by Cornerstone source."
+  },
+  {
+    "index": 62,
+    "label": "Fail",
+    "text": "Direct Mapping to AssignmentPending column in Cases table coming from DFM Events data processed by Cornerstone having string values "
+  },
+  {
+    "index": 63,
+    "label": "Pass",
+    "text": "Direct Mapping to UpdatedBy column in KPI table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 64,
+    "label": "Pass",
+    "text": "Direct Mapping to SeatBucket column in SupportRequestDetailsSIPv2 table coming from Rave data processed by Amplify Source having String values."
+  },
+  {
+    "index": 65,
+    "label": "Pass",
+    "text": "This logic uses decode logic based on the CompletedDateTime, ExpireDateTime, and SlaType columns in the Cases table to categorize status values into 'Met', 'Missed', or 'Unknown' depending on the conditions applied to the respective times."
+  },
+  {
+    "index": 66,
+    "label": "Pass",
+    "text": "Direct Mapping to EnqueuedTimeUtc column in PhoneInteraction table coming from DFM Events data processed by Cornerstone having timestamp values in UTC."
+  },
+  {
+    "index": 67,
+    "label": "Pass",
+    "text": "Direct mapping to FiscalWeek column in DimTime table coming from Commercial NextDay Datamart within SA&DP having string values."
+  },
+  {
+    "index": 68,
+    "label": "Pass",
+    "text": "Derived by applying decode logic on StateAnnotation, EventDateTime, CreatedDateTime columns in Cases table coming from DFM Events data processed by Cornerstone.\nLogic: It takes minute difference of EventDateTime and CreatedDateTime columns when StateAnnotation IN ( 'resolved','resolved external','resolved by customer')."
+  },
+  {
+    "index": 69,
+    "label": "Pass",
+    "text": "Direct Mapping to SRType column in FactSREvents Table coming from Commercial NRT Datamart within SA&DP source having string values."
+  },
+  {
+    "index": 70,
+    "label": "Pass",
+    "text": "Direct mapping to SAPId (Support Area Path Id) column in EscalationTask table coming from DFM Events data processed by Cornerstone having alphanumeric values."
+  },
+  {
+    "index": 71,
+    "label": "Fail",
+    "text": "Derived by applying decode logic on IsEUSchrems column in Cases table coming from DFM Events data processed by Cornerstone source having string values.\nLogic : CASE When IsEUSchrems = 'eu' Then TRUE Else FALSE END AS IsEUSchrems"
+  },
+  {
+    "index": 72,
+    "label": "Pass",
+    "text": "Derived column in Commercial NRT using AgentId, RoutingContextId and SRNumber columns in FollowUpTask table coming from DFM Events data processed by Cornerstone. \nStep1- RoutingContextId will have value only for the FollowUpTask Event table where the routing is done.\nStep2- As soon as the case is assigned to an AgentId, that case will disapper from the queue which means the RoutingContextId will be null. \nStep3- PreviousRoutingContextId is introduced to retain previous RoutingContextId that the SRNumber was in."
+  },
+  {
+    "index": 73,
+    "label": "Pass",
+    "text": "Direct Mapping to OriginatingSystem column in FactSREvents Table coming from Commercial NRT Datamart within SA&DP sourcehaving String values."
+  },
+  {
+    "index": 74,
+    "label": "Fail",
+    "text": "Direct Mapping to EnqueuedTimeUtc column in Cases table coming from DFM Events data processed by Cornerstone having timestamp values in UTC"
+  },
+  {
+    "index": 75,
+    "label": "Pass",
+    "text": "Derived by applying decode logic on IncidentType and CaseType columns in Cases table coming from DFM Events data processed by Cornerstone.\nLogic: Checks conditions involving IncidentType column in FactSRSupportData table. If true, assigns values based on SRType column in Cases table. If false, returns 'Unknown'."
+  },
+  {
+    "index": 76,
+    "label": "Fail",
+    "text": "Direct Mapping to ContractSiteId column in Cases table coming from DFM Events data processed by Cornerstone having string values "
+  },
+  {
+    "index": 77,
+    "label": "Fail",
+    "text": "This is reference attribute to the DimGeography table to get more details about the GeographyLevel4Name. It is populated by joining TenantCountry column in SupportRequestDetails_NRT intermediate table (refer entity desc for SupportRequestDetails_NRT table derivation) with ISOCountryShortCode column in DimGeography table coming from Commercial NextDay Datamart within SA&DP"
+  },
+  {
+    "index": 78,
+    "label": "Pass",
+    "text": "Direct Mapping to IsM365 column in EmailInteraction table from DFM Events data processed by Cornerstone having boolean values."
+  },
+  {
+    "index": 79,
+    "label": "Pass",
+    "text": "This logic calculates the time difference in minutes between CompletedOn and CreatedDateTime columns in the Cases table and uses that to assign a value of 1 or 0 based on whether the difference is less than or equal to 30 minutes."
+  },
+  {
+    "index": 80,
+    "label": "Pass",
+    "text": "Direct Mapping to IsSyncEvent column in Cases table coming from DFM Events data processed by Cornerstone source having boolean values."
+  },
+  {
+    "index": 81,
+    "label": "Pass",
+    "text": "This logic derives a value by applying decode logic on KPIState column in the DimKPIState table and State, Name, and SRNumber columns in the KPIFlash intermediate table. The process includes joining DimKPIState and KPIFLASH, and using conditional checks to determine the final value of KPIStateKey."
+  },
+  {
+    "index": 82,
+    "label": "Fail",
+    "text": "Derived by applying decode logic on ProgramType column in Cases table coming  from DFM Events data processed by Cornerstone having string values.\nLogic : CASE When ProgramType = '%m365%'  then true else false"
+  },
+  {
+    "index": 83,
+    "label": "Pass",
+    "text": "Direct Mapping to EventType column in FollowUpTask table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 84,
+    "label": "Fail",
+    "text": "Derived by applying decode logic based on RouteDateTime and CreatedDateTime columns in SupportRequestDetails_NRT intermediate table (refer entity desc for SupportRequestDetails_NRT table derivation).\nLogic:CASE \n\tWHEN time difference in minutes between RouteDateTime and CreateDateTime columns is <= 10 THEN hardcoded as '<=10 mins'\n\tWHEN time difference in minutes between RouteDateTime and CreateDateTime columns is in the range of (> 10 <= 30)mins THEN hardcoded as '10-30 mins'\n\tWHEN time difference in minutes between RouteDateTime and CreateDateTime columns is in the range of (> 30 <= 60)mins THEN hardcoded as '30-60 mins'\n\tWHEN time difference in minutes between RouteDateTime and CreateDateTime columns is in the range of (> 60 <= 120)mins THEN hardcoded as '60-120 mins'\n\tWHEN time difference in minutes between RouteDateTime and CreateDateTime columns is in the range of (> 120  <= 240)mins THEN hardcoded as '120-240 mins'\n\tWHEN time difference in minutes between RouteDateTime and CreateDateTime columns is in the range of (> 240 <= 1440)mins THEN hardcoded as '240 mins-1Day'\n\tWHEN time difference in minutes between RouteDateTime and CreateDateTime columns is '> 1440 mins' THEN hardcoded as '>1 Day'\nELSE 'Idle' END AS RouteTimeBucket"
+  },
+  {
+    "index": 85,
+    "label": "Pass",
+    "text": "Derived column in Commercial NRT using AgentId, RoutingContextId and SRNumber columns in EscalationTask table coming from DFM Events data processed by Cornerstone. \nStep1- RoutingContextId will have value only for the EscalationTask Event table where the routing is done.\nStep2- As soon as the case is assigned to an AgentId, that case will disapper from the queue which means the RoutingContextId will be null. \nStep3- PreviousRoutingContextId is introduced to retain previous RoutingContextId that the SRNumber was in."
+  },
+  {
+    "index": 86,
+    "label": "Pass",
+    "text": "Direct Mapping to OrganizationId column in  SupportRequestDetailsSIPv2 Table coming from Rave data processed by Amplify Source having String  values."
+  },
+  {
+    "index": 87,
+    "label": "Pass",
+    "text": "Direct mapping to TimeOfDayID column in DimTImeOfDay table coming from Commercial NRT Datamart within SA&DP source having integer values."
+  },
+  {
+    "index": 88,
+    "label": "Pass",
+    "text": "Direct Mapping to GeographyLevel3Name column in DimGeography table coming from Commercial NextDay Datamart within SA&DP source having string values."
+  },
+  {
+    "index": 89,
+    "label": "Pass",
+    "text": "Direct Mapping to EventDateTime column in FollowUpTask table coming from DFM Events data processed by Cornerstone having timestamp values in UTC."
+  },
+  {
+    "index": 90,
+    "label": "Pass",
+    "text": "Direct Mapping to EventDateTime column in KPI table coming from DFM Events data processed by Cornerstone having timestamp values in UTC."
+  },
+  {
+    "index": 91,
+    "label": "Pass",
+    "text": "Derived by applying decode logic based on LaborMinutes column in Cases table coming from DFM Events processed by Cornerstone having integer values.\nLogic:  Step1- If the LaborMinutes value from Cases table is not null then we will take CurrentTimestamp, \nStep2- If step1 fetches null value then it's replaced with 0."
+  },
+  {
+    "index": 92,
+    "label": "Pass",
+    "text": "Indirect mapping to IRStatusKey in DimIRStatus table, derived by joining IRStatus column in DimIRStatus table with IRStatus column in SlaItem table, replacing NULL values with -1."
+  },
+  {
+    "index": 93,
+    "label": "Pass",
+    "text": "Direct mapping to CustomerGeographyKey column in FactSupportServiceRequest table coming from Commercial NextDay Datamart within SA&DP source having interger values."
+  },
+  {
+    "index": 94,
+    "label": "Pass",
+    "text": "Direct mapping to SupportLanguage  column in Cases table coming from DFM Events data processed by Cornerstone having string values."
+  },
+  {
+    "index": 95,
+    "label": "Pass",
+    "text": "This is reference key to the DimIdleTimeSpan to get more details about IdleTimeSpan .It is populated by joining LaborSpan column in DimLaborTimeSpan table coming from Commercial NextDay Datamart within SA&DP with LaborSpanL1 column in FactSRSupportData table coming from Commercial NRT Datamart within SA&DP."
+  },
+  {
+    "index": 96,
+    "label": "Pass",
+    "text": "Derived by applying decode logic based on LaborMinutes column in Cases table coming from DFM Events processed by Cornerstone having integer values.\nLogic:  Step1- If the LaborMinutes value from Cases table is not null then we will take CurrentTimestamp, \nStep2- If step1 fetches null value then it's replaced with 0."
+  }
+]
