@@ -3,7 +3,7 @@
 # Uses LoRA (Low-Rank Adaptation) with minimal rank and DeepSpeed ZeRO optimization to reduce memory usage.
 
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments, Trainer, DataCollatorForLanguageModeling
+from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments, Trainer, DefaultDataCollator
 from peft import LoraConfig, get_peft_model
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
@@ -25,32 +25,25 @@ if tokenizer.pad_token_id is None:
 
 # Load model WITHOUT device_map so that DeepSpeed can handle distributed training.
 # Load model normally
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+
 model = AutoModelForSequenceClassification.from_pretrained(
     model_name,
-    num_labels=2, 
-    torch_dtype=torch.float16,  
-    device_map="auto",  # Ensure automatic mapping
-    trust_remote_code=True,    
+    num_labels=2,
+    torch_dtype=torch.float16,
+    trust_remote_code=True,
 )
-
-# Ensure all model parameters are moved to CUDA explicitly
-model = model.to(device)
-
-# Print device details for debugging
-for name, param in model.named_parameters():
-    if param.device != torch.device(device):
-        print(f"⚠️ Parameter {name} is on {param.device}, moving to {device}.")
-        param.to(device)
 
 model.gradient_checkpointing_enable()
 
-# Apply LoRA to the model so that only a small fraction of parameters are trainable.
+# Apply LoRA
 peft_config = LoraConfig(
     r=lora_rank,
     lora_alpha=lora_alpha,
     lora_dropout=lora_dropout,
     bias="none",
-    task_type="CAUSAL_LM"
+    task_type="SEQ_CLS"
 )
 model = get_peft_model(model, peft_config)
 model.print_trainable_parameters()
@@ -64,18 +57,41 @@ dataset = load_dataset("json", data_files=train_dataset_name, split="train")
 
 def tokenize_function(examples):
     texts = []
+    labels = []
+
     for msg_list in examples["messages"]:
-        # Extract the second message's content (assuming that is the user message)
-        if isinstance(msg_list, list) and len(msg_list) > 1:
-            texts.append(msg_list[1]["content"])
+        # Extract user input
+        user_msg = ""
+        assistant_msg = ""
+
+        if isinstance(msg_list, list):
+            for msg in msg_list:
+                if msg["role"] == "user":
+                    user_msg = msg["content"]
+                elif msg["role"] == "assistant":
+                    assistant_msg = msg["content"]
+
+        # Prepare input text
+        texts.append(user_msg)
+
+        # Extract label from assistant message
+        if assistant_msg.lower().startswith("pass"):
+            labels.append(1)
+        elif assistant_msg.lower().startswith("fail"):
+            labels.append(0)
         else:
-            texts.append("")
-    return tokenizer(texts, return_attention_mask=True, truncation=True, max_length=512)
+            labels.append(-1)  # Optional: for debugging bad data
+
+    # Tokenize user message only (sequence classification task)
+    tokenized = tokenizer(texts, truncation=True, padding=True, max_length=512)
+    tokenized["labels"] = labels
+    return tokenized
+
 
 dataset = dataset.map(tokenize_function, batched=True, remove_columns=dataset.column_names)
 
 # Data collator: pads sequences and creates labels equal to input_ids (for causal LM)
-data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
+data_collator = DefaultDataCollator()
 
 # Training arguments with DeepSpeed integration for efficient memory usage
 training_args = TrainingArguments(
@@ -91,7 +107,8 @@ training_args = TrainingArguments(
     logging_steps=50,
     save_strategy="epoch",
     report_to="none",
-    deepspeed="deepspeed_config.json",         # Path to your DeepSpeed config file
+    deepspeed="deepspeed_config.json",
+    optim="paged_adamw_32bit"
 )
 
 # Clear any cached GPU memory before starting training
@@ -111,4 +128,3 @@ trainer.train()
 print("Saving fine-tuned model...")
 trainer.model.save_pretrained(output_dir)
 tokenizer.save_pretrained(output_dir)
-

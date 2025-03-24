@@ -13,5 +13,5 @@ module load python/3.9.12  # Use the correct version available on Great Lakes
 source ~/venv_llama/bin/activate
 
 # ✅ Run the Python script to download the model
-python /home/cicconel/llama_models/download_llama.py
+deepspeed --num_gpus=4 training_model.py
 
