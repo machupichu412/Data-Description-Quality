@@ -1,0 +1,1534 @@
+[
+    {
+        "final_description": "This table contains details for issue and resolution selected by agent at various levels coming from UDPCommercial (DFM source). It is derived from DimSupportTopic DimSupportServiceRequest based on Rootcause.",
+        "comment": "The description contains source information by referring to UDPCommercial and DFM source. It also explains the transformation logic clearly, indicating that the data is derived from DimSupportTopic and DimSupportServiceRequest based on Rootcause. Additionally, the description is understandable and well-structured."
+    },
+    {
+        "final_description": "Surrogate key  generated on  SupportTopicFullPath  column coming  from DimSupportTopic in SA&DP Commercial source.",
+        "comment": "The description includes source information by specifying DimSupportTopic from the SA&DP Commercial source. It clarifies the transformation logic by explaining that a surrogate key is generated on the SupportTopicFullPath column. The text is clear and grammatically sound."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "This description indicates the source as UDP and refers to an ETL process, providing source information. It is straightforward and understandable, specifying a timestamp in UTC and its purpose in the ETL process."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "The description provides the source, UDP, pointing out the action performed by the ETL process, thereby indicating source information. It is clearly articulated, with no grammatical issues."
+    },
+    {
+        "final_description": "Direct mapping to column SupportTopicFullPath coming from table DimSupportTopic in SA&DP Commercial source",
+        "comment": "This description provides essential source information by mentioning the support topic and its origin from SA&DP Commercial. The direct mapping to the column logic is concise and easy to understand."
+    },
+    {
+        "final_description": "Derived by applying logic on SupportTopicFullPath column coming  from DimSupportTopic in SA&DP Commercial source as\nLogic step1:get the SupportTopicFullPath column and replace the '\\\\\\\\' with '^' using regexp_replace function.\nstep2: splitting the first position value of SupportTopicFullPath column on the basis of '^'.If there is no value then hardcoded to Unspecified.\nexample : if SupportTopicFullPath column value is \"zzRoot Cause: Surface Hub 2S  old\\Technical\\Personal Sign-In\" then RootCause1 is 'zzRoot Cause: Surface Hub 2S  old'",
+        "comment": "The description clearly indicates the source as the DimSupportTopic from SA&DP Commercial. It provides a detailed transformation logic through multiple steps and an example for clarification, making the process clear and understandable."
+    },
+    {
+        "final_description": "Derived by applying logic on SupportTopicFullPath column coming  from DimSupportTopic in SA&DP Commercial source as\nLogic step1:get the SupportTopicFullPath column and replace the '\\\\\\\\' with '^' using regexp_replace function.\nstep2: splitting the second position value of SupportTopicFullPath column on the basis of '^'.If there is no value then hardcoded to Unspecified.\nexample : if SupportTopicFullPath column value is \"zzRoot Cause: Surface Hub 2S  old\\Technical\\Personal Sign-In\" then RootCause2 is 'Technical'",
+        "comment": "This description contains the necessary source information by specifying DimSupportTopic from SA&DP Commercial. It details the transformation logic with steps and includes an example, ensuring clarity and understanding."
+    },
+    {
+        "final_description": "Derived by applying logic on SupportTopicFullPath column coming  from DimSupportTopic in SA&DP Commercial source as\nLogic step1:get the SupportTopicFullPath column and replace the '\\\\\\\\' with '^' using regexp_replace function.\n      step2: splitting the third position value of SupportTopicFullPath column on the basis of '^'.If there is no value then hardcoded to Unspecified.\nexample : if SupportTopicFullPath column value is \"zzRoot Cause: Surface Hub 2S  old\\Technical\\Personal Sign-In\" then RootCause3 is 'Personal Sign-In'",
+        "comment": "The description provides the source as DimSupportTopic in SA&DP Commercial and outlines a clear transformation logic with steps. The inclusion of an example enhances understanding, and the language used is clear and grammatically correct."
+    },
+    {
+        "final_description": "Derived by applying logic on SupportTopicFullPath column coming  from DimSupportTopic in SA&DP Commercial source as\nLogic step1:get the SupportTopicFullPath column and replace the '\\\\\\\\' with '^' using regexp_replace function.\n      step2: splitting the 4th position value of SupportTopicFullPath column on the basis of '^'.If there is no value then hardcoded to Unspecified.\nexample : if SupportTopicFullPath column value is \"zzRoot Cause: Surface Hub 2S  old\\Technical\\Personal Sign-InMy Files/Meetings\\Configuration Issue\"\nthen RootCause4 is 'My Files'.",
+        "comment": "This technical description correctly articulates the source (DimSupportTopic from SA&DP Commercial) while breaking down the transformation logic into clear steps, and it provides an example for better understanding. The syntax and explanation are both clear and concise."
+    },
+    {
+        "final_description": "Derived by applying logic on SupportTopicFullPath column coming  from DimSupportTopic in SA&DP Commercial source as\nLogic step1:get the SupportTopicFullPath column and replace the '\\\\\\\\' with '^' using regexp_replace function.\n      step2: splitting the 5th position value of SupportTopicFullPath column on the basis of '^'.If there is no value then hardcoded to Unspecified.\nexaple : if SupportTopicFullPath column value is \"zzRoot Cause: Surface Hub 2S  old\\Technical\\Personal Sign-InMy Files/Meetings\\Configuration Issue\"\nthen RootCause5 is 'Meetings'.",
+        "comment": "The description provides clear source information by mentioning the DimSupportTopic in the SA&DP Commercial source. It further breaks down the transformation logic with steps and an example, making it easy to comprehend and grammatically correct, except for a slight typo 'exaple' which should be 'example'."
+    },
+    {
+        "final_description": "Derived by applying logic on SupportTopicFullPath column coming  from DimSupportTopic in SA&DP Commercial source as\nLogic step1:get the SupportTopicFullPath column and replace the '\\\\\\\\' with '^' using regexp_replace function.\n      step2: splitting the 5th position value of SupportTopicFullPath column on the basis of '^'.If there is no value then hardcoded to Unspecified.\nexaple : if SupportTopicFullPath column value is \"zzRoot Cause: Surface Hub 2S  old\\Technical\\Personal Sign-InMy Files/Meetings\\Configuration Issue\"\nthen RootCause6 is 'Configuration Issue'.",
+        "comment": "The description contains precise source details (DimSupportTopic from SA&DP Commercial) and offers a thorough explanation of the transformation logic with detailed steps and an example. It is clear and understandable, with a minor typo 'exaple' that should read 'example'."
+    },
+    {
+        "final_description": "Derived by applying logic on SupportTopicFullPath column coming  from DimSupportTopic in SA&DP Commercial source as\nLogic step1:get the SupportTopicFullPath column and replace the '\\\\\\\\' with '^' using regexp_replace function.\n      step2: splitting the 7th position value of SupportTopicFullPath column on the basis of '^'.If there is no value then hardcoded to Unspecified.\nexaple : if SupportTopicFullPath column value is \"zzRoot Cause: Surface Hub 2S  old\\Technical\\Personal Sign-InMy Files/Meetings\\Configuration Issue\"\nthen RootCause7 is 'Unspecified'.",
+        "comment": "This description effectively includes the source (DimSupportTopic from SA&DP Commercial) and outlines the transformation logic using clear steps. The text is accompanied by an example for clarity. There is a minor typo 'exaple' which should be 'example'."
+    },
+    {
+        "final_description": "This table contains the details for case resolution status of the ticket coming from Dynamics and Amplify source. Grain- ServiceRequestResolution",
+        "comment": "The description successfully presents the source information by naming Dynamics and Amplify. It also specifies the grain or granularity level as ServiceRequestResolution, making the understanding clear and establishing context."
+    },
+    {
+        "final_description": "Surrogate Key generated in UDP for 'ServiceRequestResolution' column  from Rave (Amplify),Cornerstone(DFC - Dynamics For Consumer) sources.",
+        "comment": "The description indicates source details clearly, mentioning Rave (Amplify) and Cornerstone (DFC - Dynamics For Consumer) sources. It describes the transformation logic of generating a surrogate key for the specified column, and it is well-understood with no grammatical issues."
+    },
+    {
+        "final_description": "Direct mapping to distinct values of 'ServiceRequestResolution' column from Rave,cornerstone sources",
+        "comment": "This description states the source information explicitly by mentioning the Rave and Cornerstone sources. It provides a clear explanation of the transformation logic as a direct mapping to distinct values of the specified column, making it easy to comprehend."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "The description provides source information by indicating the records are processed in UDP by the ETL process. It is a straightforward explanation that uses understandable language, making it easy to grasp."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "The explanation offers sufficient source data by pointing to UDP involvement and the ETL process in action. Its clear structure and language ensure the description is easily comprehensible."
+    },
+    {
+        "final_description": "This table contains Online Safety Team Queues, Online Safety - T1, Online Safety - T2 Manilla, Online Safety - T3, DMCA - T1 Allyis, DMCA - T2 Allyis.",
+        "comment": "The description provides a clear understanding of the table contents, listing various team queues and classifications. It can be understood easily and is grammatically correct."
+    },
+    {
+        "final_description": "Direct mapping to AgentContentClassification column having string values coming from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "This description accurately includes the source by mention of CSSCPROSnow. It specifies the direct mapping logic to the AgentContentClassification column, using clear and understandable language."
+    },
+    {
+        "final_description": "Direct mapping to Assignedto column having string values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The source information is well-addressed by indicating the CSSCPROSnow source. It explains direct mapping to the Assignedto column clearly, employing grammatically correct and straightforward language."
+    },
+    {
+        "final_description": "Direct mapping to AssignedGroup column having string values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The description clearly presents the source (CPRO_Cases view from CSSCPROSnow) and describes the direct mapping to the AssignedGroup column. The explanation is both linguistically precise and simple to understand."
+    },
+    {
+        "final_description": "Direct mapping to ClosedBy column having string values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "This description delivers source information by noting the CPRO_Cases view from CSSCPROSnow. It provides a clear explanation for the direct mapping to the ClosedBy column, written in clear and concise language."
+    },
+    {
+        "final_description": "Direct mapping to CSAMRating column having string values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The description incorporates the necessary source information by citing the CPRO_Cases view from CSSCPROSnow. It provides a straightforward direct mapping explanation to the CSAMRating column, ensuring clarity."
+    },
+    {
+        "final_description": "Direct mapping to CustomerIndication column having string values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "This description includes clear source information by pointing to the CPRO_Cases view from CSSCPROSnow. It describes direct mapping to the CustomerIndication column, with clear, understandable construction."
+    },
+    {
+        "final_description": "Direct mapping to CustomerSelection column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The description supplies specific source information by indicating the CPRO_Cases view from CSSCPROSnow. It outlines direct mapping to the CustomerSelection column and is logically clear and grammatically sound."
+    },
+    {
+        "final_description": "Direct mapping to DateAcknowledged column having timestamp values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "This description efficiently displays source information by noting the data originates from the CPRO_Cases view in CSSCPROSnow. It explains direct mapping to the DateAcknowledged column using clear, proper syntax."
+    },
+    {
+        "final_description": "Direct mapping to DateClosed column having timestamp values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The description offers explicit source information, mentioning the CPRO_Cases view from CSSCPROSnow. It describes the direct mapping to the DateClosed column with clarity, using grammatically correct phrasing."
+    },
+    {
+        "final_description": "Direct mapping to DateCreated column having timestamp values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "This description successfully incorporates the relevant source information, indicating it is from the CPRO_Cases view in CSSCPROSnow. It clearly explains the direct mapping to the DateCreated column, ensuring comprehensibility."
+    },
+    {
+        "final_description": "Direct mapping to Number column having string values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The description includes appropriate source information by listing the CPRO_Cases view from CSSCPROSnow. It concisely explains the direct mapping to the Number column, maintaining clarity and grammatical accuracy."
+    },
+    {
+        "final_description": "Direct mapping to NumberofItemsInvestigated column having integer values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "This technical description provides necessary source information by mentioning the CPRO_Cases view from CSSCPROSnow. It elucidates direct mapping to the NumberofItemsInvestigated column in a clear, grammatically correct manner."
+    },
+    {
+        "final_description": "Direct mapping to NumberofItemsActioned column having integer values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The description includes explicit source information referencing the CPRO_Cases view from CSSCPROSnow. It succinctly describes the direct mapping to the NumberofItemsActioned column, employing clear and coherent language."
+    },
+    {
+        "final_description": "Direct mapping to OnlineSafetyAction column having string values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The description effectively presents source information by identifying the CPRO_Cases view from CSSCPROSnow. It articulates the direct mapping to the OnlineSafetyAction column clearly, maintaining proper grammatical structure."
+    },
+    {
+        "final_description": "Direct mapping to ParentCaseNumber column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "This description provides correct source details by citing the CPRO_Cases view from CSSCPROSnow. It explains the direct mapping to the ParentCaseNumber column clearly and accurately, guaranteeing the text is easy to understand."
+    },
+    {
+        "final_description": "Direct mapping to ProductCategory column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "This description includes source information, specifying the CPRO_Cases view from CSSCPROSnow as the data source. It clearly explains the transformation logic as a direct mapping to the ProductCategory column, and is clearly written with correct grammar."
+    },
+    {
+        "final_description": "Direct mapping to Status column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The description provides the necessary source information and explains that a direct mapping is applied to the Status column. It is well-structured and uses correct grammar, facilitating easy comprehension."
+    },
+    {
+        "final_description": "Direct mapping to SubjectCountry column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "This description clearly specifies the source as the CPRO_Cases view from CSSCPROSnow and describes a direct mapping to the SubjectCountry column. It is clearly understood and grammatically sound."
+    },
+    {
+        "final_description": "Direct mapping to SubState column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The description contains relevant source information, mentions the direct mapping to the SubState column, and is well-structured with clear grammar, making it easily understood."
+    },
+    {
+        "final_description": "Direct mapping to Tags column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "This explanation includes the necessary source detail and describes the direct mapping correctly. The clear sentence structure and proper grammar ensure that the description is easily comprehensible."
+    },
+    {
+        "final_description": "Direct mapping to TimeWorked column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The source is correctly identified as the CPRO_Cases view from CSSCPROSnow, and it explains the direct mapping to the TimeWorked column. The description is concise and grammatically correct."
+    },
+    {
+        "final_description": "Direct mapping to UpdatedBy column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source..",
+        "comment": "This description provides source information, points out the direct mapping to the UpdatedBy column, and is clear in structure and grammar, though it contains an extra period at the end."
+    },
+    {
+        "final_description": "Direct mapping to UpdatedOn column having timestamp values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The description includes the source detail of the CPRO_Cases view from CSSCPROSnow and discusses the direct mapping to the UpdatedOn column with timestamp values. Clear and accurate language makes it easily understandable."
+    },
+    {
+        "final_description": "Derived by applying decode logic on ClosedBy, DateClosed and DateCreated columns coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+        "comment": "The source is aptly mentioned, and the transformation logic involving decode logic on several columns is indicated. Proper grammar and clear explanation ensure easy understanding."
+    },
+    {
+        "final_description": "Derived by applying decode logic on TimeWorked column coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.\nLogic: Converted TimeWorked column having string values to decimal(10,2) to get WorkMinutes by use of cast function like:\nTimeWorked.cast(DecimalType(10, 2))",
+        "comment": "The inclusion of source information and a detailed explanation of the applied transformation logic ensures this description is comprehensive. By employing an example of casting values, it clarifies the process effectively and keeps the language clear and grammatically correct."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "This description refers to the insertion in UDP by the ETL process, providing sufficient source information. It is simple, yet precise, and adheres to grammatical norms."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "The explanation includes proper source information with reference to UDP and the ETL action. Its language and grammar are clear and straightforward, making it easy to understand."
+    },
+    {
+        "final_description": "This table contains Customer data coming from Dynamics Cornerstone. It is a SCD Type 2 table which means it retains history of any change to customer attribute e.g. CustomerEmail,CustomerPUID etc. Grain - CustomerId and DataSource",
+        "comment": "The description contains source information by mentioning Dynamics Cornerstone, and it explains what an SCD Type 2 table entails, including historical data retention. Clarity is enhanced by identifying the table grain, with the text being explicit and grammatically correct."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "This explanation identifies the UDP and ETL process as the source, presenting it clearly and accurately in standard grammatical form."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "In this description, the indication of UDP and the ETL process offers necessary source information, while its clarity and correctness speak to the passage of the review process."
+    },
+    {
+        "final_description": "Direct mapping to CustomerId column coming from Cornestone source",
+        "comment": "The presence of requisite source information and an explanation of direct mapping to the CustomerId column renders this description easily comprehensible, underlined by sound grammar."
+    },
+    {
+        "final_description": "Surrogate key generated in UDP on CustomerId field from Cornerstone (DFC - Dynamics For Consumer) source",
+        "comment": "This description correctly identifies the necessary source, DFC - Dynamics For Consumer, and includes the transformation details of a surrogate key generation in UDP, making it clear and well-articulated."
+    },
+    {
+        "final_description": "This atrrribte is derived by calculating hex string result of SHA-2 family of CustomerPUId column coming from Cornestone source.",
+        "comment": "The source is well-identified, and the transformation logic involving SHA-2 calculation is described, though there is a typo ('atrribte' should be 'attribute'). Besides the typo, the description is clear and well-structured."
+    },
+    {
+        "final_description": "Hardcoded as 'Dynamics' ",
+        "comment": "While minimal, the description explains a simple transformation logic of hardcoding, making its intent and meaning explicitly clear, adhering to proper grammar."
+    },
+    {
+        "final_description": "Direct mapping to Email column coming from Cornestone source",
+        "comment": "The description provides source information and explains the direct mapping to the Email column. It is clearly understood and correctly formulated."
+    },
+    {
+        "final_description": "Hardcoded  as 'Unspecified'",
+        "comment": "The description clearly describes the transformation logic of hardcoding a value, using standard grammar and sentence structures, albeit brief."
+    },
+    {
+        "final_description": "Direct mapping to CustomerId column coming from Cornestone source",
+        "comment": "This description includes the required source information and describes a direct mapping clearly and understandably, using correct grammar."
+    },
+    {
+        "final_description": "Fact table that contains Surface Devices coming from FactSupportServiceRequest table in SA&DP Commercial source. Data filtered from Commercial source using below filters (commercialproductlevel1name='wdg' and CommercialProductLevel2Name='hardware') or (PesProductName like '%hololens%' or PesProductName 'azure kinect dev kit')",
+        "comment": "The description provides the source as SA&DP Commercial, details the transformation logic with specified filters, and explains the context. The use of clear language ensures it is easily understood."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about Incident CreatedDatetime in UTC. This key is populated by joining CreatedTime from DimSupportServiceRequest table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "comment": "The description provides source and join condition information, explaining the key population logic with joining criteria. Its proper grammar and clarity in explanation facilitate easy comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about Incident CreatedDatetime in UTC. This key is populated by joining CreatedTime from DimSupportServiceRequest table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "comment": "The description includes required source information and clearly explains the joining and key extraction process to provide detailed context, making it well-understood with proper grammar."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about Incident ClosedDatetime in UTC.This key is populated by joining ClosedDateTime from DimSupportServiceRequest table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "comment": "Source details and a join condition explanation are provided, detailing the reference key logic for extracting date information. The clear structure and correct grammar contribute to successful comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about Incident ClosedDatetime in UTC. This key is populated by joining ClosedDateTime from DimSupportServiceRequest table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "comment": "This description effectively provides source information and explains the join conditions for extracting the reference key. It is well-articulated and clear in its structure, ensuring understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about Incident CreatedDatetime in PT. This key is populated by joining CreatedTime in PT from DimSupportServiceRequest table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "comment": "Source details of SA&DP Commercial are mentioned alongside clear join logic. The extraction of the Datekey is articulated properly, using correct grammar and effective language for ease of understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about Incident CreatedDatetime in PT. This key is populated by joining CreatedTime in PT from DimSupportServiceRequest table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "comment": "The description contains the requisite source information and detailed join logic for extracting a time key. The presentation is clear, structured, and grammatically accurate."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about Incident ClosedDatetime in PT . This key is populated by joining ClosedDateTime in PT from DimSupportServiceRequest table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "comment": "The description identifies the source and provides detailed join logic. Explanation of the Datekey extraction process is clear and adheres to standard grammatical practices, making it easily understood."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about Incident ClosedDatetime in PT. This key is populated by joining ClosedDateTime in PT from DimSupportServiceRequest table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "comment": "The document includes sufficient source and joining logic information, detailing the time key extraction process. It is clear and grammatically correct, aiding easy understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimDataSource table to get more details about Source. Direct mapping to DataSourcekey column in FactSupportServiceRequest table coming from SA&DP Commercial Source",
+        "comment": "The description aptly mentions the source, explains direct mapping, and highlights a reference key. It is clear, well-organized, and free of grammatical errors."
+    },
+    {
+        "final_description": "This is a reference key to DimDataSource table to get more details about Source. Direct mapping to OriginatingDataSourcekey column in FactSupportServiceRequest table coming from SA&DP Commercial Source",
+        "comment": "This description includes necessary source details, highlights direct mapping, and describes a reference key effectively. It maintains structure, clarity, and grammatical correctness."
+    },
+    {
+        "final_description": "This is a reference key to DimServiceOffering table to get the details of various Commercial Services offered. Direct mapping to ServiceOfferingKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description contains source information and explains direct mapping with respect to a reference key. It is clear in its objective, well-structured, and grammatically accurate."
+    },
+    {
+        "final_description": "This is a reference key to DimGlobalContract table to get the details of Commercial global contracts. Direct mapping to GlobalContractKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description provides complete source information and outlines the direct mapping clearly in relation to a reference key. Its explanation is well-crafted and follows proper grammatical standards."
+    },
+    {
+        "final_description": "Direct mapping to BusinessCustomerName column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description provides clear source information by mentioning the SA&DP Commercial source. It clearly states the transformation logic as a direct mapping to the BusinessCustomerName column, and the sentence is grammatically correct and easily understood."
+    },
+    {
+        "final_description": "Direct mapping to PartnerCustomerName column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "This description includes the required source information, identifies the FactSupportServiceRequest table as its origin, and explains the direct mapping, ensuring clarity and grammatical precision."
+    },
+    {
+        "final_description": "This is a reference key to DimAgentRootCauseTaxonomy table to get details of various Issue root cause classifications. Direct mapping to AgentRootCauseTaxonomyKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The explanation lists necessary source details and describes reference key usage and direct mapping, with precise language and structure for clarity and accuracy."
+    },
+    {
+        "final_description": "Hardcoded to 0 as Not related to consumer",
+        "comment": "While the description is simple, it provides clear information about the transformation logic, which is a hardcoded value, using straightforward language and correct grammar."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportLanguage table to get more details about Language. Direct mapping to Supportlanguagekey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description delivers clear source information, referencing a key and direct mapping, and maintains coherence and correctness throughout the explanation."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportAreaPath table to get details of various Support Area Paths. Direct mapping to SupportAreaPathKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "This text effectively provides source information, identifies a reference key, and explains direct mapping, all while maintaining clear and understandable language."
+    },
+    {
+        "final_description": "Direct mapping to SupportChannel column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description includes necessary information, naming the SA&DP Commercial source, and details a direct mapping for easy interpretation with clear sentence structure."
+    },
+    {
+        "final_description": "Direct mapping to GBSTMPI column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "Source information is clearly presented, and the direct mapping transformation logic is expressed unambiguously, with appropriate grammar making the description understandable."
+    },
+    {
+        "final_description": "Direct mapping to CTS_TMPI column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description presents clear source information, detailing a direct mapping to the CTS_TMPI column. The language used is grammatically sound and concise."
+    },
+    {
+        "final_description": "Direct mapping to DaysToClose column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "This explanation includes the necessary source and table details, describing a direct mapping to the DaysToClose column with clarity and proper grammar."
+    },
+    {
+        "final_description": "Direct mapping to DaysToSolution column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description gives sufficient source information, articulates direct mapping clearly, and uses correct grammar, aiding in its comprehensibility."
+    },
+    {
+        "final_description": "Direct mapping to ResolutionDateTime column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "Clear source details provide context, with the direct mapping logic effectively explained. The language is straightforward, making the description understandable."
+    },
+    {
+        "final_description": "Direct mapping to IsServiceRequestClosedwithin24hours column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The source is identified, and the description clearly states the direct mapping to a specific column, ensuring clarity through correct language and grammar."
+    },
+    {
+        "final_description": "Direct mapping to MinutesToInitialResponse column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description provides the source information and describes a direct mapping succinctly and clearly, using understandable language and correct sentence structure."
+    },
+    {
+        "final_description": "Direct mapping to PESProductKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "This explanation includes source information and describes the mapping clearly, following grammatical conventions and facilitating easy comprehension."
+    },
+    {
+        "final_description": "Direct mapping to CurrentSymptomSupportTopicKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The required source information is included, with a concise explanation of the direct mapping logic. Proper grammar is used to ensure the description is easily understood."
+    },
+    {
+        "final_description": "Direct mapping to CurrentCauseSupportTopicKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description contains source details and defines the mapping logic in a clear and straightforward manner, using correct and understandable language."
+    },
+    {
+        "final_description": "Direct mapping to FunctionHierarchyKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "By providing source details and describing a direct mapping, this explanation ensures clarity and maintains grammatical integrity for ease of understanding."
+    },
+    {
+        "final_description": "Direct mapping to TMPI column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The statement provides essential information, describing the direct mapping logic with simplicity and correctness, making it easily comprehensible."
+    },
+    {
+        "final_description": "Direct mapping to ServiceRequestAttributeKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "This text offers necessary source information and explains the direct mapping clearly. The use of correct grammar contributes to its clarity and comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimGeography table to get more details about customer geography. Direct mapping to CustomerGeographyKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description includes both source information and a clear explanation of the reference key and direct mapping. The grammar is correct and the structure ensures easy understanding."
+    },
+    {
+        "final_description": "Hardcoded to 0 , becasue Tenant is assoicated commerial not a consumer construct.",
+        "comment": "The description defines a hardcoding transformation, providing the rationale for this choice. Aside from the typos 'becasue' instead of 'because' and 'assoicated' instead of 'associated', it maintains overall clarity."
+    },
+    {
+        "final_description": "This is a reference key to DimEmployee table to get details of Employee worked on the ticket. Direct mapping to CurrentOwnerEmployeeKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description provides comprehensive source information and describes reference key logic with direct mapping. It is clear and grammatically correct, contributing to easy understanding."
+    },
+    {
+        "final_description": "Direct mapping to NativeServiceRequestID column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description includes required source details and explains a direct mapping clearly and succinctly, adhering to proper grammar."
+    },
+    {
+        "final_description": "Direct mapping to ServiceRequestNumber column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The explanation offers clear source and column details and articulates direct mapping logic, ensuring comprehensibility with accurate grammar."
+    },
+    {
+        "final_description": "Direct mapping to IsRepair column in DimSupportServiceRequest table coming from SA&DP Commercial source. ",
+        "comment": "Source information is presented along with a direct mapping explanation. The description is well-formed, clear, and grammatically correct."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "This statement identifies UDP and the ETL process as the source and clearly describes the purpose in a simple yet precise manner, following grammatical conventions."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "The description provides a clear explanation of source and context, using proper grammar and straightforward language for easy comprehension."
+    },
+    {
+        "final_description": "Hardcoded to Unspecified, Not available for commerical Surface",
+        "comment": "The description clearly defines a hardcoded value with reasoning. While 'commerical' should be 'commercial', the content is otherwise grammatically correct and understandable."
+    },
+    {
+        "final_description": "Hardcoded to Unspecified, Not available for commerical Surface",
+        "comment": "This description effectively communicates the decision for hardcoding, except for the typo 'commerical' instead of 'commercial'. It maintains clarity and accurate grammar otherwise."
+    },
+    {
+        "final_description": "Hardcoded to Unspecified, Not available for commerical Surface",
+        "comment": "The description distinctly outlines the hardcoded transformation logic. Despite the typo 'commerical', the explanation is otherwise clear and correct."
+    },
+    {
+        "final_description": "Hardcoded to Unspecified, Not available for commerical Surface",
+        "comment": "The description offers a precise rationale for hardcoding. Except for the repeated typo 'commerical', the language usage is clear."
+    },
+    {
+        "final_description": "Hardcoded to Unspecified as it is retired in MSSolve source",
+        "comment": "Clear source and transformation logic is described, indicating 'Unspecified' due to retirement in MSSolve. The explanation is precise, though more detail on 'MSSolve' might enhance understanding."
+    },
+    {
+        "final_description": "Direct mapping to PlanningCategoryKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description provides necessary source and column information, along with clear mapping logic. It is well-structured and grammatically correct, ensuring comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimRange table to get more details about Ticket ageRange. Derived by applying decode logic on ClosedDateTime,CreatedDateTime columns in DimSupportServiceRequest table coming from SA&DP Commercial Source. Logic: calculate new column Range-when datedifference of ClosedDateTime,CreatedDateTime < 0 then '<=0' ,when datedifference of ClosedDateTime,CreatedDateTime is > 0 and <=1 then '>0-1' ,when datedifference of ClosedDateTime,CreatedDateTime is > 1 and <=2 then '>1-2' ,when datedifference of ClosedDateTime,CreatedDateTime is > 2 and <=3 then '>2-3' ,when datedifference of ClosedDateTime,CreatedDateTime is > 3 and <=4 then '>3-4' ,when datedifference of ClosedDateTime,CreatedDateTime is > 4 and <=5 then '>4-5',when datedifference of ClosedDateTime,CreatedDateTime is > 5 and <=6 then '>5-6' ,when datedifference of ClosedDateTime,CreatedDateTime is > 6 and <=7 then '>6-7' ,when datedifference of ClosedDateTime,CreatedDateTime is > 7 and <=14 then '>7-14' ,when datedifference of ClosedDateTime,CreatedDateTime is > 14 and <=21 then '>14-21' ,when datedifference of ClosedDateTime,CreatedDateTime is > 21 and <=30 then '>21-30' ,when datedifference of ClosedDateTime,CreatedDateTime is > 30 and <=60 then '>30-60' ,when datedifference of ClosedDateTime,CreatedDateTime is > 60 and <=90 then '>60-90' ,when datedifference of ClosedDateTime,CreatedDateTime is > 90 and <=120 then '>90-120' ,when datedifference of ClosedDateTime,CreatedDateTime >120 then '>120' . Now join DimRange based on this new Range column and extract RangeKey",
+        "comment": "This description provides the source (SA&DP Commercial Source and DimSupportServiceRequest table) and outlines a detailed transformation logic using decode logic on two columns. The step-by-step logic for calculating the range, along with the join condition to extract RangeKey, is clearly articulated, ensuring comprehensibility despite its complexity."
+    },
+    {
+        "final_description": "Direct mapping to AgentLineOfBusiness column in DimSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The text includes essential source information, indicating the DimSupportServiceRequest table and the SA&DP Commercial source. The direct mapping logic is clearly stated. Simple sentence structure makes it easily understood, passing the review criteria."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportChannel table to get more details about medium of communication. Direct mapping to SupportChannelKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "Source details are provided for both tables involved. The explanation covers both the usage of a reference key and direct mapping, with proper grammar ensuring clarity and successful interpretation."
+    },
+    {
+        "final_description": "This is a reference key to the DimSubPlanningCategory to get more detail about Sub PlanningCategory.Derived by applying decode logic on PlanningCategoryKey column in FactSupportServiceRequest table coming from SA&DP Commercial source. Logic: join FactSupportServiceRequest and Commercial-DimPlanningCategory tables based on PlanningCategoryKey and extract SubPlanningCategoryID, join this with DimSubPlanningCategory based on SubPlanningCategoryID and extract SubPlanningCategorykey",
+        "comment": "The description includes the source information and provides a comprehensive explanation of the logic involved in deriving the reference key. The use of step-by-step join instructions ensures the transformation is clear, while correct grammar supports understanding."
+    },
+    {
+        "final_description": "Direct mapping to OrderId column in DimSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description clearly identifies the source data and specifies the direct mapping transformation logic. It is well-formulated with clear language, making it easy to understand."
+    },
+    {
+        "final_description": "This is a reference key to DimServiceRequestStatus table to get staus of ticket. Direct mapping to ServiceRequestStatusKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The text provides complete source information and covers both reference key logic and direct mapping. Although there is a slight typo ('staus' instead of 'status'), the content is otherwise clear and grammatically correct."
+    },
+    {
+        "final_description": "This is a reference key to DimServiceRequestState table to get current state of ticket. Direct mapping to StateKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description provides source information and explains the logic for a reference key with a clear direct mapping explanation. Correct grammar and clear language facilitate understanding."
+    },
+    {
+        "final_description": "Direct mapping to ServiceRequestType column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The necessary source information is correctly identified, and the transformation logic is explicitly described as direct mapping. The language used is straightforward and grammatically sound."
+    },
+    {
+        "final_description": "This is a reference key to DimServiceOfferingMaster table to get more detail of various services offered for Commercial tickets. Direct mapping to ServiceOfferingMasterKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+        "comment": "The description effectively mentions both reference key utilization and direct mapping. It offers clear source details and maintains grammatical accuracy, making the information easily comprehensible."
+    },
+    {
+        "final_description": "Fact table that contains Commercial Survey data related to Surface Devices in FactSurvey table coming from SA&DP Commercial Source. Grain: FactSurveyKey",
+        "comment": "The text provides the source and nature of the table, along with its granularity level (Grain: FactSurveyKey). The description is clear, succinct, and structured correctly, aligning with the requirements for passing the review process."
+    },
+    {
+        "final_description": "Direct mapping to ServiceRequestNumber column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "The description specifies the source information and clarifies that the transformation logic involves direct mapping. Correct grammar and syntax ensure the statement is straightforward and comprehensible."
+    },
+    {
+        "final_description": "Direct mapping to Rating column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "This description covers required source details, explaining the direct mapping to the Rating column. The direct and simple language, along with accurate grammar, promotes understanding."
+    },
+    {
+        "final_description": "Hardcoded to Unspecified",
+        "comment": "The description concisely explains the transformation logic of hardcoding to 'Unspecified.' Its simplicity and correct grammar contribute to straightforward understanding and successful passing of the review."
+    },
+    {
+        "final_description": "Direct mapping to AcknowledgeDateTime column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "The text provides the necessary source details and articulates the direct mapping logic. The clear structure and grammatical correctness support easy comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about Survey CreatedDatetime in UTC. This key is populated by joining AcknowledgeDateTime from FactSurvey table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "comment": "The explanation includes source information and clear join conditions needed to populate the reference key. Despite involving a complex process, the use of proper grammar and detailed logic makes it understandable."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about Survey CreatedDatetime in UTC. This key is populated by joining AcknowledgeDateTime from FactSurvey table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "comment": "The description provides source details and comprehensive joining logic for understanding. By maintaining clear sentence structure, it ensures clarity and adheres to review standards."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about Survey CreatedDatetime in PT. This key is populated by joining AcknowledgeDateTime in PT from FactSurvey table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey",
+        "comment": "The explanation contains source identification and clearly presents join logic for deriving the reference key, ensuring clarity and correct grammar for understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about Survey CreatedDatetime in PT. This key is populated by joining AcknowledgeDateTime in PT from FactSurvey table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+        "comment": "Including the source and the joining logic supports effective understanding of the reference key derived in the process. The description is well-structured and reads clearly."
+    },
+    {
+        "final_description": "Direct mapping to ServiceRequestKey column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "Source details and direct mapping transformation logic are effectively presented. The simple and grammatically correct language aids swift understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimRange table to get more details about Ticket ageRange. Derived by applying decode logic on ClosedDateTime,CreatedDateTime columns in DimSupportServiceRequest table coming from SA&DP Commercial Source. Logic: calculate new column Range-when datedifference of ClosedDateTime,CreatedDateTime < 0 then '<=0' ,when datedifference of ClosedDateTime,CreatedDateTime is > 0 and <=1 then '>0-1' ,when datedifference of ClosedDateTime,CreatedDateTime is > 1 and <=2 then '>1-2' ,when datedifference of ClosedDateTime,CreatedDateTime is > 2 and <=3 then '>2-3' ,when datedifference of ClosedDateTime,CreatedDateTime is > 3 and <=4 then '>3-4' ,when datedifference of ClosedDateTime,CreatedDateTime is > 4 and <=5 then '>4-5',when datedifference of ClosedDateTime,CreatedDateTime is > 5 and <=6 then '>5-6' ,when datedifference of ClosedDateTime,CreatedDateTime is > 6 and <=7 then '>6-7' ,when datedifference of ClosedDateTime,CreatedDateTime is > 7 and <=14 then '>7-14' ,when datedifference of ClosedDateTime,CreatedDateTime is > 14 and <=21 then '>14-21' ,when datedifference of ClosedDateTime,CreatedDateTime is > 21 and <=30 then '>21-30' ,when datedifference of ClosedDateTime,CreatedDateTime is > 30 and <=60 then '>30-60' ,when datedifference of ClosedDateTime,CreatedDateTime is > 60 and <=90 then '>60-90' ,when datedifference of ClosedDateTime,CreatedDateTime is > 90 and <=120 then '>90-120' ,when datedifference of ClosedDateTime,CreatedDateTime >120 then '>120' . Now join DimRange based on this new Range column and extract RangeKey ",
+        "comment": "The description offers comprehensive source and transformation details, involving complex decode logic and join conditions. Its complete logical breakdown and clear statement construction support understanding."
+    },
+    {
+        "final_description": "Direct mapping to PESProductKey column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "The description provides necessary source details and a direct mapping explanation, expressed in simple and grammatically correct terms, making the content straightforward."
+    },
+    {
+        "final_description": "Direct mapping to OwnerEmployeeKey column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "The source information and direct mapping transformation logic are clearly presented. The description's simplicity and correctness enhance its ease of understanding."
+    },
+    {
+        "final_description": "Hardcoded to 0",
+        "comment": "The description details a simple transformation logic involving hardcoding. It is clear and concise, adhering to grammatical norms, thus suitable for understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimGeography table to get more details about customer geography. Direct mapping to CustomerGeographyKey column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "The reference key's use and direct mapping are explained, with source details including the DimGeography table. Clear language and grammar make the description comprehensible."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportLanguage table to get more details about Language. Direct mapping to Supportlanguagekey column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "The description identifies the source and references key usage, describing direct mapping in a clear and structured manner with correct grammar, aiding understanding."
+    },
+    {
+        "final_description": "Direct mapping to IsResolved column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "The source details and direct mapping logic are described correctly. The clear syntax and grammar make the description easy to follow and understand."
+    },
+    {
+        "final_description": "Direct mapping to IsFirstContactResolved column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "This description identifies source data and specifies the transformation as a straightforward direct mapping. The phrasing is simple and grammatically accurate, supporting comprehension."
+    },
+    {
+        "final_description": "Hardcoded to 0",
+        "comment": "The logic of hardcoding to a value of '0' is clear and plainly stated. The concise sentence is grammatically correct, making it easy to understand."
+    },
+    {
+        "final_description": "This is a reference key to DimDataSource table to get more details about Source. Direct mapping to DataSourcekey column in FactSurvey table coming from SA&DP Commercial Source",
+        "comment": "The description clearly mentions the source and explains the reference key along with the direct mapping logic. The structure and grammar are easy to follow, facilitating understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportChannel table to get more details about medium of communication. Direct mapping to SupportChannelKey column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "Source details are presented, and the description covers both reference key usage and direct mapping. Proper grammar contributes to a well-understood explanation."
+    },
+    {
+        "final_description": "Direct mapping to FactSurveyKey column in FactSurvey table coming from SA&DP Commercial source",
+        "comment": "The description contains source information and describes a simple direct mapping logic in an understandable way, with clear and grammatical language ensuring comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimMLGCSSurveyTarget table to get more details about MLGCS Business Targets associated with the survey. Derived by applying decode logic received from MDM_viw_Consumer_MAS_MLGCSSurveyProduct table coming from MDM source. Logic: based on logic available in MDM_viw_Consumer_MAS_MLGCSSurveyProduct table MLGCSSurveyTargetkey related to survey is mapped",
+        "comment": "The text provides comprehensive details, including source and table associations, along with a full explanation of the decode logic for deriving a reference key. The structured logic supports clarity and understanding despite complexity."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "This description includes UDP and ETL as source information, with clear expression of the timestamp's purpose. The grammatical simplicity ensures easy understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "The statement provides context by indicating the source (UDP and ETL). The explanation is direct and grammatically correct, supporting clarity and easy comprehension."
+    },
+    {
+        "final_description": "This table contains the details of perfoming and Acquired accounts data coming from Microsoft Ads Data Analytics Platform Source",
+        "comment": "The complete source and table context are provided, clearly identifying the table's contents and purpose. Proper sentence structure and grammar facilitate understanding."
+    },
+    {
+        "final_description": "Direct mapping to DateKey column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "The description contains clear source information, specifying the MDAP source and table name, and explains the transformation logic as direct mapping to the DateKey column. The sentence structure and grammar are correct, making the statement understandable."
+    },
+    {
+        "final_description": "Direct mapping to PerformingAccount column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "This description provides essential source information, specifying the MDAP source and the FactPerformingAndNewCountmeasures_v1 table. The transformation logic of direct mapping to the PerformingAccount column is clearly articulated using proper grammar."
+    },
+    {
+        "final_description": "Direct mapping to AdvertiserId column coming from MDAP (MSA Data Analytics Platform) (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "The description repeats the source information but provides it clearly, and outlines direct mapping to the AdvertiserId column. Despite redundancy, sentence structure and grammar are appropriate for comprehension."
+    },
+    {
+        "final_description": "Direct mapping to AccountTimeLineID column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "This explanation includes source details and specifies the direct mapping to AccountTimeLineID, expressed with clarity and grammatical precision."
+    },
+    {
+        "final_description": "Derived by applying decode logic on AccountTimelineid and Datekey columns coming from Upstream source MDAP (Microsoft Ads Data Analytics Platform) DimAccountAttributesTimeline table.\nLogic: SegmentationKey is populated by joining FactPerformingAndNewCountMeasures table with DimAccountAttributesTimeline tables using AccountTimelineId and Datekey from both table",
+        "comment": "The text provides comprehensive source information and a detailed explanation of the transformation logic, including join conditions. The segmentation logic is detailed step-by-step, and the sentence structure enables a clear understanding."
+    },
+    {
+        "final_description": "Direct mapping to AdvertiserId column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "The description accurately presents the source information and states direct mapping to the AdvertiserId column, albeit being a duplicate entry. Grammar and clarity are maintained."
+    },
+    {
+        "final_description": "Direct mapping to AcquiredBefore3Months column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "This description includes the necessary source details and explains the direct mapping to the AcquiredBefore3Months column. The correct grammar and clarity aid in understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "The description provides clear context with the reference to UDP and ETL as source information. The explanation of the update timestamp is straightforward and grammatically correct."
+    },
+    {
+        "final_description": "Direct mapping to PerformingAdvertiserinPriorMonth column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "The necessary source and table details are provided, and the transformation logic of direct mapping to the PerformingAdvertiserinPriorMonth column is clearly stated with proper grammar."
+    },
+    {
+        "final_description": "Direct mapping to PerformingAdvertiser column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "Source information is included, and the description specifies direct mapping to the PerformingAdvertiser column. Sentence structure and grammar ensure clarity and understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "The explanation includes relevant source context (UDP and ETL), with a clear expression of the insert timestamp's function. The statement is simple yet precise and follows grammatical conventions."
+    },
+    {
+        "final_description": "Derived by applying decode logic on AccountTimelineid and Datekey columns coming from Upstream source MDAP (Microsoft Ads Data Analytics Platform) DimAccountAttributesTimeline table.\nLogic: AccountAttributeTimeLineKey is populated by joining FactPerformingAndNewCountMeasures table with DimAccountAttributesTimeline tables using AccountTimelineId and Datekey from both table",
+        "comment": "This description provides comprehensive source details and outlines transformation logic with specified join conditions. The explanation is detailed and uses correct grammar, aiding clear understanding."
+    },
+    {
+        "final_description": "Derived using Is1MonthChurn and AcquiredBefore3Months columns which come from MDAP (MSA Data Analytics Platform) source. When both are 1 then 1 else 0.",
+        "comment": "The text includes source information and a clear transformation logic involving conditional expressions. The straightforward language and clear sentence structure aid comprehension."
+    },
+    {
+        "final_description": "This is a Reference key to DimCustomerAccountNonPII table to get details for Customer Accounts. logic: CustomerAccountNonPIIKey is populated by joining DimCustomerAccountNonPII table with FactPerformingAndNewCountmeasures table using accountid from both tables.",
+        "comment": "The description provides necessary source information and explains how the reference key is derived through joining logic. Concise language and correct grammar ensure the statement is understandable."
+    },
+    {
+        "final_description": "Direct mapping to 1mo_churn column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "This text provides source information and outlines the direct mapping to the 1mo_churn column. The description is clear and uses proper grammar."
+    },
+    {
+        "final_description": "This column is an indirect mapping to IsClosed column from FactSearchView table. Its mapped based on CustomerAccountNonPIIKey, DateKey from FactPerformingAndNewCountmeasures table and CustomerAccountNonPIIKey, LastModifiedDate from FactSearchView. Logic: If CustomerAccountNonPIIKey isNotNull and IsClosed = Yes then 1 else 0",
+        "comment": "The description includes source details and provides a clear explanation of the indirect mapping logic involving conditional expressions. Proper grammar and clarity in sentence structure make it easy to comprehend."
+    },
+    {
+        "final_description": "This FactTables contains consolidated data from FactMessaging, FactPhone, FactSurvey, FactChatVendor, FactRevenue and FactServiceRequest. Grain : ServiceRequestId",
+        "comment": "The description provides a comprehensive overview of the fact table consolidation, including its source tables and grain level. The explanation is clear and well-organized, with correct grammar to ensure understanding."
+    },
+    {
+        "final_description": "Direct mapping to ticketnumber column having string values coming from DFC.Public.incident file of dynamics, PartnerSIPReport.vw_SupportRequestDetails_Consumer file of rave, Incident.IncidentCap file of ASDCAP sources.",
+        "comment": "This description offers clear source information, indicating various files and sources. It explains direct mapping to the ticketnumber column using grammatically accurate and comprehensible language."
+    },
+    {
+        "final_description": "This is a reference key to DimIssueCode table to get details about IssueCode direct mapping of 'IssueCodeKey' from FactServiceRequest.",
+        "comment": "The description contains source information and explains the usage of a reference key with direct mapping clearly. Although the sentence could be more structured, it is understandable and uses correct grammar."
+    },
+    {
+        "final_description": "This is a reference key to DimCSSProduct table to get CSSProduct related to ticket direct mapping of 'CSSProductKey' from FactServiceRequest.",
+        "comment": "The text provides necessary source details and describes how the reference key and direct mapping are used, employing clear syntax and effective grammar for understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to know the date on which ticket is last modified in UTC timezone direct mapping of 'LastModifiedUTCDateKey' from FactServiceRequest.",
+        "comment": "The description includes complete source information and details the reference key and direct mapping logic. It is structured with clarity and grammatical accuracy, aiding comprehension."
+    },
+    {
+        "final_description": "This is a reference key to FactServiceRequest table to get ticket details direct mapping of 'ServiceRequestKey' from FactServiceRequest.",
+        "comment": "The statement provides source information and describes the reference key with direct mapping logically. The language is appropriate, following grammatical rules and ensuring comprehension."
+    },
+    {
+        "final_description": "Direct mapping to DaysToClose column having string values coming from Incident.IncidentCap file of ASDCAP source ; Derived by applying decode logic on msdfm_casestatecode column coming from DFC.Secured.CasePerfAttributesEvents file of Dynamics source.\nLogic : if casestate is closed then difference between modifiedon and createdon, else 0",
+        "comment": "The description presents source information along with a combination of direct mapping and derived transformation logic. Detailed explanation and correct grammar support clear understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "This explanation includes relevant source context (UDP and ETL) and describes the function of the insert timestamp. Simple yet precise, it follows grammatical conventions effectively."
+    },
+    {
+        "final_description": "This attribute is calculated using msdfm_casestatecode column coming from Dynamics source. Logic : if lag of casestate is closed and casestate is open then add 1 to the count",
+        "comment": "The text includes necessary source details and clearly explains the logic for attribute calculation, using distinct language and correct grammar for clarity and understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportAreaPath table to get details about first support area path direct mapping of 'FirstSAPKey' from FactServiceRequest.",
+        "comment": "The explanation offers source information and describes the use of a reference key with direct mapping. Clear sentence construction and grammar aid in comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportAreaPath table to get details about current support area path direct mapping of 'SAPKey' from FactServiceRequest.",
+        "comment": "This description includes the needed source information and explains the logic behind the reference key and direct mapping in clear, grammatically correct language."
+    },
+    {
+        "final_description": "This is a reference key to DimSubPlanningCategory table to get details about Sub Planning Category direct mapping of 'SubPlanningCategoryKey' from FactServiceRequest.",
+        "comment": "The description provides adequate source information and details the reference key and direct mapping usage clearly, employing concise and correct Grammar."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportQueue table to get details about the tickets' support queue direct mapping of 'SupportQueueKey' from FactServiceRequest.",
+        "comment": "The source and logic for using the reference key and direct mapping are clearly given. Sentence structure is simple, yet effective, and grammar is correct, contributing to a well-understood explanation."
+    },
+    {
+        "final_description": "Direct mapping to modifiedon column having timestamp values coming from DFC.Public.incident file of dynamics, PartnerSIPReport.vw_SupportRequestDetails_Consumer file of rave, Incident.IncidentCap file of ASDCAP sources.",
+        "comment": "The explanation includes clear source information and describes direct mapping to the modifiedon column correctly. The language and grammar are suitable, making comprehension straightforward."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to know the time when ticket is created in UTC timezone direct mapping of 'CreatedUTCTimeKey' from FactServiceRequest.",
+        "comment": "The description gives source context and details a direct mapping with reference key usage. The sentence structure is clear, with correct grammatical composition for easy understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to know the date on which ticket is created in UTC timezone direct mapping of 'CreatedUTCDateKey' from FactServiceRequest.",
+        "comment": "The source and key logic are detailed in this statement, maintaining grammatical correctness and clarity in explanation."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to know the time when ticket is last modified in PT timezone",
+        "comment": "The description provides necessary source details regarding time-related information in PT timezone, albeit lacking mention of the exact direct mapping target. Proper grammar and simplified statement structure maintain clarity."
+    },
+    {
+        "final_description": "This is a reference key to DimResourceTenure table to get details about Resource Tenure direct mapping of 'ResourceTenureKey' from FactServiceRequest.",
+        "comment": "The description includes relevant source information and explains how the direct mapping and reference key are applied. Clarity in syntax and grammar provides effective understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to know the date on which ticket is last modified in PT timezone direct mapping of 'LastModifiedPTDateKey' from FactServiceRequest.",
+        "comment": "The description provides source and logic associated with utilizing reference key and direct mapping. Usage of coherent grammar supports clear understanding."
+    },
+    {
+        "final_description": "This attribute is calculated using ServiceRequestId, MessagingKey & ChatBeginDateTime columns coming from FactMessaging as:\nLogic:\n      After partitioned the FactMessaging by ServiceRequestId, taking the latest MessagingKey (by descending order of ChatBeginDateTime) gives CurrentMessagingKey",
+        "comment": "The text offers a comprehensive explanation of the source and transformation logic, using syntax and grammar compatible with comprehension despite the intricate logic."
+    },
+    {
+        "final_description": "Direct mapping to SecondsToInitialResponse column having string values coming from Incident.IncidentCap file of ASDCAP source, Hardcoded to 0 for Dynamics",
+        "comment": "The description presents source information, articulates direct mapping, and explains where values are hardcoded. Language is simple, well-structured, and grammar is adhered to."
+    },
+    {
+        "final_description": "Direct mapping to AcquiredBefore3Months column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "The description clearly states the source as MDAP and specifically identifies the table and column for which a direct mapping is applied. The explanation is concise and grammatically correct, making it easy to understand."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "This description provides contextual information regarding the source, UDP, and the action performed by ETL, making its purpose explicit. The sentence is clear and adheres to grammatical standards."
+    },
+    {
+        "final_description": "Direct mapping to PerformingAdvertiserinPriorMonth column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "The description includes source information by specifying MDAP and the relevant table. The direct mapping logic is clearly stated, and the description is both grammatically correct and easy to comprehend."
+    },
+    {
+        "final_description": "Direct mapping to PerformingAdvertiser column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "The statement provides the required source information and explains the direct mapping to the PerformingAdvertiser column, using clear and grammatically correct language."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "This description indicates the source as UDP and describes the action taken by the ETL process clearly. The language is simple and grammatically correct, ensuring easy understanding."
+    },
+    {
+        "final_description": "Derived by applying decode logic on AccountTimelineid and Datekey columns coming from Upstream source MDAP (Microsoft Ads Data Analytics Platform) DimAccountAttributesTimeline table.\nLogic: AccountAttributeTimeLineKey is populated by joining FactPerformingAndNewCountMeasures table with DimAccountAttributesTimeline tables using AccountTimelineId and Datekey from both table",
+        "comment": "The description provides comprehensive source information and a detailed explanation of the decode logic, including the join conditions needed to derive the AccountAttributeTimeLineKey. The sentence is complex but clear, adhering to grammatical standards."
+    },
+    {
+        "final_description": "Derived using Is1MonthChurn and AcquiredBefore3Months columns which come from MDAP (MSA Data Analytics Platform) source. When both are 1 then 1 else 0.",
+        "comment": "The description specifies the source as MDAP and provides a clear transformation logic using a simple conditional statement. The description is easy to understand, with correct grammar and structure."
+    },
+    {
+        "final_description": "This is a Reference key to DimCustomerAccountNonPII table to get details for Customer Accounts. logic: CustomerAccountNonPIIKey is populated by joining DimCustomerAccountNonPII table with FactPerformingAndNewCountmeasures table using accountid from both tables.",
+        "comment": "The description provides source information and outlines the logic for creating the reference key through a join operation. Although the phrase 'logic:' should be capitalized for consistency, the overall description is clear and understandable."
+    },
+    {
+        "final_description": "Direct mapping to 1mo_churn column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+        "comment": "The description contains the necessary source information and clearly explains the direct mapping, with correct grammar and structure for ease of understanding."
+    },
+    {
+        "final_description": "This column is an indirect mapping to IsClosed column from FactSearchView table. Its mapped based on CustomerAccountNonPIIKey, DateKey from FactPerformingAndNewCountmeasures table and CustomerAccountNonPIIKey, LastModifiedDate from FactSearchView. Logic: If CustomerAccountNonPIIKey isNotNull and IsClosed = Yes then 1 else 0",
+        "comment": "The text provides source information and a clear explanation of the mapping logic involving a condition. It uses proper grammar and structured language, making it understandable."
+    },
+    {
+        "final_description": "This FactTables contains consolidated data from FactMessaging, FactPhone, FactSurvey, FactChatVendor, FactRevenue and FactServiceRequest. Grain : ServiceRequestId",
+        "comment": "The description mentions the source tables and clarifies the nature and granularity level (Grain: ServiceRequestId) of the FactTable. The wording is clear and grammatically correct, ensuring comprehension."
+    },
+    {
+        "final_description": "Direct mapping to ticketnumber column having string values coming from DFC.Public.incident file of dynamics, PartnerSIPReport.vw_SupportRequestDetails_Consumer file of rave, Incident.IncidentCap file of ASDCAP sources.",
+        "comment": "This explanation includes comprehensive source details and states the direct mapping logic to the ticketnumber column. The inclusion of proper grammar and clear language facilitates understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimIssueCode table to get details about IssueCode direct mapping of 'IssueCodeKey' from FactServiceRequest.",
+        "comment": "The description outlines the use of a reference key and direct mapping to obtain IssueCode details. The structure remains concise and uses correct grammar for clarity."
+    },
+    {
+        "final_description": "This is a reference key to DimCSSProduct table to get CSSProduct related to ticket direct mapping of 'CSSProductKey' from FactServiceRequest.",
+        "comment": "The source information is clear and the role of the reference key and direct mapping is well-explained. The syntax and grammar are correct, aiding easy comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to know the date on which ticket is last modified in UTC timezone direct mapping of 'LastModifiedUTCDateKey' from FactServiceRequest.",
+        "comment": "The description provides the necessary source and utilization context for the reference key. The clear sentence structure and appropriate grammar promote understanding."
+    },
+    {
+        "final_description": "This is a reference key to FactServiceRequest table to get ticket details direct mapping of 'ServiceRequestKey' from FactServiceRequest.",
+        "comment": "The description states the source information and covers the logic behind using the reference key with direct mapping. Concise grammar and structure support easy understanding."
+    },
+    {
+        "final_description": "Direct mapping to DaysToClose column having string values coming from Incident.IncidentCap file of ASDCAP source ; Derived by applying decode logic on msdfm_casestatecode column coming from DFC.Secured.CasePerfAttributesEvents file of Dynamics source.\nLogic : if casestate is closed then difference between modifiedon and createdon, else 0",
+        "comment": "The text combines the use of source information with a description of direct mapping and derived logic. The transformation is well-explained, and the grammar is correct and understandable even in complexity."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "The description offers source information for UDP and ETL, clarifying the purpose of the timestamp. It is clear and grammatically sound, making it easy to understand."
+    },
+    {
+        "final_description": "This attribute is calculated using msdfm_casestatecode column coming from Dynamics source. Logic : if lag of casestate is closed and casestate is open then add 1 to the count",
+        "comment": "The description provides source details and explains a clear logic for attribute calculation. The proper use of syntax and grammar ensures the clarity of the explanation."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportAreaPath table to get details about first support area path direct mapping of 'FirstSAPKey' from FactServiceRequest.",
+        "comment": "The description delivers complete source information and explains the role of the reference key and direct mapping clearly. The sentence structure and grammar are correct, allowing straightforward understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportAreaPath table to get details about current support area path direct mapping of 'SAPKey' from FactServiceRequest.",
+        "comment": "The source information is provided, and the reference key along with the direct mapping strategy is defined clearly. The correct grammatical usage aids clarity and comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimSubPlanningCategory table to get details about Sub Planning Category direct mapping of 'SubPlanningCategoryKey' from FactServiceRequest.",
+        "comment": "This description includes source and transformation details regarding the reference key and direct mapping. Clear structuring and appropriate grammar make the explanation understandable."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportQueue table to get details about the tickets' support queue direct mapping of 'SupportQueueKey' from FactServiceRequest.",
+        "comment": "The description explains source information and transformation logic (reference key and direct mapping) well, employing correct grammar for clarity."
+    },
+    {
+        "final_description": "Direct mapping to modifiedon column having timestamp values coming from DFC.Public.incident file of dynamics, PartnerSIPReport.vw_SupportRequestDetails_Consumer file of rave, Incident.IncidentCap file of ASDCAP sources.",
+        "comment": "Comprehensive source identification is provided, and the logic for direct mapping of the modifiedon column is explained. The description's grammar and structure make it easy to understand."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to know the time when ticket is created in UTC timezone direct mapping of 'CreatedUTCTimeKey' from FactServiceRequest.",
+        "comment": "The necessary source context and reference key utilization are effectively presented. It's structured clearly, with the use of correct grammar ensuring it's easy to grasp."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to know the date on which ticket is created in UTC timezone direct mapping of 'CreatedUTCDateKey' from FactServiceRequest.",
+        "comment": "The description details both the source and the transformation logic, ensuring clarity with correct grammar and structured presentation."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to know the time when ticket is last modified in PT timezone",
+        "comment": "Although there is no direct mapping mentioned, the source is clear and the context about time in PT timezone is given. The grammar and simplicity maintain clarity in the description."
+    },
+    {
+        "final_description": "This is a reference key to DimResourceTenure table to get details about Resource Tenure direct mapping of 'ResourceTenureKey' from FactServiceRequest.",
+        "comment": "The description provides source information and details the transformation logic involved with reference key and direct mapping. Using clear grammar and structure aids in understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to know the date on which ticket is last modified in PT timezone direct mapping of 'LastModifiedPTDateKey' from FactServiceRequest.",
+        "comment": "The description correctly presents source and transformation logic for the reference key and direct mapping. Clarity and correct grammar ensure comprehension."
+    },
+    {
+        "final_description": "This attribute is calculated using ServiceRequestId, MessagingKey & ChatBeginDateTime columns coming from FactMessaging as:\nLogic:\n      After partitioned the FactMessaging by ServiceRequestId, taking the latest MessagingKey (by descending order of ChatBeginDateTime) gives CurrentMessagingKey",
+        "comment": "The description provides source information and explains the transformation logic clearly, involving partitioning and sorting. The detailed explanation is structured, aiding understanding through correct usage of language."
+    },
+    {
+        "final_description": "Direct mapping to SecondsToInitialResponse column having string values coming from Incident.IncidentCap file of ASDCAP source, Hardcoded to 0 for Dynamics",
+        "comment": "This explanation offers source context and describes a direct mapping process along with hardcoding logic. It maintains clear language and correct grammatical structure for effective comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimServiceLine table to get details tickets' first service line direct mapping of 'FirstServiceLineQueueKey' from FactServiceRequest.",
+        "comment": "The description includes source information and outlines the logic for using a reference key and direct mapping. It uses clear language and correct grammar to aid understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimGeography table to get details about Customer Geography direct mapping of 'CustomerGeographyKey' from FactServiceRequest.",
+        "comment": "The description provides complete source details, clearly explaining both the reference key and direct mapping. Its structured sentence and proper grammar contribute to comprehensible content."
+    },
+    {
+        "final_description": "This is a reference key to DimVendorSite table to get details about the employees' company and location direct mapping of 'VendorSiteKey' from FactServiceRequest.",
+        "comment": "Clear source information is given, discussing how the reference key and direct mapping are applied. The understandable language and correct grammatical use promote clarity."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportChannel table to get first support channel of the ticket direct mapping of 'FirstSupportChannelQueueKey' from FactServiceRequest.",
+        "comment": "The provided description offers source context and covers the reference key and direct mapping strategy. Appropriate grammar and sentence structure ensure the explanation is easily understood."
+    },
+    {
+        "final_description": "This is a reference key to DimServiceLine table to get details tickets' service line direct mapping of 'ServiceLineKey' from FactServiceRequest.",
+        "comment": "The description includes source information and explains the logic of linking a reference key with direct mapping. Clear language and correct grammar ensure easy understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimEmployee table to get details about the employee who worked on this ticket direct mapping of 'EmployeeKey' from FactServiceRequest.",
+        "comment": "Source and mapping details are present, with reference key usage clarified. The grammar is correct, and the structure is straightforward, aiding understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimRootCauseClassification table to get details about root cause classification direct mapping of 'RootCauseClassificationKey' from FactServiceRequest.",
+        "comment": "The explanation includes both source identification and a clear reference key, alongside direct mapping logic. Proper grammar ensures clarity and comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimCustomerPII table to get NonPII info about the customer direct mapping of 'CustomerNonPIIKey' from FactServiceRequest.",
+        "comment": "Source information is listed alongside an explanation for the direct mapping using a reference key. Sentence structure and grammar are correct, aiding in ease of understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportChannel table to get support channel of the ticket direct mapping of 'SupportChannelKey' from FactServiceRequest.",
+        "comment": "The description highlights source details and reference key and mapping logic, using clear language with appropriate grammar to facilitate comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimProgramLineOfBusiness table to get program line of business details of the ticket direct mapping of 'ProgramLineOfBusinessKey' from FactServiceRequest.",
+        "comment": "The text specifies source information and explains reference key usage and direct mapping. Correct grammar and structured sentence creation promote understanding."
+    },
+    {
+        "final_description": "This attribute is calculated using msdfm_casestatecode column coming from Dynamics source. Logic : if casestate is resolved then difference between modifiedon and createdon, if open then difference between createdon and current time in minutes ",
+        "comment": "The description provides source details and a step-by-step approach to attribute calculation logic. Clear language and grammar ensure the text is understandable."
+    },
+    {
+        "final_description": "Direct mapping to AgeInMinutes column having string values coming from Incident.IncidentCap file of ASDCAP source; Derived by applying decode logic on msdfm_casestatecode column coming from DFC.Secured.CasePerfAttributesEvents file of Dynamics source.\nLogic : if casestate is closed then difference between modifiedon and createdon, if open then difference between createdon and current time in minutes ",
+        "comment": "The description blends source information with transformation logic using a combination of direct mapping and derived logic. Its comprehensive explanation and correct grammar ensure clarity and comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportProduct table to get details about Support Product direct mapping of 'SupportProductKey' from FactServiceRequest.",
+        "comment": "Source and transformation logic details are presented clearly, including both reference key and direct mapping. Proper grammar and structured presentation make the explanation easy to understand."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportQueue table to get details about the tickets' first support queue direct mapping of 'FirstSupportQueueKey' from FactServiceRequest.",
+        "comment": "The source and logic involving reference key and direct mapping are explained clearly. Concise grammar supports easy comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimEmployee table to get details about the first employee who worked on this ticket direct mapping of 'FirstEmployeeQueueKey' from FactServiceRequest.",
+        "comment": "The description provides source details and explains the transformation involving a reference key and direct mapping, using correct grammar for clarity and understanding."
+    },
+    {
+        "final_description": "This attribute is calculated using ServiceRequestID, FactSurveyKey & ServiceRequestClosedDate columns coming from FactSurvey as:\nLogic:\n      After partitioned the FactSurvey by ServiceRequestID, taking the latest QualityOfServiceScore (by descending order of ServiceRequestClosedDate) gives QualityOfServiceScore",
+        "comment": "The description offers source information and a logical breakdown of the attribute calculation procedure. The detailed steps and correct grammar facilitate complete understanding of the process."
+    },
+    {
+        "final_description": "This attribute is calculated using SRNumber, InteractionResourceId & CalendarDateTime columns coming from FactPhone as:\nLogic:\n      After partitioned the FactPhone by SRNumber, taking the first InteractionResourceId (by ascending order of CalendarDateTime) gives FirstInteractionResourceId",
+        "comment": "The explanation provides source and logic information for attribute calculation. Steps are detailed, and the structure uses correct grammar that aids in understanding the content."
+    },
+    {
+        "final_description": "This attribute is calculated using ServiceRequestId, MessagingKey & ChatBeginDateTime columns coming from FactMessaging as:\nLogic:\n      After partitioned the FactMessaging by ServiceRequestId, taking the first MessagingKey (by ascending order of ChatBeginDateTime) gives CurrentMessagingKey",
+        "comment": "The description presents source details and transformation logic with clear partitioning and sorting steps. The clarity and adherence to grammatical norms aid in comprehension of the attribute calculation."
+    },
+    {
+        "final_description": "This is a reference key to DimVendorSite table to get details about the first employees' company and location direct mapping of 'FirstVendorSiteQueueKey' from FactServiceRequest.",
+        "comment": "Source information and mapping logic are clearly explained, and mention of the reference key functions as contextually appropriate. The language and grammar are well-suited for clear understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportLanguage table to get support language of the ticket direct mapping of 'SupportLanguageKey' from FactServiceRequest.",
+        "comment": "The description efficiently provides source and transformation details for the reference key and direct mapping. The grammatical adequacy and logical flow support easy comprehension."
+    },
+    {
+        "final_description": "This attribute is calculated using ServiceRequestID, OrderKey & TransactionUTCDate columns coming from FactRevenue as:\nLogic:\n      After partitioned the FactRevenue by ServiceRequestID, taking the first OrderKey (by ascending order of TransactionUTCDate) gives FirstOrderKey",
+        "comment": "The source information alongside the meticulously detailed transformation process is presented clearly. Steps for calculating the attribute are logical and adhere to grammatical rules, ensuring understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "This description provides context within UDP and specifies the ETL action, resulting in explicit purpose clarity. It uses simple language and adherence to grammatical norms for easy understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to know the time when ticket is created in PT timezone direct mapping of 'CreatedPTTimeKey' from FactServiceRequest.",
+        "comment": "The description effectively provides source details and explains reference key and direct mapping logic. It is structured clearly with proper grammar to ensure comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimDataSource table to identify the tool where ticket is created direct mapping of 'DataSourceKey' from FactServiceRequest.",
+        "comment": "The description includes relevant source context and information on the reference key's purpose and mapping logic. Its clear sentence structure and grammar promote understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimCustomerPII table to get info about the customer direct mapping of 'CustomerPIIKey' from FactServiceRequest.",
+        "comment": "Source information and transformation logic involving reference key and direct mapping are clearly explained. The grammar and sentence flow are effective for understanding."
+    },
+    {
+        "final_description": "Surrogate key generated in UDP to get Survey Details direct mapping of 'FactSurveyKey' from FactSurvey.",
+        "comment": "The description provides clear source content and specifies the transformation logic using a surrogate key for direct mapping. Its clarity and correct grammar ensure easy comprehension."
+    },
+    {
+        "final_description": "This attribute is calculated using ServiceRequestID, ChatVendorKey & ChatBeginDateTime columns coming from FactChatVendor as:\nLogic:\n      After partitioned the FactChatVendor by ServiceRequestID, taking the first ChatVendorKey (by ascending order of ChatBeginDateTime) gives FirstChatVendorKey",
+        "comment": "The description outlines source information and detailed transformation logic. The step-by-step outline and adherence to grammar standards ensure the attribute calculation is clearly understood."
+    },
+    {
+        "final_description": "This attribute is calculated using SRNumber, InteractionId & CalendarDateTime columns coming from FactPhone as:\nLogic:\n      After partitioned the FactPhone by SRNumber, taking the latest InteractionId (by descending order of CalendarDateTime) gives CurrentInteractionId",
+        "comment": "Source details are presented with a clear breakdown of transformation logic involving partitioning and sorting. Correct grammar and clarity support comprehensive understanding of the calculation process."
+    },
+    {
+        "final_description": "This attribute is calculated using SRNumber, InteractionId & CalendarDateTime columns coming from FactPhone as:\nLogic:\n      After partitioned the FactPhone by SRNumber, taking the first InteractionId (by ascending order of CalendarDateTime) gives FirstInteractionId",
+        "comment": "The description provides source and detailed steps for attribute calculation through partitioning and sorting. Formally correct grammar supports ease of understanding and clarity."
+    },
+    {
+        "final_description": "This attribute is calculated using SRNumber, InteractionResourceId & CalendarDateTime columns coming from FactPhone as:\nLogic:\n      After partitioned the FactPhone by SRNumber, taking the latest InteractionResourceId (by descending order of CalendarDateTime) gives CurrentInteractionResourceId",
+        "comment": "Source and transformation logic are included, detailing a series of steps for attribute calculation involving partitioning and sequencing. Clear presentation and language enhance ease of understanding."
+    },
+    {
+        "final_description": "Derived by applying decode logic on incidentid column from DFC.Public.incident file of Dynamics incident source and queueid,objectid, createdon and queuename columns from DFC.Public.queueitem file of Cornerstone Dynamics source.\nLogic 0: DFC.Public.queueitem data is partitioned by objectid and ordered by createdon column descendingly\nLogic 1: incident is joined with queueitem by incidentid and objectid columns respectively\nLogic 2: partitioned queue data is joined with queueitem by queueid column from both views\nLogic 3: If queuename contains regex values like '<%>' then HardCoded as 1 else 0 gives IsAgentSpecificQueue",
+        "comment": "The description provides comprehensive source and transformation logic with detailed join conditions and partitioning steps. Its structured explanation and correct grammar ensure clear communication of the data processing logic."
+    },
+    {
+        "final_description": "This is a reference key to DimSupportLanguage table to get first support language of the ticket direct mapping of 'FirstSupportLanguageQueueKey' from FactServiceRequest.",
+        "comment": "The description clearly outlines the source and the purpose of the reference key along with mapping logic. The clear language and proper grammar aid in understanding the data processing."
+    },
+    {
+        "final_description": "This attribute is calculated using ServiceRequestID, OrderKey & TransactionUTCDate columns coming from FactRevenue as:\nLogic:\n      After partitioned the FactRevenue by ServiceRequestID, taking the latest OrderKey (by descending order of TransactionUTCDate) gives CurrentOrderKey",
+        "comment": "The description offers insight into the source details and methodical steps for transformation using partitioning. Detailed presentation with accurate grammar makes the attribute calculation logic easy to follow."
+    },
+    {
+        "final_description": "This is a reference key to DimServiceRequestStatus table to get details about ticket status direct mapping of 'ServiceRequestStatusKey' from FactServiceRequest.",
+        "comment": "The description provides source details and describes both reference key and direct mapping logic. The text is structured with clarity and correct grammar, offering effective comprehension."
+    },
+    {
+        "final_description": "This attribute is calculated using ServiceRequestID, ChatVendorKey & ChatBeginDateTime columns coming from FactChatVendor as:\nLogic:\n      After partitioned the FactChatVendor by ServiceRequestID, taking the latest ChatVendorKey (by descending order of ChatBeginDateTime) gives CurrentChatVendorKey",
+        "comment": "The description details source and transformation logic, including partitioning and sequencing steps for calculating the attribute. Proper grammar and organization aid in understanding the computation."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to know the time when ticket is last modified in UTC timezone direct mapping of 'LastModifiedUTCTimeKey' from FactServiceRequest.",
+        "comment": "The description includes source context and logic for using the reference key and direct mapping. The text is clearly structured and grammatically correct, making it easy to understand."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to know the date on which ticket is created in PT timezone direct mapping of 'CreatedPTDateKey' from FactServiceRequest.",
+        "comment": "The description provides source information by mentioning the FactServiceRequest and outlines the transformation logic as a reference key for obtaining the date in PT timezone, with a direct mapping to 'CreatedPTDateKey'. The statement is clear, well-structured, and grammatically correct."
+    },
+    {
+        "final_description": "This attribute is calculated using msdfm_casestatecode column coming from Dynamics source. Logic : if casestate is closed then difference between modifiedon and createdon, if open then difference between createdon and current time in minutes ",
+        "comment": "The description specifies the source as Dynamics and provides a clear logic for calculating the attribute using the 'msdfm_casestatecode' column. The conditional logic is explained in an easy-to-understand manner with correct grammar."
+    },
+    {
+        "final_description": "This Table containt the details of Requests Transfer detail such as SupportArea,Organizations and SupplierName from Amplify Source.",
+        "comment": "The description identifies the source as Amplify and outlines the table's content related to request transfer details. Although there is a slight typo ('containt' should be 'contains'), the overall message is understandable and concise."
+    },
+    {
+        "final_description": "There is Indirect mapping to to column OrganizationName based on ParentRequestId derived by joining vw_SupportRequest with vw_OrganizationInfo on OrganizationId from Amplify Source",
+        "comment": "The description includes source details and explains the transformation logic for indirect mapping through joining tables. Despite the repeated 'to', the sentence is still clear and comprehensible."
+    },
+    {
+        "final_description": "There is Indirect mapping to to column OrganizationName based on RequestId derived by joining vw_SupportRequest with vw_OrganizationInfo on OrganizationId from Amplify Source",
+        "comment": "This text provides source information and explains indirect mapping logic using join conditions. The sentence structure is sound except for the repeated 'to', offering an understandable explanation."
+    },
+    {
+        "final_description": "There is Indirect mapping to to column SupplierName based on RequestId derived by joining vw_SupportRequest with vw_SupplierInfo on PartnerSupplierId from Amplify Source",
+        "comment": "The description specifies source and transformation logic for indirect mapping using join conditions. Although there's a repeated 'to', the reasoning remains clear and grammatically suitable."
+    },
+    {
+        "final_description": "There is Indirect mapping to to column SupportAreaName based on ParentRequestId derived by joining vw_SupportRequest with vw_OrganizationInfo on OrganizationId from Amplify Source",
+        "comment": "Source information and transformation logic through joins are provided clearly. The repeated 'to' is a minor issue, with the overall explanation remaining comprehensible."
+    },
+    {
+        "final_description": "There is Indirect mapping to to column SupplierName based on ParentRequestId derived by joining vw_SupportRequest with vw_SupplierInfo on PartnerSupplierId from Amplify Source",
+        "comment": "The description contains clear source details and transformation logic for indirect mapping through join conditions. Apart from the repeated 'to', the sentence is understandable."
+    },
+    {
+        "final_description": "Direct Mapping to ParentRequestId column from vw_SupportRequest view from Amplify Source",
+        "comment": "The statement provides source information and describes a clear transformation logic involving direct mapping. The simple and grammatically correct sentence helps in easy understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "The description gives context by referencing UDP and the ETL process, outlining the purpose of the timestamp. It is straightforward, using correct grammar, and easy to comprehend."
+    },
+    {
+        "final_description": "There is Indirect mapping to to column SupportAreaName based on RequestId derived by joining vw_SupportRequest with vw_OrganizationInfo on OrganizationId from Amplify Source",
+        "comment": "Source information and transformation logic for indirect mapping are presented with joining conditions. Despite the repeated 'to', the explanation remains clear and understandable."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "The description includes source context by mentioning UDP and the ETL process, specifying the action performed at the timestamp. Its clarity and grammatical accuracy support understanding."
+    },
+    {
+        "final_description": "This tables contain the details of the transfer of phone calls between agents",
+        "comment": "The description briefly outlines the table content related to phone call transfers. Although it starts with 'This tables' suggesting a typo, the rest of the statement is straightforward and clear."
+    },
+    {
+        "final_description": "This is a reference key to DimEmployee table to get more details about the agent assigned to the particular phone interaction\nThis key is populated by joining AssignedAgent from source with UserId from DimEmployee",
+        "comment": "The description specifies the source and details the reference key logic, with clear join conditions for understanding. Correct grammar and structured presentation support comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimVendorSite table to get more details about VendorSite details of the agent assigned to the particular phone interaction\nThis key is populated by joining ASSIGNED_VENDORCODE and AssignedSiteCode from source with VendorSiteCode from DimVendorSite",
+        "comment": "Clear source information and transformation logic involving joining conditions are provided. The sentence follows proper grammatical rules and structure, facilitating understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "The description offers context regarding its role in UDP and highlights the timestamp's purpose. Its simplicity and grammatical soundness ensure easy comprehension."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "This simple statement indicates a role within UDP and provides timestamp context linked to ETL processes. Direct language and grammatical accuracy contribute to easy comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimDataSource table to get more details about the source of the agent details\nThis key is populated by joining hardcoded value 'Genesys' with DataSourceName from DimDataSource",
+        "comment": "Source and transformation logic are clearly stated alongside the reference key utilization. Correct grammar and clear presentation ensure that the explanation is understood."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about the StartDate for the agent to which a phone interaction was transferred. This key is populated by joining FROM_END_DATE_TIME from source with CalendarDate from DimDate",
+        "comment": "The description contains source and transformation logic details with join conditions for deriving the key. Clear grammar and concise explanation support understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about the StartTime for the agent to which a phone interaction was transferred. This key is populated by joining FROM_END_DATE_TIME from source with Time from DimTime",
+        "comment": "The description provides source information and transformation logic through join conditions. The sentence structure is straightforward, and simple grammar ensures comprehension."
+    },
+    {
+        "final_description": "Direct mapping to FROM_INTERACTION_RESOURCE_ID column having long values coming from TRANSFER_FACT table from genesys source",
+        "comment": "The description states the source and provides transformation logic involving direct mapping. Its grammatical correctness and straightforward language make it easily understandable."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about the StartDate of the agent assigned to the particular phone interaction. This key is populated by joining FromStartDateTime from source with CalendarDate from DimDate",
+        "comment": "Source information and transformation logic with join conditions are clearly presented, supporting understanding. Proper grammar and structure aid in clear communication."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about the StartTime of the agent assigned to the particular phone interaction. This key is populated by joining FromStartDateTime from source with Time from DimTime",
+        "comment": "The description provides source and transformation logic with joining conditions, which are articulated well using correct grammar, ensuring ease of understanding."
+    },
+    {
+        "final_description": "Direct mapping to INTERACTION_ID column having long values coming from TRANSFER_FACT table from genesys source",
+        "comment": "The description mentions both the source and the direct mapping logic, providing sufficient information. The sentence is simple and follows correct grammar, aiding comprehension."
+    },
+    {
+        "final_description": "Direct mapping to MEDIA_SERVER_IXN_GUID column having string values coming from TRANSFER_FACT table from genesys source",
+        "comment": "Source details and direct mapping logic are given, using clear and simple grammar. The explanation is direct, aiding easy comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about the EndDate for the agent to which a phone interaction was transferred. This key is populated by joining ToEndDateTime from source with CalendarDate from DimDate",
+        "comment": "The description includes source information and transformation logic with join conditions. Sentence structure is straightforward, and grammar usage is proper, ensuring comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about the EndTime for the agent to which a phone interaction was transferred. This key is populated by joining ToEndDateTime from source with Time from DimTime",
+        "comment": "The description provides source context and transformation logic through clear joining conditions. The use of correct grammar and precise presentation supports understanding."
+    },
+    {
+        "final_description": "Direct mapping to TO_INTERACTION_RESOURCE_ID column having long values coming from TRANSFER_FACT table from genesys source",
+        "comment": "The explanation specifies the source and provides a clear direct mapping logic. The correct grammatical structure ensures that the description is easily understood."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about the EndDate of the agent assigned to the particular phone interaction. This key is populated by joining ToStartDateTime from source with CalendarDate from DimDate",
+        "comment": "Source and transformation logic are detailed with joining conditions. The explanation is concise, with correct grammar aiding comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about the EndTime of the agent assigned to the particular phone interaction. This key is populated by joining ToStartDateTime from source with Time from DimTime",
+        "comment": "Joining logic and source context are clearly explained with the use of correct grammar. This helps in effectively communicating the intended transformation logic."
+    },
+    {
+        "final_description": "This is a reference key to DimEmployee table to get more details about the agent to which a phone interaction was transferred. This key is populated by joining TransferredAgent from source with UserId from DimEmployee",
+        "comment": "The description provides information about source and transformation logic through join conditions. Proper sentence structure and grammar aid in understanding the data mapping clearly."
+    },
+    {
+        "final_description": "This is a reference key to DimVendorSite table to get more details about VendorSite details of agent to which phone interaction was transferred. This key is populated by joining either concatenation of TRANSFERRED_VENDORCODE, TransferredSiteCode or TransferredAgent from source with VendorSiteCode from DimVendorSite",
+        "comment": "The description offers clear source details and transformation logic for deriving reference keys through joining and concatenation. The explanation stays structurally intact and uses correct grammar, which facilitates understanding."
+    },
+    {
+        "final_description": "This Fact table have details about leads comes from MSX (Microsoft Sales Experience) source. Grain: LeadNumber",
+        "comment": "The statement clarifies the source as MSX and provides an overview of the fact table with specific granularity (Grain: LeadNumber). Some grammar refinement ('have' should be 'has') is needed but doesn't detract significantly from understanding."
+    },
+    {
+        "final_description": "Derived by appyling date format on CreatedDate column coming from MSX source Lead Table",
+        "comment": "The description identifies the source and a simple transformation logic to apply a date format. Note the typo 'appyling' should be 'applying,' but the overall explanation is clear and conveys the intended meaning."
+    },
+    {
+        "final_description": "Direct Mapping to SourceSubType column from MSX Source, Lead table",
+        "comment": "The description specifies the source as MSX and identifies the Lead table for a direct mapping to the SourceSubType column. The explanation is concise and uses correct grammar, making it easy to understand."
+    },
+    {
+        "final_description": "Direct Mapping to Status column from MSX Source, Lead table",
+        "comment": "Correctly identifies the source as MSX and describes a direct mapping to the Status column in the Lead table. The simple language and grammatical precision enhance comprehension."
+    },
+    {
+        "final_description": "Direct Mapping to createddate column from MSX Source, Email table",
+        "comment": "Provides source and transformation details clearly, describing a direct mapping for the 'createddate' column in the Email table from MSX Source. The structure and grammar are correct, facilitating understanding."
+    },
+    {
+        "final_description": "Derived by applying decode logic on Firstname,lastname columns coming from MSX Source, SystemUser table based on lead ownerid column from lead table Logic: concat(\"FirstName\",lit(\" \"),\"LastName\" )",
+        "comment": "The source is specified with a detailed transformation logic of concatenation for deriving values. The description uses standard grammar, though slightly complex, it remains clear and conveys the intended process."
+    },
+    {
+        "final_description": "Direct Mapping to promotioncode column from MSX Source, Campaign table",
+        "comment": "This statement indicates source information and describes the direct mapping to the 'promotioncode' column from the Campaign table. Simplicity and clear grammatical structure make this easy to interpret."
+    },
+    {
+        "final_description": "Direct Mapping to Subject column from MSX Source, Lead table",
+        "comment": "The source and table details are given, alongside an explanation of a direct mapping to 'Subject'. The language and structure are straightforward and appropriate."
+    },
+    {
+        "final_description": "This is an indirect mapping to internalemailaddress column coming from Upstream Source MSX(Microsoft Sales Experience), hub_vw_systemuser table by joining MSX hub_vw_lead table with systemUser table on createdbyid column from lead table and systemuserid column from systemuser table",
+        "comment": "The description includes source and transformation logic with joining conditions for indirect mapping. Clear articulation and correct grammar make the logic understandable."
+    },
+    {
+        "final_description": "Direct Mapping to CreatedDate column from MSX Source, Lead table",
+        "comment": "The source and direct mapping to 'CreatedDate' in the Lead table are clearly mentioned. The easy-to-read structure and grammar promote understanding."
+    },
+    {
+        "final_description": "Derived by applying decode logic on Firstname,lastname columns coming from MSX Source, SystemUser table based on lead createdbyid column from lead table Logic: concat(\"FirstName\",lit(\" \"),\"LastName\" )",
+        "comment": "Provides source information and a transformation logic involving concatenation. Correct grammar and structured presentation ensure the logic explanation is relatively clear."
+    },
+    {
+        "final_description": "Direct Mapping to subject column from MSX Source, Phone table",
+        "comment": "The source and table are specified with a simple explanation of direct mapping. The phrase is clear and correctly formulated, enabling easy comprehension."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "Offers context within the UDP and specifies an update action, referencing the ETL process. The text is simple and grammatically accurate for straightforward grasp."
+    },
+    {
+        "final_description": "Direct Mapping to StatusReason column from MSX Source, Lead table",
+        "comment": "Source and transformation logic are appropriately highlighted, explaining direct mapping to the 'StatusReason' column. The grammatical form is suitable for clear understanding."
+    },
+    {
+        "final_description": "Direct Mapping to subject column from MSX Source, Email table",
+        "comment": "This states the source and identifies a direct mapping to the 'subject' column in the Email table. It is coherent and easily grasped due to its simplicity."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "Besides denoting the UDP context and the ETL insertion process, its clarity and grammatical correctness make it accessible and easily understood."
+    },
+    {
+        "final_description": "Direct Mapping to LeadNumber column from MSX Source, Lead table",
+        "comment": "Identifies the MSX Source and Lead table with a direct mapping to 'LeadNumber'. The phrasing is straightforward and enunciates its objective clearly, ensuring comprehension."
+    },
+    {
+        "final_description": "This is an indirect mapping to internalemailaddress column coming from Upstream Source MSX(Microsoft Sales Experience), hub_vw_systemuser table by joining MSX hub_vw_lead table with systemUser table on ownerid column from lead table and systemuserid column from systemuser table",
+        "comment": "The source and transformation logic involving join conditions for indirect mapping are detailed. Grammatical integrity ensures a clear articulation of the process."
+    },
+    {
+        "final_description": "This column is an indirect mapping derived from two sources : the MSX ADLS hub_vw_Team table and the MSX API AuditHistory. It's mapped based on the ownerid column from hub_vw_lead with teamid column from hub_vw_team table, leadnumber from hub_vw_lead table and recordkeyvalue from MSX audithistory table. The values are obtained from team column from hub_vw_team table and newvalue column from MSXAuditHistory table.\nlogic: 1.join the lead table with team table: \n                       lead.ownerid == team.teamid\n       2.join the lead table with MSXAuditHistory:\n\t\t       lead.leadnumber == msx.RecordKeyValue and msx.operation == create\n       if msx.newvalue != null then newvalue otherwise team.team as a CreatorTeamName",
+        "comment": "The description gives detailed source information and explains a complex transformation logic using multiple join conditions and conditions, framed in a comprehensive manner. The steps are structured clearly to ensure the reader understands the mapping process."
+    },
+    {
+        "final_description": "Direct Mapping to name column from MSX Source, Site table",
+        "comment": "The MSX Source is identified, and the direct mapping to the 'name' column is explained. With clear phrasing and correct grammar, it becomes straightforward and easy to interpret."
+    },
+    {
+        "final_description": "Direct Mapping to callduration column from MSX Source, Phone table",
+        "comment": "Simple yet effective identification of source and transformation logic through a direct mapping to the 'callduration' column. Clear language and grammar make this a straightforward explanation."
+    },
+    {
+        "final_description": "Direct Mapping to LeadSource column from MSX Source, Lead table",
+        "comment": "Source information is given clearly for a direct mapping explanation, making it easily understood through grammatically correct and simple language."
+    },
+    {
+        "final_description": "Direct Mapping to TacticName column from MSX Source, Campaign table",
+        "comment": "Describes a concise and clear direct mapping to 'TacticName' in the Campaign table from MSX Source. The description uses proper grammar, promoting comprehension."
+    },
+    {
+        "final_description": "Direct Mapping to createddate column from MSX Source, Phone table",
+        "comment": "The description clearly states the source information and a direct mapping to the 'createddate' column, employing correct grammar for clarity and ease of understanding."
+    },
+    {
+        "final_description": "Direct mapping to msp_leadcloseddate column from hub_vw_lead entity coming from upstream source MSX.",
+        "comment": "Identifies the source as MSX with a clear, direct mapping explanation to the 'msp_leadcloseddate' column. The text is straightforward, ensuring easy comprehension due to its simplicity."
+    },
+    {
+        "final_description": "Direct mapping to msp_leadassignmentdate column from hub_vw_lead entity coming from upstream source MSX.",
+        "comment": "This description provides source details and explains direct mapping to 'msp_leadassignmentdate', using an understandable and direct language format for clarity."
+    },
+    {
+        "final_description": "Direct mapping to msp_leadage column from hub_vw_lead entity coming from upstream source MSX.",
+        "comment": "Simple source information and transformation logic via direct mapping to 'msp_leadage' are presented. The use of clear and concise language reinforces understanding."
+    },
+    {
+        "final_description": "This Fact table have details about Opportunities comes from MSX (Microsoft Sales Experience) source. Grain: OpportunityNumber",
+        "comment": "Describes the MSX source and outlines the Fact table content focused on opportunities, specifying its granularity (Grain: OpportunityNumber). Despite a slight grammatical oversight ('have' should be 'has'), the intended message is easily conveyed."
+    },
+    {
+        "final_description": "Direct Mapping to actualbilledclosedate column from MSX Source, opportunity table",
+        "comment": "Source and transformation logic are clearly identified, highlighting direct mapping to 'actualbilledclosedate'. The structured and grammatically correct language makes it easily understandable."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "Indicates an ETL update process within UDP, providing a clear description of the timestamp's context. Clarity and grammatical correctness support easy understanding."
+    },
+    {
+        "final_description": "Direct Mapping to createddate column from MSX Source, Account table",
+        "comment": "The description specifies the source and presents a straightforward direct mapping to the 'createddate' column. Clarity and proper grammar facilitate comprehension."
+    },
+    {
+        "final_description": "Direct Mapping to activesalesstage column from MSX Source, opportunity table",
+        "comment": "Contains source information with a clear explanation for direct mapping to 'activesalesstage'. The sentence utilizes correct grammar, allowing for straightforward understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "Provides context for the ETL process in UDP and clarifies the use of timestamps. The simple and grammatically accurate expression enhances understanding."
+    },
+    {
+        "final_description": "Direct Mapping to topic column from MSX Source, opportunity table",
+        "comment": "Provides source information and identifies the column accurately for direct mapping. Its simplicity and adherence to grammatical norms aid comprehension."
+    },
+    {
+        "final_description": "Direct Mapping to actualclosedate column from MSX Source, opportunity table",
+        "comment": "The source information is presented with a direct mapping explanation to 'actualclosedate', using clear language and structure to reinforce understanding."
+    },
+    {
+        "final_description": "Direct Mapping to TacticName column from MSX Source, Campaign table",
+        "comment": "This highlights the source and specifies direct mapping to 'TacticName', using simple and correct language to ensure accessibility and understanding."
+    },
+    {
+        "final_description": "Direct Mapping to createddate column from MSX Source, opportunity table",
+        "comment": "Source and table details are provided for direct mapping to 'createddate', written clearly and concisely to support comprehension through correct grammar."
+    },
+    {
+        "final_description": "Direct Mapping to accountnumber column from MSX Source, Account table",
+        "comment": "The description specifies the source as MSX and the Account table, indicating a direct mapping to the 'accountnumber' column. The explanation is straightforward and grammatically correct, making it easy to understand."
+    },
+    {
+        "final_description": "Derived by applying decode logic on Firstname,lastname columns coming from MSX Source, SystemUser table based Opportunity createdbyid column from Opportunity table Logic: concat(\"FirstName\",lit(\" \"),\"LastName\" )",
+        "comment": "The source information is provided, and a clear transformation logic of concatenating 'FirstName' and 'LastName' is described. Despite some missing prepositions, the description conveys the necessary logic clearly and grammatically correct enough to pass review."
+    },
+    {
+        "final_description": "Direct Mapping to promotioncode column from MSX Source, Campaign table",
+        "comment": "The description clearly identifies the source and Campaign table, providing a direct mapping to the 'promotioncode' column. The text is simple and grammatically sound, aiding comprehension."
+    },
+    {
+        "final_description": "Derived by applying decode logic on createddate column coming from Upstream source MSX(Microsoft Sales Experience) hub_vw_opportunity table.\nLogic: date_format(\"createddate\", \"yyyyMMdd\").cast(\"int\")\n",
+        "comment": "Describes the use of source MSX and a transformation logic involving date formatting and type casting. The logic is clear, and the grammar is correct, supporting understanding."
+    },
+    {
+        "final_description": "Direct Mapping to LeadNumber column from MSX Source, Lead table",
+        "comment": "The source and table are specified, with a straightforward explanation of direct mapping to the 'LeadNumber' column. Clear grammar and structure aid easy understanding."
+    },
+    {
+        "final_description": "This is an indirect mapping to team column coming from Upstream Source MSX(Microsoft Sales Experience) hub_vw_team table by joining MSX hub_vw_opportunity table with ownerid column from Opportunity table and teamid column from hub_vw_team table",
+        "comment": "Provides source details and a clear explanation of the transformation logic involving join conditions for indirect mapping. Proper grammar and construction ensure comprehensibility."
+    },
+    {
+        "final_description": "This is an indirect mapping to value column coming from Upstream Source MSX(Microsoft Sales Experience) hub_vw_hub_vw_stringmap table by joining MSX hub_vw_opportunity table with StatusSeqNo column from Opportunity table and StringMapSeqNo column from StringMap table",
+        "comment": "Source information and transformation logic for indirect mapping through join conditions are given. The grammatical structure is suitable for understanding the mapping process."
+    },
+    {
+        "final_description": "Direct Mapping to accountname column from MSX Source, Account table",
+        "comment": "Identifies the source and a direct mapping to the 'accountname' column. Its simplicity and grammatical correctness make it easily understandable."
+    },
+    {
+        "final_description": "Direct Mapping to opportunitynumber column from MSX Source, opportunity table",
+        "comment": "The source and table are clearly specified, with a direct mapping explanation for 'opportunitynumber'. The language is straightforward and clear, ensuring comprehension."
+    },
+    {
+        "final_description": "This is an indirect mapping to internalemailaddress column coming from Upstream Source MSX(Microsoft Sales Experience) ,hub_vw_systemuser table by joining MSX hub_vw_opportunity table with systemUser table on createdbyid column from opportunity table and systemuserid column from systemuser table",
+        "comment": "The description includes source details and a transformation logic involving join conditions for indirect mapping. Clear articulation and correct grammar make the logic understandable."
+    },
+    {
+        "final_description": "Derived by appyling decode logic on Need column coming from MSX source Opportunity Table. Logic: If \"need\".rlike(\"CID:[0-9]\"), lit(split(\"Need\",'^CID:').getItem(1))).else None",
+        "comment": "The source and table are specified, with a comprehensive transformation logic involving regex. Some minor typographical errors ('appyling' -> 'applying') are present, yet the description is detailed and uses correct grammar, enabling comprehension."
+    },
+    {
+        "final_description": "Derived by applying decode logic on Firstname,lastname columns coming from MSX Source, SystemUser table based Opportunity ownerid column from Opportunity table Logic: concat(\"FirstName\",lit(\" \"),\"LastName\" )",
+        "comment": "Provides source details and clear transformation logic by concatenating 'FirstName' and 'LastName', although missing some connective terms, it maintains clarity and comprehension."
+    },
+    {
+        "final_description": "This is an indirect mapping to team column coming from Upstream Source MSX(Microsoft Sales Experience) hub_vw_team table by joining MSX hub_vw_opportunity table with createdbyid column from Opportunity table and teamid column from hub_vw_team table",
+        "comment": "The source information and transformation logic via join conditions for indirect mapping are well outlined. Grammatical integrity and structured presentation facilitate understanding."
+    },
+    {
+        "final_description": "This is an indirect mapping to internalemailaddress column coming from Upstream Source MSX(Microsoft Sales Experience) ,hub_vw_systemuser table by joining MSX hub_vw_opportunity table with systemUser table on ownerid column from opportunity table and systemuserid column from systemuser table",
+        "comment": "Comprehensive source details and logic involving joins for indirect mapping are clearly articulated. Proper grammar use supports clarity and easy comprehension."
+    },
+    {
+        "final_description": "Direct mapping to msp_opportunityage column from hub_vw_opportunity entity coming from upstream source MSX.",
+        "comment": "The description provides source details with a direct mapping to the 'msp_opportunityage' column. Simple and grammatically sound language ensures straightforward understanding."
+    },
+    {
+        "final_description": "Direct mapping to Name column from hub_vw_lead entity coming from upstream source MSX.",
+        "comment": "Source and column details for direct mapping are clearly stated. The concise language and correct grammatical use assist in easy comprehension."
+    },
+    {
+        "final_description": "This is a Fact table for reporting users that contains the details of Requests Transfer detail such as SupportArea,Organizations and SupplierName from Amplify Source. Grain - RequestID",
+        "comment": "The table's content and amplification of its source (Amplify) regarding requests transfer are listed with specified granularity (Grain: RequestID). There are minor grammatical oversights ('Users that contains'), but the description communicates the table's purpose effectively."
+    },
+    {
+        "final_description": "Direct mapping to CurOrg column in AmplifyTransfer entity coming from Amplify source.",
+        "comment": "Clarifies the source as Amplify and the direct mapping to 'CurOrg'. Simple and correct grammar allows for clear understanding."
+    },
+    {
+        "final_description": "Direct mapping to PreOrg column in AmplifyTransfer entity coming from Amplify source.",
+        "comment": "The source and column for direct mapping are precisely identified. The text employs grammatically correct, clear language for straightforward interpretation."
+    },
+    {
+        "final_description": "Direct mapping to PreSupplierName column in AmplifyTransfer entity coming from Amplify source.",
+        "comment": "This specifies the source and the transformation in a direct mapping context for 'PreSupplierName'. Language use is simple and correct, promoting understanding."
+    },
+    {
+        "final_description": "Direct mapping to CurSupportArea column in AmplifyTransfer entity coming from Amplify source.",
+        "comment": "Clearly indicates the source and direct mapping to 'CurSupportArea'. Comprehension is facilitated through straightforward, grammatically correct language."
+    },
+    {
+        "final_description": "Direct mapping to CurSupplierName column in AmplifyTransfer entity coming from Amplify source.",
+        "comment": "Direct mapping logic and source are specified. Clarity and grammatical accuracy in description support comprehension."
+    },
+    {
+        "final_description": "Direct Mapping to ParentRequestId column from vw_SupportRequest view from Amplify Source",
+        "comment": "This mentions source details and describes a direct mapping to 'ParentRequestId'. The simple and grammatically correct sentence aids understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "Defines the context within UDP and the ETL insertion process, with clarity and grammatical correctness ensuring easy comprehension."
+    },
+    {
+        "final_description": "Direct mapping to PreSupportArea column in AmplifyTransfer entity coming from Amplify source.",
+        "comment": "Provides source and column identification for direct mapping to 'PreSupportArea'. The description is clear and uses appropriate grammar for understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "Denotes the timestamp within UDP and clarifies the ETL update process. Its grammar and structure ensure that the sentence is easily comprehended."
+    },
+    {
+        "final_description": "This tables contain the details of the transfer of phone calls between agents coming from TRANSFER_FACT table in genesys source.\nThis table is created for Insights(Reporting) Team.",
+        "comment": "Characteristics of the table and its source (genesys) concerning phone call transfers are provided, as well as identifying its purpose for the Insights Team. Although 'This tables' suggests a typo, the intention is communicated effectively."
+    },
+    {
+        "final_description": "\"This is a reference key to DimEmployee entity to get more details about the agent assigned to the particular phone interaction\nTRANSFER_FACT and DimEmployee tables are joined on AssignedAgent.TRANSFER_FACT coming from genesys source and UserId.DimEmployee from UDP and\nEmployeeKey is picked from DimEmployee table to populate AssignedEmployeeKey",
+        "comment": "The description explicates joining logic for populating the AssignedEmployeeKey reference key, detailing source and table interactions. Despite the complex parsing, the grammar supports a clear understanding of the process."
+    },
+    {
+        "final_description": "This is a reference key to DimVendorSite table to get more details about VendorSite details of the agent assigned to the particular phone interaction\nThis key is populated by joining ASSIGNED_VENDORCODE and AssignedSiteCode from source with VendorSiteCode from DimVendorSite to pick DimVendorSite.VendorSiteKey TRANSFER_FACT and DimVendorSite tables are joined on ASSIGNED_VENDORCODE.TRANSFER_FACT and AssignedSiteCode.TRANSFER_FACT coming from genesys source and VendorSiteCode.DimVendorSite from UDP and\nVendorSiteKey is picked from DimVendorSite table to populate AssignedVendorSiteKey",
+        "comment": "The joining process for VendorSiteKey population using source information is explained, aligning grammatically correct phrasing with detailed join conditions to support understanding."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "Designates the insertion timestamp within UDP during an ETL process, framed simply and grammatically accurate to aid comprehension."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "References the UDP process and specifies an update timestamp, simplifying comprehension with coherent language and correct grammar."
+    },
+    {
+        "final_description": "\"This is a reference key to DimDataSource table to get more details about the source of the agent details\nIt is the key correspoding to DataSourceGroup =  \"\"Genesys\"\" in DimDataSource\"",
+        "comment": "Source information is given with reference key context, enabled by grammatically correct phrasing for understanding, despite typographical repetition of quotation marks."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about the StartDate for the agent to which a phone interaction was transferred. \nTRANSFER_FACT and DimDate tables are joined on FROM_END_DATE_TIME.TRANSFER_FACT coming from genesys source and CalendarDate.DimDate from UDP and\nDateUTCKey is picked from DimDate table to populate FromEndUTCDateKey",
+        "comment": "Joining logic for reference key population is described in detail with the relevant sources, maintaining clarity and proper grammar to enable comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about the StartDate for the agent to which a phone interaction was transferred. \nTRANSFER_FACT and DimTime tables are joined on FROM_END_DATE_TIME.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and\nDateUTCKey is picked from DimTime table to populate FromEndUTCTimeKey",
+        "comment": "The reference key and join logic are clearly outlined while mentioning the source data, employing correct grammar to support understanding despite complexity."
+    },
+    {
+        "final_description": "Direct mapping to FROM_INTERACTION_RESOURCE_ID column having long values coming from TRANSFER_FACT table from genesys source",
+        "comment": "Direct mapping context and source identification are provided simply through correct grammar, engendering straightforward comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about the StartDate for the agent to which a phone interaction was transferred. \nTRANSFER_FACT and DimDate tables are joined on FromStartDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimDate from UDP and\nDateUTCKey is picked from DimDate table to populate FromStartUTCDateKey",
+        "comment": "Outlines joining logic for reference key determination regarding the StartDate, specifying sources clearly and maintaining grammatical correctness for comprehensible explanation."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about the StartDate for the agent to which a phone interaction was transferred. \nTRANSFER_FACT and DimTime tables are joined on FromStartDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and\nDateUTCKey is picked from DimTime table to populate FromStartUTCTimeKey",
+        "comment": "Illustrates joining conditions and source details for reference key logic pertaining to phone interaction start dates, implementing clear grammar for clarity."
+    },
+    {
+        "final_description": "Direct mapping to INTERACTION_ID column having long values coming from TRANSFER_FACT table from genesys source",
+        "comment": "Identifies the TRANSFER_FACT table from the genesys source with direct mapping logic to 'INTERACTION_ID', described in a simple and grammatical manner."
+    },
+    {
+        "final_description": "Direct mapping to MEDIA_SERVER_IXN_GUID column having string values coming from TRANSFER_FACT table from genesys source",
+        "comment": "Details direct mapping using the genesys source, maintaining clear and grammatically correct language to convey the transformation intent simply."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about the EndDate for the agent to which a phone interaction was transferred. \nTRANSFER_FACT and DimDate tables are joined on ToEndDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimDate from UDP and\nDateUTCKey is picked from DimDate table to populate FromEndUTCDateKey",
+        "comment": "The description specifies source information and provides clear join conditions required for deriving the DateUTCKey. The explanation uses structured language and proper grammar to articulate the transformation process, supporting comprehension."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about the EndTime for the agent to which a phone interaction was transferred. \nTRANSFER_FACT and DimTime tables are joined on ToEndDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and\nTimeUTCKey is picked from DimTime table to populate FromEndUTCDateKey",
+        "comment": "Source tables are identified and the join logic needed to obtain TimeUTCKey is clearly described. The explanation maintains clarity and grammatical correctness, making the logic understandable."
+    },
+    {
+        "final_description": "Direct mapping to TO_INTERACTION_RESOURCE_ID column having long values coming from TRANSFER_FACT table from genesys source",
+        "comment": "The description outlines the source and direct mapping to the TO_INTERACTION_RESOURCE_ID column. Its straightforward explanation with correct grammar supports easy understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimDate table to get more details about the EndDate of the agent assigned to the particular phone interaction. \nThis key is populated by joining ToStartDateTime from source with CalendarDate from DimDate\nTRANSFER_FACT and DimDate tables are joined on ToStartDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimDate from UDP and\nDateUTCKey is picked from DimDate table to populate ToStartUTCDateKey",
+        "comment": "The text specifies the source and provides detailed join logic to derive the DateUTCKey. The grammatical precision and structured explanation support clarity and understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimTime table to get more details about the EndTime of the agent assigned to the particular phone interaction. \nThis key is populated by joining ToStartDateTime from source with CalendarDate from DimDate\nTRANSFER_FACT and DimTime tables are joined on ToStartDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and\nTimeUTCKey is picked from DimTime table to populate ToStartUTCDateKey",
+        "comment": "Details the source and clearly outlines the transformation logic involving join conditions for obtaining TimeUTCKey. The explanation is well-organized and grammatically correct, promoting understanding."
+    },
+    {
+        "final_description": "This is a reference key to DimEmployee table to get more details about the agent to which a phone interaction was transferred.\nThis key is populated by joining TransferredAgent from source with UserId from DimEmployee\nTRANSFER_FACT and DimEmployee tables are joined on TransferredAgent.TRANSFER_FACT coming from genesys source and UserId.DimEmployee from UDP and\nEmployeeKey is picked from DimEmployee table to populate TransferredEmployeeKey",
+        "comment": "The source, join logic, and key derivation process are thoroughly described, facilitating understanding. The structured and grammatically correct presentation communicates the transformation clearly."
+    },
+    {
+        "final_description": "This is a reference key to DimVendorSite table to get more details about VendorSite details of agent \nto which phone interaction was transferred. \nTRANSFER_FACT and DimEmployee tables are joined on either concatenation of TRANSFERRED_VENDORCODE.TRANSFER_FACT,TransferredSiteCode.TRANSFER_FACT or TransferredAgent.TRANSFER_FACT coming from genesys source and VendorSiteCode.DimVendorSite from UDP and\nVendorSiteKey is picked from DimVendorSite table to populate TransferredVendorSiteKey",
+        "comment": "The description specifies sources and details the intricate join logic that involves concatenation. Despite the complexity, the description maintains clarity and uses proper grammar, aiding understanding."
+    },
+    {
+        "final_description": "This table contains Commercial ticket data coming from SA&DP Commercial source. It is derived from DimSupportServiceRequest and FactSupportServiceRequest tables. Grain:ServiceRequestID",
+        "comment": "The description provides source information and context for derivation, indicating the data grain. The language is straightforward and grammatically accurate, supporting easy comprehension."
+    },
+    {
+        "final_description": "This table contains Commercial Interaction data coming from SA&DP Commercial source. It is derived from FactInteraction table. Grain: ServiceRequestInteractionID",
+        "comment": "The text details the source and source tables from which the commercial interaction data is derived, specifying its grain. Proper grammar and clarity in description facilitate understanding."
+    },
+    {
+        "final_description": "Surrogate Key generated based on ServiceRequestInteractionID column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "comment": "The description articulates source information and transformation logic of generating a surrogate key. The language is clear and properly structured to ensure straightforward understanding."
+    },
+    {
+        "final_description": "Direct mapping to CreatedByType column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "comment": "The source and transformation logic surrounding direct mapping are clearly highlighted. The simple structure and correct grammar contribute to easy-to-understand content."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "Provides context for the ETL insertion process in UDP, clarifying the timestamp's purpose. Its simplicity and grammatical correctness allow for quick comprehension."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "The statement indicates the ETL process in UDP, specifying the context of the update timestamp. Clear and correct grammar ensures ease of understanding."
+    },
+    {
+        "final_description": "Derived attribute of DataSourcekey column in FactIncidentInteraction table coming from SA&DP Commercial source. Logic: Join the FactIncidentInteraction table with the DimDataSource table using the DataSourceKey column, thus denormalizing datasourcekey to retrieve the DataSource column",
+        "comment": "The description provides source information and outlines transformation logic, including join conditions to achieve denormalization. The explanation uses correct grammar and clear structuring for comprehensive understanding."
+    },
+    {
+        "final_description": "Direct mapping to InteractionDirection column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "comment": "The description offers clarity in presenting the source and mapping logic. Its straightforward language and grammatical correctness support understanding."
+    },
+    {
+        "final_description": "Direct mapping to InteractionType column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "comment": "Source details and transformation logic involving direct mapping are clearly delineated. Simple expression and correct grammar promote easy comprehension."
+    },
+    {
+        "final_description": "Direct mapping to ServiceRequestKey column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "comment": "Defines the source and direct mapping logic for the ServiceRequestKey column. The uncomplicated and grammatically accurate description enhances understanding."
+    },
+    {
+        "final_description": "Direct mapping to ServiceRequestInteractionID column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "comment": "The text identifies the source and transformation logic surrounding the direct mapping. With correct grammar and simple sentence structuring, it ensures comprehensibility."
+    },
+    {
+        "final_description": "Direct mapping to InteractionStatus column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "comment": "Source information and direct mapping logic for the column are clearly presented. The description's simplicity and adherence to grammatical norms support clarity."
+    },
+    {
+        "final_description": "Direct mapping to UpdatedByType column in FactIncidentInteraction table coming from SA&DP Commercial source",
+        "comment": "Provides a straightforward description of the source and direct mapping transformation logic. The grammar and clarity in phrasing facilitate understanding."
+    },
+    {
+        "final_description": "This table contains details of attributes belonging to consumer tickets coming from ASDCAP source. Grain: ServiceRequestID",
+        "comment": "Identifies the source and explains the table content associated with consumer tickets, specifying the data grain. The language is clear, with correct grammar ensuring understanding."
+    },
+    {
+        "final_description": "This table contains Language data coming from SA&DP Commercial source. Grain: NativeLanguage",
+        "comment": "The description indicates the source and details about the Language data which is clearly defined with its grain. Simple grammar and structure make the information comprehensible."
+    },
+    {
+        "final_description": "Direct mapping to GeographyLevel1Name column in Geography table coming from ASDCAP source",
+        "comment": "The source and direct mapping transformation strategy are described concisely. Correct language use and straightforward structure aid comprehension."
+    },
+    {
+        "final_description": "Direct mapping to GeographyLevel2Name column in Geography table coming from ASDCAP source",
+        "comment": "Contains proper source and transformation details with direct mapping logic. The description's grammatical soundness supports understanding."
+    },
+    {
+        "final_description": "Direct mapping to GeographyLevel3Name column in Geography table coming from ASDCAP source",
+        "comment": "The direct mapping to a specific column in the Geography table is highlighted alongside source information. The expression is clear and correct grammatically, enhancing comprehension."
+    },
+    {
+        "final_description": "Direct mapping to GeographyLevel4Name column in Geography table coming from ASDCAP source",
+        "comment": "The transformation logic for direct mapping is clarified with source details. Its straightforward language and grammar help make the explanation easy to follow."
+    },
+    {
+        "final_description": "This table contains details of initiatives taken by Microsoft to increase customer, coming from UCM source. Grain: InitiativeId",
+        "comment": "The source and intent of the table are outlined alongside its grain specification. The structured and grammatically correct language facilitates understanding, although 'customer' could be clarified."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+        "comment": "Contextualizes the timestamp role within the UDP ETL insertion process. Its concise language and accurate grammar make it easy to interpret."
+    },
+    {
+        "final_description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+        "comment": "Lists the timestamp related to the UDP update process associated with ETL. The simplicity and grammatical correctness ensure immediate comprehension."
+    },
+    {
+        "final_description": "Direct mapping to InitiativeEndDate column in OARInitiative table coming from UCM source",
+        "comment": "The source is clearly identified with an explanation for direct mapping to 'InitiativeEndDate'. The expression is grammatically sound, allowing for easy interpretation."
+    },
+    {
+        "final_description": "Direct mapping to InitiativeId column in OARInitiative table coming from UCM source",
+        "comment": "Provides source identification and transformation logic. Its clear and simple phrasing ensures that the mapping to 'InitiativeId' is understood."
+    },
+    {
+        "final_description": "Surrogate Key generated based on InitiativeId column in OARInitiative table coming from UCM source",
+        "comment": "The description details the generation of a surrogate key and its source, employing appropriate grammatical structure for clear understanding."
+    },
+    {
+        "final_description": "Direct mapping to InitiativeName column in OARInitiative table coming from UCM source",
+        "comment": "The source and direct mapping to the 'InitiativeName' column are outlined clearly. Its simple language and correct grammar contribute to ease of comprehension."
+    },
+    {
+        "final_description": "Direct mapping to InitiativeStartDate column in OARInitiative table coming from UCM source",
+        "comment": "States the source along with mapping logic for 'InitiativeStartDate'. The expression is straightforward and grammatically correct, facilitating comprehension."
+    }
+]

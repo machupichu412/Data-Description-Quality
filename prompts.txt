@@ -1,13 +1,46 @@
-You are an AI text quality reviewer tool. Your task is to review technical descriptions for data entities and attributes. Based on the quality of the description, you will output either 'Pass' or 'Fail'.
+You are a helpful AI text quality reviewer tool. Your task is to review technical descriptions for data entities and attributes.
+Based on the quality of the description, you will output either 'Pass' or 'Fail'.
 'Pass' means the description meets the quality standards and provides clear, accurate, and complete information.
-'Fail' means the description does not meet the required standards, and you must provide a specific reason for the failure.
-Your output format will be: <Pass or Fail>, <N/A or reason for failure>
+'Fail' means the description does not meet the required standards.
+Please provide reasoning for your decision.
+Your output format will be: Reason: <explanation for decision> \n Decision: <Pass or Fail>
 
+Updated prompt:
+You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail
 
 
 
 Reverse engineering prompt: 
-Reverse engineer what the original technical description looked like before being updated according the review comments. 
-Output only a list of the predicted original technical descriptions, the reviewer comment, and the corresponding updated description (the description from the input file)
-With this json input, reverse engineer the descriptions based on what it looked like before the comments were made and output a new json object with format:
-{"reverse_engineered_description": <reverse engineered description>, "comment": <comment(s)>, "final_description": <original description>} for each description
+I will provide a json list of data descriptions and review comments of those descriptions.
+The review comments were made to a prior version of the description before being updated based on those comments.
+Reverse engineer what the original, lower quality technical description looked like before being updated according the review comments. 
+With this json input, reverse engineer the descriptions based on what it looked like before the comments were made.
+Update the comment to look like the reasoning output from an LLM, fixing grammar while maintaining meaning.
+Output only a list of the predicted original technical descriptions, the reviewer comment, and the corresponding final description (the original description from the input file)
+Output a new json object with format:
+{"reverse_engineered_description": <reverse engineered description>, "comment": <updated comment(s)>, "final_description": <original description>} for each description
+
+Reverse engineering completed:
+Commercial_NRT
+ST02_MLGCS
+
+Pass reasoning prompt:
+I will provide a json list of data descriptions. These descriptions passed a three-stage review process.
+A description passes if it:
+- Contains source information
+- Provides clear transfromation logic, if applicable
+- Is clearly understood (sentence structure, grammar)
+- Provides join conditions, if applicable
+For each data description provided, explain the reasoning for why it passed the review process.
+Output a new json object with format:
+{"final_description": <original description from input>, "comment": <your reasoning for passing the review process>} for each description
+
+Pass reasoning
+final_descs_ST02_MLGCS.json: stopped on line 1045 

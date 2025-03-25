@@ -536,27 +536,27 @@
       },
       {
         "reverse_engineered_description": "Direct Mapping to IntervalEndPSTDateTime column coming from MC_OLSSentryReviewerMetrics Entity.",
-        "comment": "Pls add the datatype of the column",
+        "comment": "Please add the datatype of the column",
         "final_description": "Direct Mapping to IntervalEndPSTDateTime column  coming from MC_OLSSentryReviewerMetrics Entity from Sentry_OLSSentryReviewerMetrics source having Timestamp type data."
       },
       {
         "reverse_engineered_description": "Direct Mapping to IntervalStartPSTDateTime column coming from MC_OLSSentryReviewerMetrics entity.",
-        "comment": "Pls add the datatype of the column",
+        "comment": "Please add the datatype of the column",
         "final_description": "Direct Mapping to IntervalStartPSTDateTime column  coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source having TimeStamp type data."
       },
       {
         "reverse_engineered_description": "Direct Mapping to AssignmentCreatedCount column coming from MC_OLSSentryReviewerMetrics entity.",
-        "comment": "Pls add the datatype of the column",
+        "comment": "Please add the datatype of the column",
         "final_description": "Direct Mapping to AssignmentCreatedCount column coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source having Integer type data."
       },
       {
         "reverse_engineered_description": "Direct Mapping to ReviewEventCompletedPSTDate column coming from MC_OLSSentryReviewerMetrics entity.",
-        "comment": "Pls add the datatype of the column",
+        "comment": "Please add the datatype of the column",
         "final_description": "Direct Mapping to ReviewEventCompletedPSTDate column coming from MC_OLSSentryReviewerMetrics Entity from Sentry_OLSSentryReviewerMetrics source having Timestamp type data."
       },
       {
         "reverse_engineered_description": "Direct Mapping to AssignmentCanceledCount column coming from MC_OLSSentryReviewerMetrics entity.",
-        "comment": "Pls add the datatype of the column",
+        "comment": "Please add the datatype of the column",
         "final_description": "Direct Mapping to AssignmentCanceledCount column  coming from MC_OLSSentryReviewerMetrics Entity from Sentry_OLSSentryReviewerMetrics source having Integer type data."
       },
       {
@@ -566,7 +566,7 @@
       },
       {
         "reverse_engineered_description": "Direct Mapping to ReviewEventCompletedDateKey column coming from MC_OLSSentryReviewerMetrics entity.",
-        "comment": "Pls add the datatype of the column",
+        "comment": "Please add the datatype of the column",
         "final_description": "Direct Mapping to ReviewEventCompletedDateKey column having string values coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source."
       },
       {
@@ -576,27 +576,27 @@
       },
       {
         "reverse_engineered_description": "Direct Mapping to ReviewEscalatedCount column coming from MC_OLSSentryReviewerMetrics entity.",
-        "comment": "Pls add the datatype of the column",
+        "comment": "Please add the datatype of the column",
         "final_description": "Direct Mapping to ReviewEscalatedCount column coming from MC_OLSSentryReviewerMetrics Entity from Sentry_OLSSentryReviewerMetrics source having Integer type data."
       },
       {
         "reverse_engineered_description": "Direct Mapping to HoldCreatedCount column coming from MC_OLSSentryReviewerMetrics entity.",
-        "comment": "Pls add the datatype of the column",
+        "comment": "Please add the datatype of the column",
         "final_description": "Direct Mapping to HoldCreatedCount column coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source having Integer type data."
       },
       {
         "reverse_engineered_description": "Direct Mapping to ReviewReconstitutedByAdminCount column coming from MC_OLSSentryReviewerMetrics entity.",
-        "comment": "Pls add the datatype of the column",
+        "comment": "Please add the datatype of the column",
         "final_description": "Direct Mapping to ReviewReconstitutedByAdminCount column coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source having Integer type data."
       },
       {
         "reverse_engineered_description": "Direct Mapping to AssignmentExpiredCount column coming from MC_OLSSentryReviewerMetrics entity.",
-        "comment": "Pls add the datatype of the column",
+        "comment": "Please add the datatype of the column",
         "final_description": "Direct Mapping to AssignmentExpiredCount column having Integer type data coming from MC_OLSSentryReviewerMetrics entity from Sentry_OLSSentryReviewerMetrics source."
       },
       {
         "reverse_engineered_description": "Direct Mapping to SRID Column coming from Asimov.CLL file.",
-        "comment": "Pls add the complete description",
+        "comment": "Please add the complete description",
         "final_description": "Direct Mapping to SRID Column having string values coming from Asimov.CLL file from external source cornerstone."
       },
       {
@@ -616,12 +616,12 @@
       },
       {
         "reverse_engineered_description": "Direct mapping to DistributorId column coming from MsOrder-Materialized DeltaStream files.",
-        "comment": "Pls call out cornerstone as External source",
+        "comment": "Please call out cornerstone as External source",
         "final_description": "Direct mapping to DistributorId column having string values coming of MsOrder-Materialized DeltaStream files coming from external source cornerstone maintained in Cosmos."
       },
       {
         "reverse_engineered_description": "Direct mapping to SkuDescription column coming from MsOrder-Materialized DeltaStream files.",
-        "comment": "Pls call out cornerstone as External source",
+        "comment": "Please call out cornerstone as External source",
         "final_description": "Direct mapping to SkuDescription column having string values coming of MsOrder-Materialized DeltaStream files coming from external source cornerstone maintained in Cosmos"
       }
 ]
