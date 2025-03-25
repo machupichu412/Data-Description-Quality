@@ -1,0 +1,594 @@
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimGlobalContract table to get the details of Commercial global contracts. Direct mapping to GlobalContractKey column in FactSupportServiceRequest table coming from SA&DP Commercial source<|end|><|assistant|>Reason: The description provides complete source information and outlines the direct mapping clearly in relation to a reference key. Its explanation is well-crafted and follows proper grammatical standards.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This field references the DimGeography table to retrieve CustomerCountry details. The value is populated by joining the TenantCountry field from the SupportRequestDetailsSIPv2 table with the ISOCountryShortCode in the DimGeography table.<|end|><|assistant|>Reason: Specify the source as UDPCommercial and provide the join condition used in the mapping.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Timestamp in UTC at which record is updated by ETL process in UDP<|end|><|assistant|>Reason: The description provides the source, UDP, pointing out the action performed by the ETL process, thereby indicating source information. It is clearly articulated, with no grammatical issues.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimTime table to get more details about Incident ClosedDatetime in UTC.<|end|><|assistant|>Reason: If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....
+Otherwise use desc below to write the logic:
+Ref desc below - SubmitterEmployeeKey - This is a reference key to EmpMapData entity present within MLGCS datamart.
+Logic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail coming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.
+
+ e.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.
+Logic - 'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR business, is joined with 'Market' column in DimGeography to pick GeographyKey
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to ServicePackageSKU column from a provided source.<|end|><|assistant|>Reason: Clarify that the source is a static file and mention that values are provided by commercial business.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimGeography table to get more details about customer geography.<|end|><|assistant|>Reason: If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to  rno - 60 as Logic - .....
+Otherwise use desc below to write the logic:
+Ref desc below - SubmitterEmployeeKey - This is a reference key to EmpMapData entity present within MLGCS datamart.
+Logic - CSIEscalation and EmpMapData tables are joined on EmpMapData.EmployeeEmail and CSIEscalation.SubmitterEmail coming from Critsit source and EmployeeKey is picked from EmpMapData table to populate SubmitterEmployeeKey.
+
+ e.g.-2: This is a reference key to DimGeography table to get more details about customer region related to the messaging impressions data.
+Logic - 'DisplayName' column from 'Domain_Geo' static domain file coming from Excel file source provided by CPR business, is joined with 'Market' column in DimGeography to pick GeographyKey
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to DateClosed column having timestamp values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.<|end|><|assistant|>Reason: The description offers explicit source information, mentioning the CPRO_Cases view from CSSCPROSnow. It describes the direct mapping to the DateClosed column with clarity, using grammatically correct phrasing.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This tables contain the details of the transfer of phone calls between agents coming from TRANSFER_FACT table in genesys source.
+This table is created for Insights(Reporting) Team.<|end|><|assistant|>Reason: Characteristics of the table and its source (genesys) concerning phone call transfers are provided, as well as identifying its purpose for the Insights Team. Although 'This tables' suggests a typo, the intention is communicated effectively.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Static values (Unknown, Critical) in field provided by Commercial Business, uploaded via flat file.<|end|><|assistant|>Reason: Ensure the description is properly phrased, especially for text highlighted in red. Mention the entity related to ExpiresDateTime.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimDate table to get more details about the StartDate for the agent to which a phone interaction was transferred. 
+TRANSFER_FACT and DimDate tables are joined on FROM_END_DATE_TIME.TRANSFER_FACT coming from genesys source and CalendarDate.DimDate from UDP and
+DateUTCKey is picked from DimDate table to populate FromEndUTCDateKey<|end|><|assistant|>Reason: Joining logic for reference key population is described in detail with the relevant sources, maintaining clarity and proper grammar to enable comprehension.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This attribute has values assigned based on TimeOfDayId and time intervals.<|end|><|assistant|>Reason: Please confirm whether these values are static or hardcoded. If they are static, they must be sourced from a static file provided by the business.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This table contains details of attributes belonging to consumer tickets coming from ASDCAP source. Grain: ServiceRequestID<|end|><|assistant|>Reason: Identifies the source and explains the table content associated with consumer tickets, specifying the data grain. The language is clear, with correct grammar ensuring understanding.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Decode on CompletedOn and CreatedDateTime in Cases. Calculate time difference, assign value based on 30-minute threshold.<|end|><|assistant|>Reason: The current description lacks paraphrasing; rewrite it for better clarity of logic and flow.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This table contains ticket data derived from DimSupportServiceRequest and FactSupportServiceRequest tables. Grain: ServiceRequestID<|end|><|assistant|>Reason: I don't think this is all commercial tickets through, on MLGCS?
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimDate table to get more details about the EndDate for the agent to which a phone interaction was transferred. 
+TRANSFER_FACT and DimDate tables are joined on ToEndDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimDate from UDP and
+DateUTCKey is picked from DimDate table to populate FromEndUTCDateKey<|end|><|assistant|>Reason: The description specifies source information and provides clear join conditions required for deriving the DateUTCKey. The explanation uses structured language and proper grammar to articulate the transformation process, supporting comprehension.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to PerformingAdvertiserinPriorMonth column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table<|end|><|assistant|>Reason: The necessary source and table details are provided, and the transformation logic of direct mapping to the PerformingAdvertiserinPriorMonth column is clearly stated with proper grammar.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimProgramLineOfBusiness table to get program line of business details of the ticket direct mapping of 'ProgramLineOfBusinessKey' from FactServiceRequest.<|end|><|assistant|>Reason: The text specifies source information and explains reference key usage and direct mapping. Correct grammar and structured sentence creation promote understanding.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimServiceRequestStatus table to get details about ticket status.<|end|><|assistant|>Reason: Need to add the logic of key population. Please refer the latest Guidelines.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to Email column coming from Cornestone source<|end|><|assistant|>Reason: The description provides source information and explains the direct mapping to the Email column. It is clearly understood and correctly formulated.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimEmployee table to get details about the first employee who worked on this ticket.<|end|><|assistant|>Reason: Need to add the logic of key population. Please refer the latest Guidelines.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimDate table to get more details about Survey CreatedDatetime in PT. This key is populated by joining AcknowledgeDateTime in PT from FactSurvey table coming from SA&DP Commercial source with CalendarDate in the DimDate and extracting Datekey<|end|><|assistant|>Reason: The explanation contains source identification and clearly presents join logic for deriving the reference key, ensuring clarity and correct grammar for understanding.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: The attribute has values like >= 7Days <14Days, <1Day, >= 21Days <31Days, >= 1Day <3Days, Unknown, determined by commercial business.<|end|><|assistant|>Reason: Refer to row #15 where the attribute is IdleTimeL1 and entity is vwdimidletimespan for consistency.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to AdvertiserId column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table<|end|><|assistant|>Reason: The description accurately presents the source information and states direct mapping to the AdvertiserId column, albeit being a duplicate entry. Grammar and clarity are maintained.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct Mapping to IntervalEndPSTDateTime column coming from MC_OLSSentryReviewerMetrics Entity.<|end|><|assistant|>Reason: Please add the datatype of the column
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Timestamp in UTC at which record is inserted by ETL process in UDP<|end|><|assistant|>Reason: The description gives context by referencing UDP and the ETL process, outlining the purpose of the timestamp. It is straightforward, using correct grammar, and easy to comprehend.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimRange table to get more details about Ticket ageRange. Derived by applying decode logic on ClosedDateTime,CreatedDateTime columns in DimSupportServiceRequest table coming from SA&DP Commercial Source. Logic: calculate new column Range-when datedifference of ClosedDateTime,CreatedDateTime < 0 then '<=0' ,when datedifference of ClosedDateTime,CreatedDateTime is > 0 and <=1 then '>0-1' ,when datedifference of ClosedDateTime,CreatedDateTime is > 1 and <=2 then '>1-2' ,when datedifference of ClosedDateTime,CreatedDateTime is > 2 and <=3 then '>2-3' ,when datedifference of ClosedDateTime,CreatedDateTime is > 3 and <=4 then '>3-4' ,when datedifference of ClosedDateTime,CreatedDateTime is > 4 and <=5 then '>4-5',when datedifference of ClosedDateTime,CreatedDateTime is > 5 and <=6 then '>5-6' ,when datedifference of ClosedDateTime,CreatedDateTime is > 6 and <=7 then '>6-7' ,when datedifference of ClosedDateTime,CreatedDateTime is > 7 and <=14 then '>7-14' ,when datedifference of ClosedDateTime,CreatedDateTime is > 14 and <=21 then '>14-21' ,when datedifference of ClosedDateTime,CreatedDateTime is > 21 and <=30 then '>21-30' ,when datedifference of ClosedDateTime,CreatedDateTime is > 30 and <=60 then '>30-60' ,when datedifference of ClosedDateTime,CreatedDateTime is > 60 and <=90 then '>60-90' ,when datedifference of ClosedDateTime,CreatedDateTime is > 90 and <=120 then '>90-120' ,when datedifference of ClosedDateTime,CreatedDateTime >120 then '>120' . Now join DimRange based on this new Range column and extract RangeKey<|end|><|assistant|>Reason: This description provides the source (SA&DP Commercial Source and DimSupportServiceRequest table) and outlines a detailed transformation logic using decode logic on two columns. The step-by-step logic for calculating the range, along with the join condition to extract RangeKey, is clearly articulated, ensuring comprehensibility despite its complexity.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimSupportQueue table to get details about the tickets' first support queue.<|end|><|assistant|>Reason: Need to add the logic of key population. Please refer the latest Guidelines.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Timestamp in UTC at which record is inserted by ETL process in UDP<|end|><|assistant|>Reason: The description offers source information for UDP and ETL, clarifying the purpose of the timestamp. It is clear and grammatically sound, making it easy to understand.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimDate table to know the date on which ticket is last modified in PT timezone.<|end|><|assistant|>Reason: Need to add the logic of key population. Please refer the latest Guidelines.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This attribute has values ('Unknown', '<1Day', '1-<3 Days', '3-<7 Days', etc.) assigned based on TimeSpanKey.
+When TimeSpanKey = -1, it is assigned 'Unknown'.
+When TimeSpanKey = 1, it is assigned '<1Day'.
+When TimeSpanKey = 2, it is assigned '1-<3 Days'.
+When TimeSpanKey = 3, it is assigned '3-<7 Days'.
+When TimeSpanKey = 4, it is assigned '7-<14 Days'.<|end|><|assistant|>Reason: Clarify whether these values are static (coming from a predefined file) or hardcoded. If static, specify the source.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This attribute is calculated using ServiceRequestID, OrderKey & TransactionUTCDate columns coming from FactRevenue as:
+Logic:
+      After partitioned the FactRevenue by ServiceRequestID, taking the first OrderKey (by ascending order of TransactionUTCDate) gives FirstOrderKey<|end|><|assistant|>Reason: The source information alongside the meticulously detailed transformation process is presented clearly. Steps for calculating the attribute are logical and adhere to grammatical rules, ensuring understanding.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This attribute is based on TimeOfDayId and mapped to specific time ranges.<|end|><|assistant|>Reason: Please confirm whether these values are static or hardcoded. If they are static, they must be sourced from a static file provided by the business.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimTime table to get more details about the EndTime for the agent to which a phone interaction was transferred. 
+TRANSFER_FACT and DimTime tables are joined on ToEndDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and
+TimeUTCKey is picked from DimTime table to populate FromEndUTCDateKey<|end|><|assistant|>Reason: Source tables are identified and the join logic needed to obtain TimeUTCKey is clearly described. The explanation maintains clarity and grammatical correctness, making the logic understandable.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimGeography table to get details about Customer Geography.<|end|><|assistant|>Reason: Need to add the logic of key population. Please refer the latest Guidelines.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is an indirect mapping to internalemailaddress column.<|end|><|assistant|>Reason: Need to add logic. Please refer the latest guidelines
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimTime table to know the time when ticket is last modified in PT timezone<|end|><|assistant|>Reason: The description provides necessary source details regarding time-related information in PT timezone, albeit lacking mention of the exact direct mapping target. Proper grammar and simplified statement structure maintain clarity.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimServiceRequestState table to get current state of ticket.<|end|><|assistant|>Reason: If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to rno - 60 as Logic - .....
+Otherwise use desc below to write the logic:
+Ref desc below - SubmitterEmployeeKey - This is a reference key to EmpMapData entity... etc.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Hardcoded to Unspecified, Not available for commerical Surface<|end|><|assistant|>Reason: The description offers a precise rationale for hardcoding. Except for the repeated typo 'commerical', the language usage is clear.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct Mapping to AssignmentCanceledCount column coming from MC_OLSSentryReviewerMetrics entity.<|end|><|assistant|>Reason: Please add the datatype of the column
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimTime table to get more details about the EndTime of the agent assigned to the particular phone interaction. This key is populated by joining ToStartDateTime from source with Time from DimTime<|end|><|assistant|>Reason: Joining logic and source context are clearly explained with the use of correct grammar. This helps in effectively communicating the intended transformation logic.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to CurSupportArea column in AmplifyTransfer entity coming from Amplify source.<|end|><|assistant|>Reason: Clearly indicates the source and direct mapping to 'CurSupportArea'. Comprehension is facilitated through straightforward, grammatically correct language.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Derived by applying decode logic on incidentid column from DFC.Public.incident file of Dynamics incident source and queueid,objectid, createdon and queuename columns from DFC.Public.queueitem file of Cornerstone Dynamics source.
+Logic 0: DFC.Public.queueitem data is partitioned by objectid and ordered by createdon column descendingly
+Logic 1: incident is joined with queueitem by incidentid and objectid columns respectively
+Logic 2: partitioned queue data is joined with queueitem by queueid column from both views
+Logic 3: If queuename contains regex values like '<%>' then HardCoded as 1 else 0 gives IsAgentSpecificQueue<|end|><|assistant|>Reason: The description provides comprehensive source and transformation logic with detailed join conditions and partitioning steps. Its structured explanation and correct grammar ensure clear communication of the data processing logic.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimSupportChannel table to get more details about medium of communication.<|end|><|assistant|>Reason: If it is a direct mapping to Commerical attribute then add the sentence that it is a direct mapping to xyz column in commercial similar to rno - 60 as Logic - .....
+Otherwise use desc below to write the logic:
+Ref desc below - SubmitterEmployeeKey - This is a reference key to EmpMapData entity... etc.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimTime table to know the time when ticket is last modified in UTC timezone direct mapping of 'LastModifiedUTCTimeKey' from FactServiceRequest.<|end|><|assistant|>Reason: The description includes source context and logic for using the reference key and direct mapping. The text is clearly structured and grammatically correct, making it easy to understand.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to distinct values of 'ServiceRequestResolution' column from Rave,cornerstone sources<|end|><|assistant|>Reason: This description states the source information explicitly by mentioning the Rave and Cornerstone sources. It provides a clear explanation of the transformation logic as a direct mapping to distinct values of the specified column, making it easy to comprehend.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: SurrogateKey generated within UDP NRT to identify unique records of DimCauseType table.<|end|><|assistant|>Reason: Specify which column(s) are used for surrogate key generation and add the source table and source name.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Derived by applying decode logic on Firstname,lastname columns coming from MSX Source, SystemUser table based Opportunity createdbyid column from Opportunity table Logic: concat("FirstName",lit(" "),"LastName" )<|end|><|assistant|>Reason: The source information is provided, and a clear transformation logic of concatenating 'FirstName' and 'LastName' is described. Despite some missing prepositions, the description conveys the necessary logic clearly and grammatically correct enough to pass review.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Decode logic on State, StateLastUpdatedDateTime, CreatedDateTime in Cases from DFM. Open calculates hours from current time, Closed from StateLastUpdated. Otherwise assigns 0.<|end|><|assistant|>Reason: What does 'FI' indicate? Please explain this term. Consider paraphrasing the logic into a clear format like 'case when...' or 'if else...'.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimGeography table to get more details about customer geography. Direct mapping to CustomerGeographyKey column in FactSupportServiceRequest table coming from SA&DP Commercial source<|end|><|assistant|>Reason: The description includes both source information and a clear explanation of the reference key and direct mapping. The grammar is correct and the structure ensures easy understanding.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to INTERACTION_ID column having long values coming from TRANSFER_FACT table from genesys source<|end|><|assistant|>Reason: The description mentions both the source and the direct mapping logic, providing sufficient information. The sentence is simple and follows correct grammar, aiding comprehension.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This column is an indirect mapping to IsClosed column from FactSearchView table. Its mapped based on CustomerAccountNonPIIKey, DateKey from FactPerformingAndNewCountmeasures table and CustomerAccountNonPIIKey, LastModifiedDate from FactSearchView. Logic: If CustomerAccountNonPIIKey isNotNull and IsClosed = Yes then 1 else 0<|end|><|assistant|>Reason: The description includes source details and provides a clear explanation of the indirect mapping logic involving conditional expressions. Proper grammar and clarity in sentence structure make it easy to comprehend.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to CTS_TMPI column in FactSupportServiceRequest table coming from SA&DP Commercial source<|end|><|assistant|>Reason: The description presents clear source information, detailing a direct mapping to the CTS_TMPI column. The language used is grammatically sound and concise.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This table contains Commercial Interaction data coming from SA&DP Commercial source. It is derived from FactInteraction table. Grain: ServiceRequestInteractionID<|end|><|assistant|>Reason: The text details the source and source tables from which the commercial interaction data is derived, specifying its grain. Proper grammar and clarity in description facilitate understanding.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Map to FiscalPeriod on DimTime table after UDPCommercial day, values are Integer.<|end|><|assistant|>Reason: Mention the source as UDPCommercial to clarify where the data originates.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Derived by applying decode logic on createddate column coming from Upstream source MSX(Microsoft Sales Experience) hub_vw_opportunity table.
+Logic: date_format("createddate", "yyyyMMdd").cast("int")
+<|end|><|assistant|>Reason: Describes the use of source MSX and a transformation logic involving date formatting and type casting. The logic is clear, and the grammar is correct, supporting understanding.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This is a reference key to DimTime table to know the time when ticket is last modified in PT timezone<|end|><|assistant|>Reason: Although there is no direct mapping mentioned, the source is clear and the context about time in PT timezone is given. The grammar and simplicity maintain clarity in the description.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to FiscalMonthName column in DimTime table, which contains string values and originates from UDPCommercial Next Day data.<|end|><|assistant|>Reason: Explicitly mention the source as UDPCommercial.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This field serves as a reference key to the DimGeography table for retrieving CustomerGeographyKey. The value is determined by joining the TenantCountry in the SupportRequestDetailsSIPv2 table with the ISOCountryShortCode in the DimGeography table.<|end|><|assistant|>Reason: In the join logic, DimGeography (DimGeo) is not used.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct mapping to GeographyLevel3Name column in Geography table coming from ASDCAP source<|end|><|assistant|>Reason: The direct mapping to a specific column in the Geography table is highlighted alongside source information. The expression is clear and correct grammatically, enhancing comprehension.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: This field references the DimGeography table to retrieve CustomerGeographyLevel1Name. The value is populated by joining TenantCountry from the SupportRequestDetailsSIPv2 table with ISOCountryShortCode from the DimGeography table.<|end|><|assistant|>Reason: Specify the source as UDPCommercial and provide the join condition.
+Decision: Fail"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Direct Mapping to actualclosedate column from MSX Source, opportunity table<|end|><|assistant|>Reason: The source information is presented with a direct mapping explanation to 'actualclosedate', using clear language and structure to reinforce understanding.
+Decision: Pass"}
+{"text": "<|system|>You are a helpful AI assistant that reviews technical descriptions for data entities and attributes.
+Your task is to determine whether the description meets quality standards. If it does, respond with **Pass**. If not, respond with **Fail**.
+- A **Pass** means the description is clear, complete, and accurately describes the attribute and its source.
+- A **Fail** means the description lacks clarity, completeness, or essential details.
+Please provide a short explanation for your decision.
+Your output format should be:
+Reason: <your explanation>  
+Decision: Pass or Fail<|end|><|user|>Description: Decode logic on EventDateTime in DFM Events. Extract date, replace null with -1.<|end|><|assistant|>Reason: Update the logic by referring to the approach used for the SRCreatedDateTimeId column to ensure consistency and completeness.
+Decision: Fail"}
