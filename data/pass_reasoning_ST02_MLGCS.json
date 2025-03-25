@@ -1348,7 +1348,7 @@
         "comment": "Characteristics of the table and its source (genesys) concerning phone call transfers are provided, as well as identifying its purpose for the Insights Team. Although 'This tables' suggests a typo, the intention is communicated effectively."
     },
     {
-        "final_description": "\"This is a reference key to DimEmployee entity to get more details about the agent assigned to the particular phone interaction\nTRANSFER_FACT and DimEmployee tables are joined on AssignedAgent.TRANSFER_FACT coming from genesys source and UserId.DimEmployee from UDP and\nEmployeeKey is picked from DimEmployee table to populate AssignedEmployeeKey",
+        "final_description": "This is a reference key to DimEmployee entity to get more details about the agent assigned to the particular phone interaction\nTRANSFER_FACT and DimEmployee tables are joined on AssignedAgent.TRANSFER_FACT coming from genesys source and UserId.DimEmployee from UDP and\nEmployeeKey is picked from DimEmployee table to populate AssignedEmployeeKey",
         "comment": "The description explicates joining logic for populating the AssignedEmployeeKey reference key, detailing source and table interactions. Despite the complex parsing, the grammar supports a clear understanding of the process."
     },
     {
@@ -1364,7 +1364,7 @@
         "comment": "References the UDP process and specifies an update timestamp, simplifying comprehension with coherent language and correct grammar."
     },
     {
-        "final_description": "\"This is a reference key to DimDataSource table to get more details about the source of the agent details\nIt is the key correspoding to DataSourceGroup =  \"\"Genesys\"\" in DimDataSource\"",
+        "final_description": "This is a reference key to DimDataSource table to get more details about the source of the agent details\nIt is the key correspoding to DataSourceGroup =  'Genesys' in DimDataSource",
         "comment": "Source information is given with reference key context, enabled by grammatically correct phrasing for understanding, despite typographical repetition of quotation marks."
     },
     {
