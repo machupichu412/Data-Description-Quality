@@ -1,0 +1,32 @@
+[
+    {
+      "reverse_engineered_description": "Derived by applying the below logic on the 'Version' column from 'Period' table from upstream source 'EDL_Dim_Period' and 'DealType', 'C1ServiceStartDate' column from 'ASFP' table loaded from ASFP (Advanced Support for Partners) API Source\nLogic: When Version= 3 and DealType='net new' and C1ServiceStartDate>'2022-10-15' then Hardcoded as 0 else 1",
+      "comment": "Pls confirm C1ServiceStartDate the condition, is it greater than or equal to or any other condition?",
+      "final_description": "Derived by applying the below logic on the 'Version' column from 'Period' table from upstream source 'EDL_Dim_Period' and 'DealType', 'C1ServiceStartDate' column from 'ASFP' table loaded from ASFP (Advanced Support for Partners) API Source\nLogic: When Version= 3 and DealType='net new' and C1ServiceStartDate >= '2022-10-15' then Hardcoded as 0 else 1"
+    },
+    {
+      "reverse_engineered_description": "This table contains information about subscriptions like whether subscription is CSPSubscription (Cloud Service Provider Subscription) or not, time interval of CSPSubscription (Cloud Service Provider Subscription) maintained by GPSMart (Global Partner Solution Mart) source. Grain is combination of SubscriptionID, ReportingProductName and SummaryPricingLevelName columns.",
+      "comment": "Are we filtering any records from vw factrevenue?",
+      "final_description": "This table contains information about subscriptions like whether subscription is CSPSubscription (Cloud Service Provider Subscription) or not, time interval of CSPSubscription (Cloud Service Provider Subscription) maintained by GPSMart (Global Partner Solution Mart) source. Grain is combination of SubscriptionID, ReportingProductName and SummaryPricingLevelName columns.\nNo, vw_Fact_Revenue is in join condition with vw_Dim_Subscription in our srcquery to get SubscriptionKey column (SELECT F.SubscriptionKey [sales].[vw_Fact_Revenue] AS F JOIN [sales].[vw_Dim_Subscription] S ON F.[SubscriptionKey] = S.[SubscriptionKey])"
+    },
+    {
+      "reverse_engineered_description": "This table contains Dynamics365 seats data such as ActiveSeats, SoldSeats, AssignedSeats for partners which provides seat count per user-based subscription which is maintained by GPSMart (Global Partner Solution Mart) source. Grain is combination of PartnerId and Dynamics365ActiveUsageKey columns.",
+      "comment": "Added 'primarily sourced from vw_Fact_Dynamics365ActiveUsage.' in description. Cross-check and confirm.",
+      "final_description": "This table contains Dynamics365 seats data such as ActiveSeats, SoldSeats, AssignedSeats for partners which provides seat count per user-based subscription which is maintained by GPSMart (Global Partner Solution Mart) source. Grain is combination of PartnerId and Dynamics365ActiveUsageKey columns primarily sourced from vw_Fact_Dynamics365ActiveUsage."
+    },
+    {
+      "reverse_engineered_description": "Direct Mapping to 'AccountType' column from table 'AccountExternalResourceKeys-V4' having string values loaded from source 'Partner Accounts Data Common'.",
+      "comment": "Provide distinct samples for AccountType",
+      "final_description": "Direct Mapping to 'AccountType' column from table 'AccountExternalResourceKeys-V4' having string values loaded from source 'Partner Accounts Data Common'.\nPlease find the below samples:\nPartnerLocation, PartnerGlobal, Tenant."
+    },
+    {
+      "reverse_engineered_description": "Direct Mapping to 'KeyType' column from table 'AccountExternalResourceKeys-V4' having string values loaded from source 'Partner Accounts Data Common'.",
+      "comment": "Provide distinct samples for keytype",
+      "final_description": "Direct Mapping to 'KeyType' column from table 'AccountExternalResourceKeys-V4' having string values loaded from source 'Partner Accounts Data Common'.\nPlease find the below samples:\nMpnId, GlobalAdminAadGroupId, CustomerMasterId."
+    },
+    {
+      "reverse_engineered_description": "This entity tells about ASFP-PSAM (Advance Support for Partners - Partner Success Account Manager) Employee available hours per each weekday. It has employee available date and available hours and EmployeeKey. It is populated from Excel Loader source which is managed by CAPS Partner Reporting Users. Grain is combination of EmployeeKey, AvailableDate.",
+      "comment": "Source missing? Isn't this table having emp holidays/weekends/leaves?\nWhat is the frequency of the data coming from Excel Loader source?",
+      "final_description": "This entity tells about ASFP-PSAM (Advance Support for"
+    }
+]
