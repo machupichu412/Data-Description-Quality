@@ -1,28 +1,37 @@
 #!/usr/bin/env python3
-# Fine-tunes a LLaMA model with LoRA to generate "Pass/Fail + Reason" outputs
+# Fine-tunes Phi-4-mini-instruct using LoRA to generate "Reason + Decision" outputs
 
 import torch
 from datasets import load_dataset
-from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments, Trainer, DataCollatorForLanguageModeling
+from transformers import (
+    AutoTokenizer,
+    AutoModelForCausalLM,
+    TrainingArguments,
+    Trainer,
+    DataCollatorForLanguageModeling,
+)
 from peft import LoraConfig, get_peft_model
+from peft.utils.other import prepare_model_for_kbit_training
 
 # --- Config ---
-base_model_path = "/home/cicconel/llama3_8B_local"           # Path to base LLaMA model
-dataset_path = "/home/cicconel/llama_models/train.jsonl"     # Training data
-output_dir = "llama_finetune_output_gen"                     # Save directory
+base_model_path = "/home/cicconel/phi4_mini_instruct_local"
+dataset_path = "/home/cicconel/llama_models/final_train.jsonl"
+output_dir = "phi_finetune_output_gen"
 
-# LoRA config
+# --- LoRA config ---
 lora_config = LoraConfig(
-    r=1,
+    r=4,
     lora_alpha=16,
     lora_dropout=0.05,
     bias="none",
-    task_type="CAUSAL_LM"
+    task_type="CAUSAL_LM",
+    target_modules=["qkv_proj", "o_proj"]
+
 )
 
 # --- Load tokenizer and model ---
 print("Loading tokenizer and model...")
-tokenizer = AutoTokenizer.from_pretrained(base_model_path)
+tokenizer = AutoTokenizer.from_pretrained(base_model_path, trust_remote_code=True)
 if tokenizer.pad_token_id is None:
     tokenizer.pad_token_id = tokenizer.eos_token_id
 
@@ -31,24 +40,39 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.float16,
     trust_remote_code=True,
 )
-model = get_peft_model(model, lora_config)
+
+for name, module in model.named_modules():
+    print(name)
+
+model = prepare_model_for_kbit_training(model)  # <= FIRST
+model = get_peft_model(model, lora_config)      # <= THEN apply LoRA
+model.enable_input_require_grads()              # <= Enable gradient tracking
 model.print_trainable_parameters()
 
-# --- Format dataset into prompt/response pairs ---
+
+# --- Load dataset ---
+print("Loading dataset...")
+dataset = load_dataset("json", data_files=dataset_path, split="train")
+
+# --- Validate and filter dataset ---
+def is_valid(example):
+    return isinstance(example.get("text"), str) and len(example["text"].strip()) > 0
+
+dataset = dataset.filter(is_valid)
+print(f"✅ Loaded {len(dataset)} valid examples")
+
+# --- Format dataset into Phi-4 chat-style prompt/response ---
 def format_example(example):
-    user_msg, assistant_msg = "", ""
-    for msg in example["messages"]:
-        if msg["role"] == "user":
-            user_msg = msg["content"].strip()
-        elif msg["role"] == "assistant":
-            assistant_msg = msg["content"].strip()
-    prompt = f"<|user|> {user_msg}\n<|assistant|> {assistant_msg}"
-    tokenized = tokenizer(prompt, truncation=True, padding="max_length", max_length=128)
+    tokenized = tokenizer(
+        example["text"],
+        truncation=True,
+        padding="max_length",
+        max_length=512,
+    )
     tokenized["labels"] = tokenized["input_ids"].copy()
     return tokenized
 
-print("Loading and formatting dataset...")
-dataset = load_dataset("json", data_files=dataset_path, split="train")
+print("Tokenizing dataset...")
 dataset = dataset.map(format_example, remove_columns=dataset.column_names)
 
 # --- Data collator ---
