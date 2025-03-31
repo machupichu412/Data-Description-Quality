@@ -1,0 +1,332 @@
+[
+  {
+    "index": 1,
+    "description": "Direct mapping to AccountTimeLineID column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table",
+    "decision": "Pass",
+    "full_reasoning": "Reason:This explanation includes source details and specifies the direct mapping to AccountTimeLineID, expressed with clarity and grammatical precision.\nDecision: Pass"
+  },
+  {
+    "index": 2,
+    "description": "This is a reference key to DimDataSource table to get more details about the source of the agent details.\nIt is the key corresponding to DataSourceGroup = \"Genesys\" in DimDataSource.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description should specify the source of the data and how it is used to populate the ServicePackageName column. It should also mention that the values are provided by commercial business, as indicated in the original text.\nDecision: Fail"
+  },
+  {
+    "index": 3,
+    "description": "This is a reference key to DimSupportAreaPath table to get details about current support area path direct mapping of 'SAPKey' from FactServiceRequest.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:This description includes the needed source information and explains the logic behind the reference key and direct mapping in clear, grammatically correct language.\nDecision: Pass"
+  },
+  {
+    "index": 4,
+    "description": "Direct mapping to InitiativeId column in OARInitiative table coming from UCM source",
+    "decision": "Pass",
+    "full_reasoning": "Reason:Provides source identification and transformation logic. Its clear and simple phrasing ensures that the mapping to 'InitiativeId' is understood.\nDecision: Pass"
+  },
+  {
+    "index": 5,
+    "description": "This field references the DimGeography table to retrieve CustomerCountry details. The value is populated by joining the TenantCountry field from the SupportRequestDetailsSIPv2 table with the ISOCountryShortCode in the DimGeography table.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description is not clear enough because it does not specify the source as UDPCommercial and does not provide the join condition used in the mapping. It also does not mention the exact fields from the tables that are being joined. The description should be revised to include these details for clarity and completeness.\nDecision: Fail"
+  },
+  {
+    "index": 6,
+    "description": "Surrogate key  generated on  SupportTopicFullPath  column coming  from DimSupportTopic in SA&DP Commercial source.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description includes source information by specifying DimSupportTopic from the SA&DP Commercial source. It clarifies the transformation logic by explaining that a surrogate key is generated on the SupportTopicFullPath column. The text is clear and grammatically sound.\nDecision: Pass"
+  },
+  {
+    "index": 7,
+    "description": "Indirect mapping using SupportRequestDetailsSIPv2 and static RavePlanningCategories based on CaseType, IssueType, TenantName, ProgramId. Values joined via key columns SupportAreaName, OrganizationId, RequestId.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description is somewhat clear but lacks specific details about the source of the data and the exact nature of the 'static RavePlanningCategories'. It also does not mention the table name from MDM, which is important for understanding the context of the data source. Additionally, the term 'Business rules' could be more explicitly connected to the logic that determines the mapping.\nDecision: Fail"
+  },
+  {
+    "index": 8,
+    "description": "This is a reference key to DimAgentRootCauseTaxonomy table to get details of various Issue root cause classifications. Direct mapping to AgentRootCauseTaxonomyKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The explanation lists necessary source details and describes reference key usage and direct mapping, with precise language and structure for clarity and accuracy.\nDecision: Pass"
+  },
+  {
+    "index": 9,
+    "description": "Decode logic on SupportAreaName, SubscriptionType, SkillIds, ProgramId in SRDetails_INC table from Rave via Amplify. CASE statements determine ServiceOfferingKey.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:Identify the source of the FactRequest table to provide more context on the data's origin.\nDecision: Fail"
+  },
+  {
+    "index": 10,
+    "description": "Direct Mapping to promotioncode column from MSX Source, Campaign table",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description clearly identifies the source and Campaign table, providing a direct mapping to the 'promotioncode' column. The text is simple and grammatically sound, aiding comprehension.\nDecision: Pass"
+  },
+  {
+    "index": 11,
+    "description": "SurrogateKey generated within UDP NRT to identify unique records of DimCauseType table.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:Specify which column(s) are used for surrogate key generation and add the source table and source name.\nDecision: Fail"
+  },
+  {
+    "index": 12,
+    "description": "This is a reference key to DimTime table to get more details about the StartTime of the agent assigned to the particular phone interaction.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:Need to add the logic of key population. Please refer the latest Guidelines.\nDecision: Fail"
+  },
+  {
+    "index": 13,
+    "description": "Decode logic on EventDateTime in DFM Events. Extract date and replace nulls with -1.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description is clear and specifies the action to be taken on the EventDateTime attribute. It also indicates the handling of null values, which is a common requirement for data processing.\nDecision: Pass"
+  },
+  {
+    "index": 14,
+    "description": "This is a reference key to DimGeography table to get details about Customer Geography direct mapping of 'CustomerGeographyKey' from FactServiceRequest.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description provides complete source details, clearly explaining both the reference key and direct mapping. Its structured sentence and proper grammar contribute to comprehensible content.\nDecision: Pass"
+  },
+  {
+    "index": 15,
+    "description": "Derived by applying logic on SupportTopicFullPath column coming  from DimSupportTopic in SA&DP Commercial source as\nLogic step1:get the SupportTopicFullPath column and replace the '\\\\\\\\' with '^' using regexp_replace function.\nstep2: splitting the 4th position value of SupportTopicFullPath column on the basis of '^'.If there is no value then hardcoded to Unspecified.\nexample : if SupportTopicFullPath column value is \"zzRoot Cause: Surface Hub 2S  old\\Technical\\Personal Sign-InMy Files/Meetings\\Configuration Issue\"\nthen RootCause4 is 'My Files'.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The source and direct mapping transformation strategy are described concisely. Correct language use and straightforward structure aid comprehension.\nDecision: Pass"
+  },
+  {
+    "index": 16,
+    "description": "Surrogate key in UDP NRT for FactSREvents, generated via SRNumber.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description is too vague and does not provide enough detail about the surrogate key generation process. It does not specify how the SRNumber is used to generate the surrogate key, which is essential for understanding the attribute and its source.\nDecision: Fail"
+  },
+  {
+    "index": 17,
+    "description": "Direct Mapping to SourceSubType column from MSX Source, Lead table",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description specifies the source as MSX and identifies the Lead table for a direct mapping to the SourceSubType column. The explanation is concise and uses correct grammar, making it easy to understand.\nDecision: Pass"
+  },
+  {
+    "index": 18,
+    "description": "This is a reference key to DimTime table to get more details about the StartDate for the agent to which a phone interaction was transferred.\nTRANSFER_FACT and DimTime tables are joined on FromStartDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and\nDateUTCKey is picked from DimTime table to populate FromStartUTCTimeKey",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description lacks clarity on how the reference key is used to retrieve VendorSite details. It does not specify the source tables or the joining conditions. The mention of \"latest Guidelines\" is vague and does not provide the necessary detail for understanding the attribute's source or its use in the context of the phone interaction.\nDecision: Fail"
+  },
+  {
+    "index": 19,
+    "description": "This is a reference key to DimDataSource table to get more details about the source of the agent details.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:Need to add the logic of key population. Please refer the latest Guidelines.\nDecision: Fail"
+  },
+  {
+    "index": 20,
+    "description": "Direct mapping to FactSurveyKey column in FactSurvey table coming from SA&DP Commercial source",
+    "decision": "Pass",
+    "full_reasoning": "Reason:Explanation:\nDecision: Pass"
+  },
+  {
+    "index": 21,
+    "description": "This table contains fields related to product details coming from AIPMR source.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description is clear, complete, and accurately describes the attribute and its source.\nDecision: Pass"
+  },
+  {
+    "index": 22,
+    "description": "Direct mapping to CurOrg column in AmplifyTransfer entity coming from Amplify source.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:Clarifies the source as Amplify and the direct mapping to 'CurOrg'. Simple and correct grammar allows for clear understanding.\nDecision: Pass"
+  },
+  {
+    "index": 23,
+    "description": "Direct mapping to SubjectCountry column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The additional information about the case-insensitive comparison provides useful context about the data processing method, which is important for understanding how the data is handled.\nDecision: Pass"
+  },
+  {
+    "index": 24,
+    "description": "There is Indirect mapping to to column SupportAreaName based on RequestId derived by joining vw_SupportRequest with vw_OrganizationInfo on OrganizationId from Amplify Source",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description contains a typographical error with the repeated word 'to'. The description should be corrected for clarity.\nDecision: Fail"
+  },
+  {
+    "index": 25,
+    "description": "This is a reference key to DimTime table to get more details about Incident ClosedDatetime in PT.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description is incomplete as it does not provide the full context or the source of the reference key. It also lacks clarity on what \"DimTime table\" refers to and how it relates to the \"Incident ClosedDatetime\" attribute. Additionally, it does not specify whether it is a direct mapping or if there are any transformations or business rules applied. The mention of \"PT\" is unclear without further explanation.\nDecision: Fail"
+  },
+  {
+    "index": 26,
+    "description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+    "decision": "Pass",
+    "full_reasoning": "Reason:This simple statement indicates a role within UDP and provides timestamp context linked to ETL processes. Direct language and grammatical accuracy contribute to easy comprehension.\nDecision: Pass"
+  },
+  {
+    "index": 27,
+    "description": "This attribute is derived using decode logic on the CustomerPUId column.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:It is not a decode logic. change accordingly.\nDecision: Fail"
+  },
+  {
+    "index": 28,
+    "description": "Direct mapping to FROM_INTERACTION_RESOURCE_ID column having long values coming from TRANSFER_FACT table from genesys source",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description is clear and provides the necessary context for understanding the mapping. It specifies the source table (TRANSFER_FACT) and the Genesys source, as well as the target column (FROM_INTERACTION_RESOURCE_ID) where the long values are being mapped. The description is concise and to the point.\nDecision: Pass"
+  },
+  {
+    "index": 29,
+    "description": "This FactTables contains consolidated data from FactMessaging, FactPhone, FactSurvey, FactChatVendor, FactRevenue and FactServiceRequest. Grain : ServiceRequestId",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description provides a comprehensive overview of the fact table consolidation, including its source tables and grain level. The explanation is clear and well-organized, with correct grammar to ensure understanding.\nDecision: Pass"
+  },
+  {
+    "index": 30,
+    "description": "Timestamp in UTC at which record is updated by ETL process in UDP",
+    "decision": "Pass",
+    "full_reasoning": "Reason:This description provides context within UDP and specifies the ETL action, resulting in explicit purpose clarity. It uses simple language and adherence to grammatical norms for easy understanding.\nDecision: Pass"
+  },
+  {
+    "index": 31,
+    "description": "This is a reference key to DimTime table to get more details about Incident CreatedDatetime in PT. This key is populated by joining CreatedTime in PT from DimSupportServiceRequest table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description contains the requisite source information and detailed join logic for extracting a time key. The presentation is clear, structured, and grammatically accurate.\nDecision: Pass"
+  },
+  {
+    "index": 32,
+    "description": "Decode based on Row_InitialPreviousRoutingContext and EventDateTime in SREvents from DFM. Join for QueueKey, alias as PreviousAssignedQueueKey.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The revised description now clearly explains the purpose of the PreviousAssignedQueueKey and its role in the context of SREvents from DFM. It specifies that the PreviousAssignedQueueKey is a reference key, which provides clarity on its usage. The description is complete and accurately describes the attribute and its source, meeting the quality standards.\nDecision: Pass"
+  },
+  {
+    "index": 33,
+    "description": "Direct mapping to modifiedon column having timestamp values coming from DFC.Public.incident file of dynamics, PartnerSIPReport.vw_SupportRequestDetails_Consumer file of rave, Incident.IncidentCap file of ASDCAP sources.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The explanation includes clear source information and describes direct mapping to the modifiedon column correctly. The language and grammar are suitable, making comprehension straightforward.\nDecision: Pass"
+  },
+  {
+    "index": 34,
+    "description": "Direct map to ARRTypeDerived in FactSREvents from Commercial NRT with strings.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description is unclear and lacks context. It is not clear what ARRTypeDerived, FactSREvents, and Commercial NRT refer to. Additionally, the use of \"strings\" is ambiguous.\nDecision: Fail"
+  },
+  {
+    "index": 35,
+    "description": "Direct mapping to NumberofItemsInvestigated column having integer values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:This technical description provides necessary source information by mentioning the CPRO_Cases view from CSSCPROSnow. It elucidates direct mapping to the NumberofItemsInvestigated column in a clear, grammatically correct manner.\nDecision: Pass"
+  },
+  {
+    "index": 36,
+    "description": "This is a reference key to DimTime table to get more details about the EndTime of the agent assigned to the particular phone interaction.\nThis key is populated by joining ToStartDateTime from source with CalendarDate from DimDate\nTRANSFER_FACT and DimTime tables are joined on ToStartDateTime.TRANSFER_FACT coming from genesys source and CalendarDate.DimTime from UDP and\nTimeUTCKey is picked from DimTime table to populate ToStartUTCDateKey",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description is clear and complete. It accurately describes the attribute, its source, and the conditions under which it is assigned. It also provides an example of the values assigned to the attribute.\nDecision: Pass"
+  },
+  {
+    "index": 37,
+    "description": "This is a Reference key to DimCustomerAccountNonPII table to get details for Customer Accounts. logic: CustomerAccountNonPIIKey is populated by joining DimCustomerAccountNonPII table with FactPerformingAndNewCountmeasures table using accountid from both tables.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description provides source information and outlines the logic for creating the reference key through a join operation. Although the phrase 'logic:' should be capitalized for consistency, the overall description is clear and understandable.\nDecision: Pass"
+  },
+  {
+    "index": 38,
+    "description": "This is a reference key to DimSupportChannel table to get first support channel of the ticket direct mapping of 'FirstSupportChannelQueueKey' from FactServiceRequest.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The provided description offers source context and covers the reference key and direct mapping strategy. Appropriate grammar and sentence structure ensure the explanation is easily understood.\nDecision: Pass"
+  },
+  {
+    "index": 39,
+    "description": "Direct mapping to DateCreated column having timestamp values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.",
+    "decision": "Pass",
+    "full_reasoning": "Reason:This description successfully incorporates the relevant source information, indicating it is from the CPRO_Cases view in CSSCPROSnow. It clearly explains the direct mapping to the DateCreated column, ensuring comprehensibility.\nDecision: Pass"
+  },
+  {
+    "index": 40,
+    "description": "Direct mapping to NativeServiceRequestID column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+    "decision": "Pass",
+    "full_reasoning": "Reason:<your explanation>\nDecision: Pass"
+  },
+  {
+    "index": 41,
+    "description": "This is a reference key to DimRange table to get more details about Ticket ageRange.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description is unclear and incomplete. It does not specify what \"DimRange\" is, nor does it clarify the relationship between \"Ticket ageRange\" and the \"DimRange\" table. It also lacks the necessary detail about the source of the reference key and how it relates to the \"Commercial\" attribute. To improve the description, it should clearly define \"DimRange,\" explain the nature of the reference key, and describe how it connects to the \"Commercial\" attribute, possibly by specifying the column in the \"Commercial\" table that corresponds to \"Ticket ageRange.\"\nDecision: Fail"
+  },
+  {
+    "index": 42,
+    "description": "This is a reference key to DimVendorSite table to get more details about VendorSite details of the agent assigned to the particular phone interaction\nThis key is populated by joining ASSIGNED_VENDORCODE and AssignedSiteCode from source with VendorSiteCode from DimVendorSite to pick DimVendorSite.VendorSiteKey TRANSFER_FACT and DimVendorSite tables are joined on ASSIGNED_VENDORCODE.TRANSFER_FACT and AssignedSiteCode.TRANSFER_FACT coming from genesys source and VendorSiteCode.DimVendorSite from UDP and\nVendorSiteKey is picked from DimVendorSite table to populate AssignedVendorSiteKey",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description is too brief and lacks clarity on the source and logic behind the attribute. It does not provide enough information for understanding the attribute's calculation or its source.\nDecision: Fail"
+  },
+  {
+    "index": 43,
+    "description": "This is a reference key to DimServiceRequestState table to get current state of ticket. Direct mapping to StateKey column in FactSupportServiceRequest table coming from SA&DP Commercial source",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description provides source information and explains the logic for a reference key with a clear direct mapping explanation. Correct grammar and clear language facilitate understanding.\nDecision: Pass"
+  },
+  {
+    "index": 44,
+    "description": "This table contains Language data coming from SA&DP Commercial source. Grain: NativeLanguage",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description indicates the source and details about the Language data which is clearly defined with its grain. Simple grammar and structure make the information comprehensible.\nDecision: Pass"
+  },
+  {
+    "index": 45,
+    "description": "This is a reference key to DimSupportChannel table to get first support channel of the ticket.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:Need to add the logic of key population. Please refer the latest Guidelines.\nDecision: Fail"
+  },
+  {
+    "index": 46,
+    "description": "Timestamp in UTC at which record is inserted by ETL process in UDP",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description is clear and complete, accurately describing the attribute (timestamp in UTC), the process (ETL), and the context (Universal Data Protocol). It also uses proper grammar and technical terminology.\nDecision: Pass"
+  },
+  {
+    "index": 47,
+    "description": "This is a reference key to DimRange table to get more details about Ticket ageRange. Derived by applying decode logic on ClosedDateTime,CreatedDateTime columns in DimSupportServiceRequest table coming from SA&DP Commercial Source. Logic: calculate new column Range-when datedifference of ClosedDateTime,CreatedDateTime < 0 then '<=0' ,when datedifference of ClosedDateTime,CreatedDateTime is > 0 and <=1 then '>0-1' ,when datedifference of ClosedDateTime,CreatedDateTime is > 1 and <=2 then '>1-2' ,when datedifference of ClosedDateTime,CreatedDateTime is > 2 and <=3 then '>2-3' ,when datedifference of ClosedDateTime,CreatedDateTime is > 3 and <=4 then '>3-4' ,when datedifference of ClosedDateTime,CreatedDateTime is > 4 and <=5 then '>4-5',when datedifference of ClosedDateTime,CreatedDateTime is > 5 and <=6 then '>5-6' ,when datedifference of ClosedDateTime,CreatedDateTime is > 6 and <=7 then '>6-7' ,when datedifference of ClosedDateTime,CreatedDateTime is > 7 and <=14 then '>7-14' ,when datedifference of ClosedDateTime,CreatedDateTime is > 14 and <=21 then '>14-21' ,when datedifference of ClosedDateTime,CreatedDateTime is > 21 and <=30 then '>21-30' ,when datedifference of ClosedDateTime,CreatedDateTime is > 30 and <=60 then '>30-60' ,when datedifference of ClosedDateTime,CreatedDateTime is > 60 and <=90 then '>60-90' ,when datedifference of ClosedDateTime,CreatedDateTime is > 90 and <=120 then '>90-120' ,when datedifference of ClosedDateTime,CreatedDateTime >120 then '>120' . Now join DimRange based on this new Range column and extract RangeKey",
+    "decision": "Pass",
+    "full_reasoning": "Reason:This description provides the source (SA&DP Commercial Source and DimSupportServiceRequest table) and outlines a detailed transformation logic using decode logic on two columns. The step-by-step logic for calculating the range, along with the join condition to extract RangeKey, is clearly articulated, ensuring comprehensibility despite its complexity.\nDecision: Pass"
+  },
+  {
+    "index": 48,
+    "description": "Direct Mapping to activesalesstage column from MSX Source, opportunity table",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description now includes the 1:1 mapping detail, which is crucial for understanding the nature of the data transfer. It also mentions the importance of preventing data loss or duplication, which is essential for maintaining data integrity. The sentence is still clear and complete.\nDecision: Pass"
+  },
+  {
+    "index": 49,
+    "description": "Using Date_Diff function on AcknowledgeDateTime, CreateDateTime in SRD_SIPv2 from Rave by Amplify.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description is not clear enough. It should explain the logic in simple English, for example, state: 'Derived by calculating the time difference between the two datetime columns...'.\nDecision: Fail"
+  },
+  {
+    "index": 50,
+    "description": "This is a reference key to DimTime table to get more details about Survey CreatedDatetime in PT. This key is populated by joining AcknowledgeDateTime in PT from FactSurvey table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey",
+    "decision": "Pass",
+    "full_reasoning": "Reason:Including the source and the joining logic supports effective understanding of the reference key derived in the process. The description is well-structured and reads clearly.\nDecision: Pass"
+  },
+  {
+    "index": 51,
+    "description": "This is a reference key to DimDataSource table to get more details about Source. Direct mapping to DataSourcekey column in FactSurvey table coming from SA&DP Commercial Source",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description clearly mentions the source and explains the reference key along with the direct mapping logic. The structure and grammar are easy to follow, facilitating understanding.\nDecision: Pass"
+  },
+  {
+    "index": 52,
+    "description": "This is a reference key to DimTime table to get more details about the EndTime for the agent to which a phone interaction was transferred. This key is populated by joining ToEndDateTime from source with Time from DimTime",
+    "decision": "Pass",
+    "full_reasoning": "Reason:The description provides source context and transformation logic through clear joining conditions. The use of correct grammar and precise presentation supports understanding.\nDecision: Pass"
+  },
+  {
+    "index": 53,
+    "description": "This is a reference key to DimServiceRequestState table to get current state of ticket.",
+    "decision": "Fail",
+    "full_reasoning": "Reason:The description is too brief and lacks clarity. It does not specify the source of the reference key or the exact nature of the mapping to the DimServiceRequestState table. It also does not mention the commercial attribute or the specific column in the commercial table that it maps to. The description should include these details to provide a complete understanding of the attribute and its source.\nDecision: Fail"
+  },
+  {
+    "index": 54,
+    "description": "This table contains Customer data coming from Dynamics Cornerstone. It is a SCD Type 2 table which means it retains history of any change to customer attribute e.g. CustomerEmail,CustomerPUID etc. Grain - CustomerId and DataSource",
+    "decision": "Pass",
+    "full_reasoning": "Reason:<your explanation>\nDecision: Pass"
+  },
+  {
+    "index": 55,
+    "description": "Derived by applying logic on SupportTopicFullPath column coming  from DimSupportTopic in SA&DP Commercial source as\nLogic step1:get the SupportTopicFullPath column and replace the '\\\\\\\\' with '^' using regexp_replace function.\nstep2: splitting the first position value of SupportTopicFullPath column on the basis of '^'.If there is no value then hardcoded to Unspecified.\nexample : if SupportTopicFullPath column value is \"zzRoot Cause: Surface Hub 2S  old\\Technical\\Personal Sign-In\" then RootCause1 is 'zzRoot Cause: Surface Hub 2S  old'",
+    "decision": "Fail",
+    "full_reasoning": "Reason:Need to re-work, please refer to the latest guidelines\nDecision: Fail"
+  }
+]
