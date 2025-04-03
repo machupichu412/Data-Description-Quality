@@ -19,7 +19,7 @@ model = model.to(device)
 model.eval()
 
 # Load dataset
-dataset = load_dataset("json", data_files="test_ALL_cleaned_final.jsonl", split="train")
+dataset = load_dataset("json", data_files="train_ALL.jsonl", split="train")
 
 # Build Phi-4-style prompt with system + user + assistant
 def extract_chat_prompt(example):
