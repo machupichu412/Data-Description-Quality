@@ -2,8 +2,8 @@
   {
     "index": 1,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Direct mapping to AccountTimeLineID column coming from MDAP (MSA Data Analytics Platform) source,FactPerformingAndNewCountmeasures_v1 table<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 2,
@@ -32,14 +32,14 @@
   {
     "index": 6,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This field references the DimGeography table to retrieve CustomerCountry details. The value is populated by joining the TenantCountry field from the SupportRequestDetailsSIPv2 table with the ISOCountryShortCode in the DimGeography table.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 7,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Surrogate key  generated on  SupportTopicFullPath  column coming  from DimSupportTopic in SA&DP Commercial source.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 8,
@@ -50,20 +50,20 @@
   {
     "index": 9,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This is a reference key to DimAgentRootCauseTaxonomy table to get details of various Issue root cause classifications. Direct mapping to AgentRootCauseTaxonomyKey column in FactSupportServiceRequest table coming from SA&DP Commercial source<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 10,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Decode logic on SupportAreaName, SubscriptionType, SkillIds, ProgramId in SRDetails_INC table from Rave via Amplify. CASE statements determine ServiceOfferingKey.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 11,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Direct Mapping to promotioncode column from MSX Source, Campaign table<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 12,
@@ -104,8 +104,8 @@
   {
     "index": 18,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Surrogate key in UDP NRT for FactSREvents, generated via SRNumber.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 19,
@@ -122,8 +122,8 @@
   {
     "index": 21,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This is a reference key to DimVendorSite table to get more details about VendorSite details of the agent assigned to the particular phone interaction.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 22,
@@ -140,8 +140,8 @@
   {
     "index": 24,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This table contains fields related to product details coming from AIPMR source.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 25,
@@ -170,14 +170,14 @@
   {
     "index": 29,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Timestamp in UTC at which record is updated by ETL process in UDP<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 30,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This attribute is derived using decode logic on the CustomerPUId column.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 31,
@@ -188,14 +188,14 @@
   {
     "index": 32,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This FactTables contains consolidated data from FactMessaging, FactPhone, FactSurvey, FactChatVendor, FactRevenue and FactServiceRequest. Grain : ServiceRequestId<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 33,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Timestamp in UTC at which record is updated by ETL process in UDP<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 34,
@@ -206,20 +206,20 @@
   {
     "index": 35,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Decode based on Row_InitialPreviousRoutingContext and EventDateTime in SREvents from DFM. Join for QueueKey, alias as PreviousAssignedQueueKey.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 36,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Direct mapping to modifiedon column having timestamp values coming from DFC.Public.incident file of dynamics, PartnerSIPReport.vw_SupportRequestDetails_Consumer file of rave, Incident.IncidentCap file of ASDCAP sources.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 37,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Direct map to ARRTypeDerived in FactSREvents from Commercial NRT with strings.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 38,
@@ -242,8 +242,8 @@
   {
     "index": 41,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This is a Reference key to DimCustomerAccountNonPII table to get details for Customer Accounts. logic: CustomerAccountNonPIIKey is populated by joining DimCustomerAccountNonPII table with FactPerformingAndNewCountmeasures table using accountid from both tables.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 42,
@@ -278,8 +278,8 @@
   {
     "index": 47,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This attribute is calculated using SRNumber, InteractionResourceId & CalendarDateTime columns coming from FactPhone as: Logic:       After partitioned the FactPhone by SRNumber, taking the first InteractionResourceId (by ascending order of CalendarDateTime) gives FirstInteractionResourceId<|end|><|assistant|>",
-    "output": "Fail",
-    "label": 0
+    "output": "Pass",
+    "label": 1
   },
   {
     "index": 48,
@@ -290,26 +290,26 @@
   {
     "index": 49,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This is a reference key to DimServiceRequestState table to get current state of ticket. Direct mapping to StateKey column in FactSupportServiceRequest table coming from SA&DP Commercial source<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 50,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This table contains Language data coming from SA&DP Commercial source. Grain: NativeLanguage<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 51,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This is a reference key to DimSupportChannel table to get first support channel of the ticket.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 52,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Timestamp in UTC at which record is inserted by ETL process in UDP<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 53,
@@ -320,20 +320,20 @@
   {
     "index": 54,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Direct Mapping to activesalesstage column from MSX Source, opportunity table<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 55,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Using Date_Diff function on AcknowledgeDateTime, CreateDateTime in SRD_SIPv2 from Rave by Amplify.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 56,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This is a reference key to DimTime table to get more details about Survey CreatedDatetime in PT. This key is populated by joining AcknowledgeDateTime in PT from FactSurvey table coming from SA&DP Commercial source with Time in the DimTime and extracting Timekey<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 57,
@@ -350,8 +350,8 @@
   {
     "index": 59,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>This is a reference key to DimServiceRequestState table to get current state of ticket.<|end|><|assistant|>",
-    "output": "Pass",
-    "label": 1
+    "output": "Fail",
+    "label": 0
   },
   {
     "index": 60,
@@ -362,8 +362,8 @@
   {
     "index": 61,
     "prompt": "<|system|>You are a data quality evaluator. Your task is to classify data descriptions as 'Pass' or 'Fail' based on best practices for clarity, precision, and consistency.A high-quality data description should:1. Avoid self-referencing or circular definitions.2. Clarify the meaning of outliers using business-specific distinctions.3. Use singular tense unless referring to a naturally plural concept.4. Define what something is, not what it is not.5. Use clear, descriptive sentences to avoid ambiguity.6. Expand uncommon abbreviations at first use.7. Be precise and allow only one interpretation.8. Be self-contained and not rely on references to other fields.9. Optionally include example values to improve clarity and consistency.Evaluate the following description carefully. If it violates any of these principles, label it as **Fail** Otherwise, label it **Pass**Output only 'Pass' or 'Fail' without any additional text.<|end|><|user|>Derived by applying logic on SupportTopicFullPath column coming  from DimSupportTopic in SA&DP Commercial source as Logic step1:get the SupportTopicFullPath column and replace the '\\\\\\\\\\\\\\\\' with '^' using regexp_replace function. step2: splitting the first position value of SupportTopicFullPath column on the basis of '^'.If there is no value then hardcoded to Unspecified. example : if SupportTopicFullPath column value is 'zzRoot Cause: Surface Hub 2S  old\\\\Technical\\\\Personal Sign-In' then RootCause1 is 'zzRoot Cause: Surface Hub 2S  old'<|end|><|assistant|>",
-    "output": "Fail",
-    "label": 0
+    "output": "Pass",
+    "label": 1
   },
   {
     "index": 62,
