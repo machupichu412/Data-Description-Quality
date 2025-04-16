@@ -18,7 +18,7 @@
         "Review Comment L3": "Add the source and source table names and grain. \nIf the list is big then mention just the source name and grain."
     },
     {
-        "TechnicalDescription": "This atrrribte is derived by calculating hex string result of SHA-2 family of CustomerPUId column coming from Cornestone source.",
+        "TechnicalDescription": "This attribute is derived by calculating hex string result of SHA-2 family of CustomerPUId column coming from Cornestone source.",
         "L1 Review Comment": null,
         "L2 Review Comment": "Ok",
         "Review Comment L3": "It is not a decode logic. change accordingly.\nLogic part is not clear."
