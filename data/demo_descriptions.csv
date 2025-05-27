@@ -1,0 +1,10 @@
+description
+Direct mapping to DayName column in DimTime table.
+Direct mapping to ServicePackageName column from a provided source.
+Direct mapping to DateCreated column having timestamp values coming from  CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.
+Direct mapping to NativeServiceRequestID column in FactSupportServiceRequest table coming from SA&DP Commercial source.
+This is a reference key to DimRange table to get more details about Ticket ageRange.
+This attribute is derived using decode logic on the CustomerPUId column.
+Direct mapping to SubjectCountry column having string values coming from CPRO_Cases view from CSSCPROSnow (CSS Snow Cases for Online Privacy) source.
+Direct mapping to InitiativeId column in OARInitiative table coming from UCM source
+SurrogateKey generated within UDP NRT to identify unique records of DimCauseType table.

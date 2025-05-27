@@ -15,6 +15,9 @@ Your output format should be:
 Reason: <your explanation>  
 Decision: Pass or Fail
 
+Reasoning Prompt:
+
+
 
 
 Reverse engineering prompt: 

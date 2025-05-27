@@ -1,0 +1,4 @@
+description
+Direct mapping to DayName column in DimTime table.
+This is a reference key to DimRange table to get more details about Ticket ageRange.
+Direct mapping to ServicePackageName column from a provided source.
